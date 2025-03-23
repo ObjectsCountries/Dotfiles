@@ -319,25 +319,30 @@ Zip [here](Minecraft/VanillaTweaks-1.21.zip).
 
 Install the Python libraries `dotenv`, `psutil`, `pysolar` and `pywal` (`pysolar` through the AUR, the rest through Pacman) in order to get the auto-updating background.
 
-### Waybar
+### Hyprpanel
 
 #### Left
 
+* Menu
 * Workspaces
-* Media Title (transparent background)
+* Media Title
+* Cava
 
 #### Center
 
-* Open Apps (click to center mouse in given window)
+* Open Window
 
 #### Right
 
-* Clipboard (left click to view, right click to clear)
-* Weather ([`wttrbar`](https://github.com/bjesus/wttrbar))
+* Notifications
+* Weather
 * System Tray
 * Upload/Download Speeds
+* Packages
 * Volume
-* CPU (Click to open Mission Center)
-* RAM (Click to open Mission Center)
-* GPU ([`gpu-usage-waybar`](https://github.com/PolpOnline/gpu-usage-waybar)) (Click to open Mission Center)
+* Microphone Volume
+* CPU Usage (Click to open Mission Center)
+* RAM Usage (Click to open Mission Center)
+* Hyprsunset
+* Hypridle
 * Time
