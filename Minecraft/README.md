@@ -174,8 +174,8 @@
   * Fully Aged Amethyst Cluster Marker
   * Redstone Power Levels
   * Clean Redstone Dust
-  * Unique Painting Items (__1.21.5+__)
-  * Unique Axolotl Buckets (__1.21.5+__)
+  * Unique Painting Items (**1.21.5+**)
+  * Unique Axolotl Buckets (**1.21.5+**)
 * Connected Textures
   * Connected Polished Stones
   * Connected Iron Blocks
