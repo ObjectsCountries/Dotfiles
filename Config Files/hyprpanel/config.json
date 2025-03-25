@@ -94,7 +94,7 @@
   "menus.dashboard.powermenu.shutdown": "shutdown now",
   "menus.dashboard.powermenu.reboot": "reboot",
   "menus.dashboard.shortcuts.right.shortcut3.tooltip": "Clear Clipboard",
-  "menus.dashboard.shortcuts.right.shortcut3.command": "cliphist wipe && dunstify 'Clipboard Cleared' -I /usr/share/icons/Papirus-Dark/64x64/apps/diodon.svg -a Clipboard",
+  "menus.dashboard.shortcuts.right.shortcut3.command": "cliphist wipe && dunstify 'Clipboard Cleared' -I /usr/share/icons/Papirus/64x64/apps/diodon.svg -a Clipboard || dunstify 'Failed to Clear Clipboard' -I /usr/share/icons/Papirus/64x64/apps/system-error.svg -a Clipboard",
   "menus.dashboard.shortcuts.right.shortcut3.icon": "󱘚",
   "menus.dashboard.shortcuts.left.shortcut2.icon": "",
   "menus.dashboard.shortcuts.left.shortcut2.command": "steam",
