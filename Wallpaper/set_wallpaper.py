@@ -33,7 +33,7 @@ while True:
                 break
 
         if wallpaper in {1, 2, 3, 11, 12} and hyprsunset is None:
-            subprocess.Popen(["hyprsunset", "-i", "5000"])
+            subprocess.Popen(["hyprsunset", "-t", "5000"])
         elif wallpaper in {4, 5, 6, 7, 8, 9, 10} and hyprsunset is not None:
             hyprsunset.send_signal(SIGTERM)
 
