@@ -55,6 +55,7 @@ while True:
         elif wallpaper not in HYPRSUNSET_ON and hyprsunset is not None:
             hyprsunset.send_signal(SIGTERM)
 
+        sleep(1)
         run(["hyprpanel", "sw", wallpaper_path])
 
     previous_wallpaper = wallpaper
