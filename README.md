@@ -101,7 +101,7 @@ Cyberdream for other apps available under their [extras](https://github.com/scot
 
 ## Hyprland
 
-Install the Python libraries `dotenv`, `psutil`, `pysolar` and `pywal` (`pysolar` through the AUR, the rest through Pacman) in order to get the auto-updating background.
+Install the Python libraries `dotenv`, `psutil` and `pysolar` (`pysolar` through the AUR, the others through Pacman) in order to get the auto-updating background.
 
 ### Hyprpanel
 
