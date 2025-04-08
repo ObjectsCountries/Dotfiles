@@ -329,7 +329,22 @@ lspconfig.matlab_ls.setup({
 lspconfig.rust_analyzer.setup({ capabilities = capabilities })
 lspconfig.kotlin_language_server.setup({ capabilities = capabilities })
 lspconfig.gradle_ls.setup({ capabilities = capabilities })
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = {'verilog', 'systemverilog'},
+  callback = function()
+    vim.lsp.start({
+      name = 'verible',
+      cmd = {'verible-verilog-ls', '--rules_config_search'},
+    })
+  end,
+})
 
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = "*.v",
+  callback = function()
+    vim.lsp.buf.format({ async = false })
+  end
+})
 require("telescope").setup({
 	extensions = {
 		["ui-select"] = {
@@ -387,4 +402,4 @@ vim.keymap.set("n", "<A-7>", "<Cmd>BufferGoto 7<CR>", opts)
 vim.keymap.set("n", "<A-8>", "<Cmd>BufferGoto 8<CR>", opts)
 vim.keymap.set("n", "<A-9>", "<Cmd>BufferGoto 9<CR>", opts)
 vim.keymap.set("n", "<A-0>", "<Cmd>BufferLast<CR>", opts)
-vim.g.markdown_fenced_languages = { "cs", "python", "javascript", "cpp" }
+vim.g.markdown_fenced_languages = { "cs", "python", "javascript", "cpp", "verilog", "v" }
