@@ -7,3 +7,6 @@
 	dark = true
 [merge]
 	conflictStyle = zdiff3
+[user]
+	name = Kasra Moayedi
+	email = kasramoayedi@protonmail.com
