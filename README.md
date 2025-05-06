@@ -40,15 +40,13 @@ Cyberdream for other apps available under their [extras](https://github.com/scot
   * Panel:
     * Background color: #1B1030
   * Widgets:
-    * Background color: #8B5BC4
+    * Background color: #8B5BC4, alpha 0.50
     * Foreground color: #EAE6F0
     * Radius of 16 and margin of 2 on all sides, spacing of 4
   * Tray elements: no customization
   * Overrides:
-    * Plain: Disable widgets customization
-      * Apply to Application Menu, Panel Spacer, Icons-Only Task Manager, second Panel Spacer, Total CPU Use, Memory Usage
-    * Plain Lavender: Background #1B1030, foreground #EAE6F0
-      * Apply to Global Menu
+    * Plain: Background #000000 alpha 0.00, disable foreground
+      * Apply to Application Menu, Global Menu, Panel Spacer, Icons-Only Task Manager, second Panel Spacer, Total CPU Use, Memory Usage
 * Application Menu
   * `endeavouros` icon
 * Global Menu

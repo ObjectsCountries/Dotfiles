@@ -264,18 +264,13 @@ require("gitsigns").setup()
 
 require("mason-lspconfig").setup({
 	ensure_installed = {
-		"lua_ls",
-		"omnisharp_mono",
-		"html",
-		"basedpyright",
-		"ruff",
-		"marksman",
 		"biome",
 		"clangd",
-		"matlab_ls",
+		"html",
+		"lua_ls",
+		"marksman",
+        "omnisharp",
 		"rust_analyzer",
-		"kotlin_language_server",
-		"gradle_ls",
 	},
 })
 
@@ -288,12 +283,24 @@ require("nvim-ts-autotag").setup({
 })
 
 local lspconfig = require("lspconfig")
-local pid = vim.fn.getpid()
+
+lspconfig.biome.setup({
+    capabilities = capabilities,
+	root_dir = function()
+		return vim.loop.cwd()
+	end,
+})
+
+lspconfig.clangd.setup({ capabilities = capabilities })
+lspconfig.html.setup({ capabilities = capabilities })
 lspconfig.lua_ls.setup({ capabilities = capabilities, settings = { Lua = { diagnostics = { globals = { "vim" } } } } })
-lspconfig.omnisharp_mono.setup({
+lspconfig.marksman.setup({ capabilities = capabilities })
+
+local pid = vim.fn.getpid()
+lspconfig.omnisharp.setup({
 	capabilities = capabilities,
 	cmd = {
-        "$HOME/.local/share/nvim/mason/packages/omnisharp-mono/omnisharp-mono",
+        "/usr/bin/OmniSharp",
 		"--languageserver",
 		"--hostPID",
 		tostring(pid),
@@ -302,33 +309,12 @@ lspconfig.omnisharp_mono.setup({
 	organize_imports_on_format = true,
 	enable_roslyn_analyzers = true,
 	root_dir = function()
-		return vim.loop.cwd() -- current working directory
+		return vim.loop.cwd()
 	end,
 })
-lspconfig.html.setup({ capabilities = capabilities })
-lspconfig.basedpyright.setup({ capabilities = capabilities })
-lspconfig.ruff.setup({ capabilities = capabilities })
-lspconfig.marksman.setup({ capabilities = capabilities })
-lspconfig.biome.setup({
-    capabilities = capabilities,
-	root_dir = function()
-		return vim.loop.cwd() -- current working directory
-	end,
-})
-lspconfig.clangd.setup({ capabilities = capabilities, filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto", "ino" } })
-lspconfig.matlab_ls.setup({
-	capabilities = capabilities,
-	filetypes = { "matlab" },
-	settings = {
-		matlab = {
-			installPath = "/usr/local/matlab/R2024b/",
-		},
-	},
-	single_file_support = true,
-})
+
 lspconfig.rust_analyzer.setup({ capabilities = capabilities })
-lspconfig.kotlin_language_server.setup({ capabilities = capabilities })
-lspconfig.gradle_ls.setup({ capabilities = capabilities })
+
 vim.api.nvim_create_autocmd('FileType', {
   pattern = {'verilog', 'systemverilog'},
   callback = function()
