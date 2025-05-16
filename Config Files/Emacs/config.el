@@ -76,7 +76,7 @@
 ;; they are implemented.
 
 (add-hook 'window-setup-hook 'toggle-frame-maximized t)
-(elcord-mode)
+;(elcord-mode)
 (setenv "FrameworkPathOverride" "/usr/lib/mono/4.8-api")
 (use-package! lsp-bridge
   :config
@@ -107,7 +107,7 @@
         block-end-comments
         ports))
 (require 'verilog-ext)
-(verilog-ext-mode-setup)
+;(verilog-ext-mode-setup)
 (add-hook 'verilog-mode-hook #'verilog-ext-mode)
 
 (projectile-add-known-project "~/Coding Projects/KTaNE/Canny and Uncanny Mazes")

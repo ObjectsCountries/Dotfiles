@@ -58,3 +58,5 @@
                  :build (:not compile)))
   (package! markdown-mode)
   (package! yasnippet))
+(package! verilog-ext)
+(package! auto-complete)

@@ -6,7 +6,7 @@
  ;; If there is more than one, they won't work right.
  '(elcord-display-line-numbers nil)
  '(elcord-editor-icon "emacs_pen_icon")
- '(elcord-mode t nil (elcord))
+ '(elcord-mode nil nil (elcord))
  '(package-selected-packages
    '(auto-complete good-scroll lsp-treemacs smooth-scroll tree-sitter-langs
      verilog-ext)))
