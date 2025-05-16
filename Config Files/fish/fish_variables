@@ -3,7 +3,8 @@
 SETUVAR ARDUINO_HOME:\x24HOME/\x2earduino15
 SETUVAR BAT_THEME:cyberdream
 SETUVAR EDITOR:nvim
-SETUVAR PATH:/usr/local/MATLAB/R2024b/bin\x3a\x24HOME/\x2ecargo/bin\x3a\x24HOME/\x2elocal/share/nvim/mason/bin\x3a\x24PATH
+SETUVAR PATH:/usr/local/MATLAB/R2024b/bin:$HOME/.cargo/bin:$HOME/.local/share/nvim/mason/bin:$HOME/.dotnet/tools:$PATH
+SETUVAR FrameworkPathOverride:/usr/lib/mono/4.8-api
 SETUVAR __fish_initialized:3800
 SETUVAR fish_color_autosuggestion:7b8496
 SETUVAR fish_color_cancel:ff6e5e
