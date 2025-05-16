@@ -60,3 +60,8 @@
   (package! yasnippet))
 (package! verilog-ext)
 (package! auto-complete)
+(package! dashboard)
+(package! load-env-vars)
+(package! request)
+(package! aio)
+(package! org-gcal)

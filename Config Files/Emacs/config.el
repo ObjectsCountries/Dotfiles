@@ -125,3 +125,27 @@
 ;(add-hook 'csharp-mode-hook 'csharp-mode)
 ;(map! "SPC f g" 'lsp-format-buffer)
 ;(lsp-treemacs-sync-mode 1)
+(use-package dashboard
+  :ensure t
+  :config
+  (dashboard-setup-startup-hook))
+(setq dashboard-banner-logo-title "Emacs")
+(setq dashboard-startup-banner 'logo)
+(setq dashboard-center-content t)
+(setq dashboard-vertically-center-content t)
+(setq dashboard-items '((recents   . 5)
+                        (projects  . 5)
+                        (agenda    . 5)))
+(require 'dashboard)
+(dashboard-open)
+
+(require 'load-env-vars)
+(load-env-vars "~/.doom.d/.env")
+
+(setq org-gcal-client-id (getenv "GCAL_ID")
+      org-gcal-client-secret (getenv "GCAL_SECRET")
+      org-gcal-fetch-file-alist (((getenv "GCAL_EMAIL_MAIN") . "~/Calendars/main.org")
+                                 ((getenv "GCAL_EMAIL_SCHEDULE") . "~/Calendars/schedule.org")
+                                 ((getenv "GCAL_EMAIL_IEEE") . "~/Calendars/ieee.org")))
+(setq plstore-cache-passphrase-for-symmetric-encryption t)
+(require 'org-gcal)

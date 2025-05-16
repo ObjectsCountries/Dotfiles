@@ -8,8 +8,8 @@
  '(elcord-editor-icon "emacs_pen_icon")
  '(elcord-mode nil nil (elcord))
  '(package-selected-packages
-   '(auto-complete good-scroll lsp-treemacs smooth-scroll tree-sitter-langs
-     verilog-ext)))
+   '(auto-complete dashboard good-scroll load-env-vars lsp-treemacs org-gcal
+     smooth-scroll tree-sitter-langs verilog-ext)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
