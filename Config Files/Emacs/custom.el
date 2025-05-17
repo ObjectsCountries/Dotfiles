@@ -4,12 +4,15 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(dashboard-projects-backend 'projectile)
  '(elcord-display-line-numbers nil)
  '(elcord-editor-icon "emacs_pen_icon")
  '(elcord-mode nil nil (elcord))
+ '(org-agenda-files '("~/Calendars/"))
  '(package-selected-packages
-   '(auto-complete dashboard good-scroll load-env-vars lsp-treemacs org-gcal
-     smooth-scroll tree-sitter-langs verilog-ext)))
+   '(auto-complete dashboard good-scroll lsp-treemacs pinentry smooth-scroll
+     tree-sitter-langs verilog-ext))
+ '(projectile-project-search-path '("~/Coding Projects/KTaNE/" "~/Coding Projects/Other/")))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

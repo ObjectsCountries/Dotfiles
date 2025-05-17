@@ -65,3 +65,4 @@
 (package! request)
 (package! aio)
 (package! org-gcal)
+(package! pinentry)
