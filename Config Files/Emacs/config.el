@@ -110,11 +110,6 @@
 ;(verilog-ext-mode-setup)
 (add-hook 'verilog-mode-hook #'verilog-ext-mode)
 
-(projectile-add-known-project "~/Coding Projects/KTaNE/Canny and Uncanny Mazes")
-(projectile-add-known-project "~/Coding Projects/KTaNE/Homestar Runner Pack")
-(projectile-add-known-project "~/Coding Projects/KTaNE/KTaNEfetch")
-(projectile-add-known-project "~/Coding Projects/KTaNE/Smash, Marry, Kill")
-
 (require 'auto-complete)
 (global-auto-complete-mode t)
 
@@ -125,6 +120,13 @@
 ;(add-hook 'csharp-mode-hook 'csharp-mode)
 ;(map! "SPC f g" 'lsp-format-buffer)
 ;(lsp-treemacs-sync-mode 1)
+
+
+
+(setq dashboard-display-icons-p t)
+(setq dashboard-icon-type 'nerd-icons)
+(setq dashboard-set-heading-icons t)
+(setq dashboard-set-file-icons t)
 (use-package dashboard
   :ensure t
   :config
@@ -137,7 +139,6 @@
                         (projects  . 5)
                         (agenda    . 5)))
 (require 'dashboard)
-(dashboard-open)
 
 (require 'load-env-vars)
 (load-env-vars "~/.doom.d/.env")
@@ -154,4 +155,6 @@
 (require 'plstore)
 (add-to-list 'plstore-encrypt-to (getenv "GPG_KEY"))
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
-(setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
+(setq initial-buffer-choice #'dashboard-open)
+
+(require 'org-agenda)

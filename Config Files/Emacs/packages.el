@@ -66,3 +66,4 @@
 (package! aio)
 (package! org-gcal)
 (package! pinentry)
+(package! nerd-icons)
