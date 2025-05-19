@@ -158,3 +158,13 @@
 (setq initial-buffer-choice #'dashboard-open)
 
 (require 'org-agenda)
+(use-package markdown-mode
+:commands gfm-mode markdown-mode
+:mode
+("README\\.md\\'" . gfm-mode)
+("\\.md\\'" . markdown-mode)
+("\\.markdown\\'" . markdown-mode)
+:custom
+(markdown-header-scaling t)
+(markdown-fontify-code-blocks-natively t)
+)

@@ -8,6 +8,9 @@
  '(elcord-display-line-numbers nil)
  '(elcord-editor-icon "emacs_pen_icon")
  '(elcord-mode nil nil (elcord))
+ '(markdown-enable-highlighting-syntax t)
+ '(markdown-enable-math t)
+ '(markdown-italic-underscore nil)
  '(org-agenda-files '("~/Calendars/"))
  '(package-selected-packages
    '(auto-complete dashboard good-scroll lsp-treemacs pinentry smooth-scroll
