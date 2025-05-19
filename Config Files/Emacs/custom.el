@@ -13,8 +13,8 @@
  '(markdown-italic-underscore nil)
  '(org-agenda-files '("~/Calendars/"))
  '(package-selected-packages
-   '(auto-complete dashboard good-scroll lsp-treemacs pinentry smooth-scroll
-     tree-sitter-langs verilog-ext))
+   '(auto-complete dashboard django-commands good-scroll lsp-treemacs pinentry
+     smooth-scroll tree-sitter-langs verilog-ext))
  '(projectile-project-search-path '("~/Coding Projects/KTaNE/" "~/Coding Projects/Other/")))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
