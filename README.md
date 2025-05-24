@@ -4,8 +4,8 @@
 
 |Component|Using|Package|
 |-|-|-|
-|Icons|Papirus|`papirus-icon-theme`|
-|Color of Folders|Papirus Folders script|`papirus-folders` (AUR)|
+|Icons (Laptop) |Papirus|`papirus-icon-theme`|
+|Color of Folders (Laptop)|Papirus Folders script|`papirus-folders` (AUR)|
 |`ls` replacement|`eza`|`eza`|
 |`cat` replacement|`bat`|`bat`|
 |`git diff` replacement|Delta|`git-delta`|
@@ -18,7 +18,44 @@ eza -l --color=always --icons=always --hyperlink -a --group-directories-first --
 
 Cyberdream for other apps available under their [extras](https://github.com/scottmckendry/cyberdream.nvim/tree/main/extras)
 
-## KDE Plasma
+## Desktop KDE Plasma
+
+### Theming
+
+* Fira Sans font, FiraCode Nerd Font for monospace
+
+|Component|Theme|
+|-|-|
+|Colors|[MyBreeze-Dark-Color](https://store.kde.org/p/2217383)|
+|Application Style|Breeze|
+|Plasma Style|[MyBreeze-Dark-Plasma](https://store.kde.org/p/2217414)|
+|GTK Theme|[MyBreeze-Dark-GTK](https://store.kde.org/p/2217416)|
+|Window Decorations|[Cool-Color-Dark-Aurorae-6](https://store.kde.org/p/2227008)|
+|Icons|[Varied-gnome-dark](https://store.kde.org/p/2221913)|
+|Cursors|Breeze Light|
+|System Sounds|Ocean|
+|Splash Screen|None|
+|Login Screen (SDDM)|Default|
+|Boot Splash Screen|BGRT|
+
+### Desktop
+
+* Dynamic Wallpaper: `plasma5-wallpapers-dynamic`
+  * Use [Lakeside](Wallpaper/wallpaper.avif)
+* Digital Clock w/ background in bottom right corner of left monitor
+* Wunderground widget in bottom left corner of right monitor
+* GPU Usage line graph and Disk Usage pie chart above Wunderground
+
+### Taskbar
+
+* Application Launcher w/ `endeavouros` icon
+* Icons-Only Task Manager
+  * Floorp, Discord, Steam, Emacs client
+* Wunderground
+* System Tray
+* Clock
+
+## Laptop KDE Plasma
 
 ### Desktop
 
@@ -61,30 +98,33 @@ Cyberdream for other apps available under their [extras](https://github.com/scot
 * Digital Clock
   * M/d beside region defaults time
 
-### Dotfiles
+## Dotfiles
 
+* [Emacs](Config%20Files/Emacs)
 * [Fastfetch](Config%20Files/fastfetch)
 * [Fish](Config%20Files/fish)
 * [Hyfetch](Config%20Files/hyfetch.json)
+* [Hyprland](Config%20Files/hypr)
+* [Hyprpanel](Config%20Files/hyprpanel)
 * [Kitty](Config%20Files/kitty)
 * [Neovim](Config%20Files/nvim)
 * [Neovide](Config%20Files/neovide)
 * [Starship](Config%20Files/starship.toml)
 
-### Mods
+## Mods
 
-#### Minecraft
+### Minecraft
 
 * [Craft Presence](https://www.curseforge.com/minecraft/mc-mods/craftpresence)
 
-#### Guilty Gear Strive
+### Guilty Gear Strive
 
 * [Secretary of Trans Rights Goldlewis](https://gamebanana.com/mods/395711)
 * [Purple UI](https://gamebanana.com/mods/330653)
 * [Dark/Night Celestial Lobby](https://gamebanana.com/mods/429714)
 * [SF6 Frame DATA viewer FIXED (SEASON 4)](https://gamebanana.com/mods/513406)
 
-### Other
+## Other
 
 * [Login Screen](Login%20Screen)
 * [Background](Wallpaper)
