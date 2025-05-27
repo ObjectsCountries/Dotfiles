@@ -78,7 +78,7 @@ Cyberdream for other apps available under their [extras](https://github.com/scot
     * Background color: #1B1030
   * Widgets:
     * Background color: #8B5BC4, alpha 0.50
-    * Foreground color: #EAE6F0
+    * Foreground color: #FFFFFF
     * Radius of 16 and margin of 2 on all sides, spacing of 4
   * Tray elements: no customization
   * Overrides:
