@@ -8,7 +8,7 @@ format = """
 [](fg:color_2 bg:color_3)\
 [$cpp$python$rust](fg:color_2 bg:color_3)\
 [](fg:color_3 bg:color_4)\
-[$git_branch$git_status](fg:color_2 bg:color_4)\
+[( $git_branch$git_status )](fg:color_2 bg:color_4)\
 [](fg:color_4 bg:color_5)\
 [$time](bg:color_5 fg:color_2)\
 [](fg:color_5)\
@@ -54,11 +54,11 @@ format = ' $symbol$version '
 symbol = ' '
 
 [git_branch]
-format = ' $symbol$branch '
+format = '$symbol$branch'
 symbol = ' '
 
 [git_status]
-format = '$all_status$ahead_behind '
+format = '( $all_status$ahead_behind)'
 
 [time]
 format = '  $time '
