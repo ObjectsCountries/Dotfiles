@@ -84,6 +84,8 @@ Cyberdream for other apps available under their [extras](https://github.com/scot
   * Overrides:
     * Plain: Background #000000 alpha 0.00, disable foreground
       * Apply to Application Menu, Global Menu, Panel Spacer, Icons-Only Task Manager, second Panel Spacer, Total CPU Use, Memory Usage
+    * Plain: Margins 2 vertically, 6 horizontally
+      * Apply to Digital Clock
 * Application Menu
   * `endeavouros` icon
 * Global Menu
