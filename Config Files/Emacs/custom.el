@@ -13,8 +13,11 @@
  '(markdown-italic-underscore nil)
  '(org-agenda-files '("~/Calendars/"))
  '(package-selected-packages
-   '(auto-complete dashboard django-commands good-scroll lsp-treemacs pinentry
-     smooth-scroll tree-sitter-langs verilog-ext))
+   '(auto-complete dashboard django-commands good-scroll lsp-treemacs
+     makefile-executor pdf-tools pinentry smooth-scroll tree-sitter-langs
+     verilog-ext))
+ '(pdf-view-continuous t)
+ '(pdf-view-display-size 'fit-height)
  '(projectile-project-search-path '("~/Coding Projects/KTaNE/" "~/Coding Projects/Other/")))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
