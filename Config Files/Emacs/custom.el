@@ -15,7 +15,7 @@
  '(package-selected-packages
    '(auto-complete dashboard django-commands good-scroll lsp-treemacs
      makefile-executor pdf-tools pinentry smooth-scroll tree-sitter-langs
-     verilog-ext))
+     verilog-ext yaml-mode))
  '(pdf-view-continuous t)
  '(pdf-view-display-size 'fit-height)
  '(projectile-project-search-path '("~/Coding Projects/KTaNE/" "~/Coding Projects/Other/")))
