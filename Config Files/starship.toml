@@ -6,9 +6,9 @@ format = """
 [](color_1 bg:color_2)\
 [$directory($git_branch$git_status )](black bg:color_2)\
 [](color_2 bg:color_3)\
-[$cmake$cpp$dotnet$nodejs$python$rust${custom.verilog}](white bg:color_3)\
+[$cmake$cpp$dotnet${custom.jupyter}$nodejs$python$rust${custom.verilog}](white bg:color_3)\
 [](color_3 bg:color_4)\
-[ ($battery )$sudo](white bg:color_4)\
+[( ($battery )$sudo )](white bg:color_4)\
 [](color_4 bg:color_5)\
 [$time$cmd_duration](white bg:color_5)\
 [](color_5)\
@@ -55,6 +55,15 @@ disabled = false
 [dotnet]
 format = ' $symbol$version( $tfm) '
 symbol = ' '
+
+[custom.jupyter]
+command = '[ -f "/tmp/jupyter_lab_version.txt" ] || jupyter lab --version > /tmp/jupyter_lab_version.txt; cat /tmp/jupyter_lab_version.txt'
+shell = ['/usr/bin/bash']
+description = 'Custom widget for Jupyter Lab notebooks'
+detect_extensions = ['ipynb']
+symbol = ' '
+format = ' $symbol$output '
+ignore_timeout = true
 
 [nodejs]
 format = ' $symbol$version '
@@ -150,7 +159,7 @@ charging_symbol = '󰂅'
 discharging_symbol = '󰁹'
 
 [sudo]
-format = 'Sudo Active '
+format = 'Sudo Active'
 disabled = false
 
 [time]
