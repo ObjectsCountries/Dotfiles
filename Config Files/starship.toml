@@ -8,7 +8,7 @@ format = """
 [](color_2 bg:color_3)\
 [$cmake$cpp$dotnet${custom.jupyter}$nodejs$python$rust${custom.verilog}](white bg:color_3)\
 [](color_3 bg:color_4)\
-[( ($battery )$sudo )](white bg:color_4)\
+[($battery$sudo )](white bg:color_4)\
 [](color_4 bg:color_5)\
 [$time$cmd_duration](white bg:color_5)\
 [](color_5)\
@@ -106,7 +106,7 @@ symbol = ' '
 format = '( $all_status$ahead_behind)'
 
 [battery]
-format = '$symbol $percentage'
+format = ' $symbol $percentage'
 
 [[battery.display]]
 threshold = 10
@@ -159,7 +159,7 @@ charging_symbol = '󰂅'
 discharging_symbol = '󰁹'
 
 [sudo]
-format = 'Sudo Active'
+format = ' Sudo Active'
 disabled = false
 
 [time]
