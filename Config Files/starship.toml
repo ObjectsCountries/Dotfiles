@@ -32,6 +32,7 @@ disabled = false
 
 [os.symbols]
 EndeavourOS = ' '
+Ubuntu = '󰕈 '
 Windows = ' '
 
 [username]
