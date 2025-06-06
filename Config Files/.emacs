@@ -5,71 +5,105 @@
 (package-initialize)
 (package-refresh-contents)
 
-;; Install packages
-(eval-when-compile
-  (require 'use-package))
+;; For OmniSharp to work
+(setenv "FrameworkPathOverride" "/usr/lib/mono/4.8-api")
 
-;; Evil mode
-(use-package evil
-  :ensure t
-  :config
-  (evil-mode 1))
+(require 'cl-lib)
 
-;; Emacs Discord rich presence
-(use-package elcord
-  :ensure t)
+;; LSP packages to install:
+;; omnisharp-roslyn ruff typescript typescript-language-server vue-language-server
+(defvar my-packages
+  '(dashboard elcord evil magit markdown-mode monokai-theme npm treemacs treemacs-evil treemacs-icons-dired treemacs-magit treemacs-projectile typescript-mode web-mode)
+  "A list of packages to ensure are installed at launch.")
 
-;; Theme
-(use-package monokai-theme
-  :ensure t
-  :config
-  (load-theme 'monokai t))
+(defun my-packages-installed-p ()
+  (cl-loop for p in my-packages
+           when (not (package-installed-p p)) do (cl-return nil)
+           finally (cl-return t)))
 
-;; Treemacs
-(use-package treemacs
-  :ensure t)
-(use-package treemacs-evil
-  :after (treemacs evil)
-  :ensure t)
-(use-package treemacs-projectile
-  :after (treemacs projectile)
-  :ensure t)
-(use-package treemacs-icons-dired
-  :hook (dired-mode . treemacs-icons-dired-enable-once)
-  :ensure t)
-(use-package treemacs-magit
-  :after (treemacs magit)
-  :ensure t)
+(unless (my-packages-installed-p)
+  ;; check for new packages (package versions)
+  (package-refresh-contents)
+  ;; install the missing packages
+  (dolist (p my-packages)
+    (when (not (package-installed-p p))
+      (package-install p))))
 
-;; LSP
-(use-package lsp-mode
-  :ensure t
-  :init
-  ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
-  (setq lsp-keymap-prefix "C-c l")
-  :hook (
-         (sh-mode . lsp) ;; Bash
-	 (omnisharp-mode . lsp) ;; C#
-	 (c++-mode . lsp) ;; C++
-         (lsp-mode . lsp-enable-which-key-integration))
-  :commands lsp)
+;; web-mode setup
+(define-derived-mode vue-mode web-mode "Vue")
+(add-to-list 'auto-mode-alist '("\\.vue\\'" . vue-mode))
 
-(use-package lsp-ui
-  :ensure t
-  :commands lsp-ui-mode)
-(use-package lsp-treemacs
-  :ensure t
-  :commands lsp-treemacs-errors-list)
+(defun vue-eglot-init-options ()
+             (let ((tsdk-path (expand-file-name
+                               "lib"
+                               (string-trim-right (shell-command-to-string "npm list --global --parseable typescript | head -n1")))))
+               `(:typescript (:tsdk ,tsdk-path
+                              :languageFeatures (:completion
+                                                 (:defaultTagNameCase "both"
+                                                  :defaultAttrNameCase "kebabCase"
+                                                  :getDocumentNameCasesRequest nil
+                                                  :getDocumentSelectionRequest nil)
+                                                 :diagnostics
+                                                 (:getDocumentVersionRequest nil))
+                              :documentFeatures (:documentFormatting
+                                                 (:defaultPrintWidth 100
+                                                  :getDocumentPrintWidthRequest nil)
+                                                 :documentSymbol t
+                                                 :documentColor t)))))
 
-;; LSP Debugging
-(use-package dap-mode
-  :ensure t)
-(use-package dap-unity
-  :ensure t)
-(use-package which-key
-  :ensure t
-  :config
-  (which-key-mode))
+;; Volar
+(with-eval-after-load 'eglot
+  (add-to-list 'eglot-server-programs
+                          `(vue-mode . ("vue-language-server" "--stdio" :initializationOptions ,(vue-eglot-init-options)))))
+
+;; TypeScript
+(cl-defmethod project-root ((project (head eglot-project)))
+  (cdr project))
+(defun my-project-try-tsconfig-json (dir)
+  (when-let* ((found (locate-dominating-file dir "tsconfig.json")))
+    (cons 'eglot-project found)))
+(add-hook 'project-find-functions
+          'my-project-try-tsconfig-json nil nil)
+(with-eval-after-load 'eglot
+  (add-to-list 'eglot-server-programs
+               '((typescript-mode) "typescript-language-server" "--stdio")))
+
+;; Setup
+(evil-mode 1)
+(load-theme 'deeper-blue t)
+(which-key-mode)
+(add-to-list 'initial-frame-alist '(fullscreen . maximized))
+(setq vc-follow-symlinks t)
+(setq frame-title-format "%b - Emacs")
+
+;; Markdown
+(autoload 'markdown-mode "markdown-mode"
+   "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist
+             '("\\.\\(?:md\\|markdown\\|mkd\\|mdown\\|mkdn\\|mdwn\\)\\'" . markdown-mode))
+
+(autoload 'gfm-mode "markdown-mode"
+   "Major mode for editing GitHub Flavored Markdown files" t)
+(add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
+
+(with-eval-after-load 'markdown-mode
+  (define-key markdown-mode-map (kbd "C-c C-e") #'markdown-do))
+
+;; Dashboard
+(setq dashboard-display-icons-p t)
+(setq dashboard-icon-type 'nerd-icons)
+(setq dashboard-set-heading-icons t)
+(setq dashboard-set-file-icons t)
+(setq dashboard-banner-logo-title "Emacs")
+(setq dashboard-startup-banner 'logo)
+(setq dashboard-center-content t)
+(setq dashboard-vertically-center-content t)
+(setq dashboard-items '((recents   . 5)
+                        (projects  . 5)
+                        (agenda    . 5)))
+(require 'dashboard)
+(dashboard-setup-startup-hook)
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
