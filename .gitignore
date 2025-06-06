@@ -1,6 +1,4 @@
 /Config\ Files/Doom\ Emacs/.env
-/Config\ Files/Emacs/*
-!/Config\ Files/Emacs/init.el
 /Config\ Files/nvim/lazy-lock.json
 /GGST\ Mods/
 /Wallpaper/.env
