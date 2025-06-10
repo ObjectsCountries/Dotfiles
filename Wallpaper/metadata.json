@@ -1,0 +1,89 @@
+{
+  "Type": "solar",
+  "Meta": [
+  	    {
+          "SolarAzimuth": 0,
+          "SolarElevation": -90,
+    	  "CrossFade": false,
+    	  "Time": "00:00",
+    	  "FileName": "dear-2.jpg"
+    	},
+    	{
+          "SolarAzimuth": 30,
+          "SolarElevation": -60,
+    	  "CrossFade": false,
+    	  "Time": "02:00",
+    	  "FileName": "dear-3.jpg"
+    	},
+    	{
+          "SolarAzimuth": 60,
+          "SolarElevation": -30,
+    	  "CrossFade": false,
+    	  "Time": "04:00",
+    	  "FileName": "dear-4.jpg"
+    	},
+    	{
+          "SolarAzimuth": 90,
+          "SolarElevation": 0,
+    	  "CrossFade": false,
+    	  "Time": "06:00",
+    	  "FileName": "dear-5.jpg"
+    	},
+    	{
+          "SolarAzimuth": 120,
+          "SolarElevation": 30,
+    	  "CrossFade": false,
+    	  "Time": "08:00",
+    	  "FileName": "dear-6.jpg"
+    	},
+    	{
+          "SolarAzimuth": 150,
+          "SolarElevation": 60,
+    	  "CrossFade": false,
+    	  "Time": "10:00",
+    	  "FileName": "dear-7.jpg"
+    	},
+    	{
+          "SolarAzimuth": 180,
+          "SolarElevation": 90,
+    	  "CrossFade": false,
+    	  "Time": "12:00",
+    	  "FileName": "dear-8.jpg"
+    	},
+    	{
+          "SolarAzimuth": 210,
+          "SolarElevation": 60,
+    	  "CrossFade": false,
+    	  "Time": "14:00",
+    	  "FileName": "dear-9.jpg"
+    	},
+    	{
+          "SolarAzimuth": 240,
+          "SolarElevation": 30,
+    	  "CrossFade": false,
+    	  "Time": "16:00",
+    	  "FileName": "dear-10.jpg"
+    	},
+    	{
+          "SolarAzimuth": 270,
+          "SolarElevation": 0,
+    	  "CrossFade": false,
+    	  "Time": "18:00",
+    	  "FileName": "dear-11.jpg"
+    	},
+    	{
+          "SolarAzimuth": 300,
+          "SolarElevation": -30,
+    	  "CrossFade": false,
+    	  "Time": "20:00",
+    	  "FileName": "dear-12.jpg"
+    	},
+    	{
+          "SolarAzimuth": 330,
+          "SolarElevation": -60,
+    	  "CrossFade": false,
+    	  "Time": "22:00",
+    	  "FileName": "dear-1.jpg"
+    	}
+  ]
+}

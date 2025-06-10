@@ -1,0 +1,178 @@
+'$schema' = 'https://starship.rs/config-schema.json'
+
+format = """
+[](color_1)\
+[$os$username](white bg:color_1)\
+[](color_1 bg:color_2)\
+[$directory($git_branch$git_status )](black bg:color_2)\
+[](color_2 bg:color_3)\
+[$cmake$cpp$dotnet${custom.jupyter}$nodejs$python$rust${custom.verilog}](white bg:color_3)\
+[](color_3 bg:color_4)\
+[($battery$sudo )](white bg:color_4)\
+[](color_4 bg:color_5)\
+[$time$cmd_duration](white bg:color_5)\
+[](color_5)\
+$line_break$character"""
+
+add_newline = false
+
+palette = 'genderfluid'
+
+[palettes.genderfluid]
+color_1 = '#ff76a4'
+color_2 = '#ffffff'
+color_3 = '#c011d7'
+color_4 = '#404040'
+color_5 = '#2f3cbe'
+
+[os]
+format = '$symbol'
+disabled = false
+
+[os.symbols]
+EndeavourOS = ' '
+Windows = ''
+
+[username]
+format = ' $user '
+show_always = true
+
+[directory]
+truncation_length = -1
+format = ' ($read_only)$path '
+read_only = ' '
+
+[cmake]
+format = '( $symbol$version )'
+symbol = ' '
+
+[cpp]
+format = '( $symbol$version-$name )'
+symbol = ' '
+disabled = false
+
+[dotnet]
+format = '( $symbol$version( $tfm) )'
+symbol = ' '
+
+[custom.jupyter]
+command = '[ -f "/tmp/jupyter_lab_version.txt" ] || jupyter lab --version > /tmp/jupyter_lab_version.txt; cat /tmp/jupyter_lab_version.txt'
+shell = ['/usr/bin/bash']
+description = 'Custom widget for Jupyter Lab notebooks'
+detect_extensions = ['ipynb']
+symbol = ' '
+format = '( $symbol$output )'
+ignore_timeout = true
+
+[nodejs]
+format = '( $symbol$version )'
+symbol = ' '
+
+[python]
+format = '( $symbol$pyenv_prefix($version)( \($virtualenv\)) )'
+symbol = ' '
+
+[rust]
+format = '( $symbol$version )'
+symbol = ' '
+
+[custom.verilog]
+command = '''
+if [ -x "$(command -v iverilog)" ]; then
+    echo -n " IVerilog v`(iverilog -V | head -n 1 | cut -d ' ' -f 4) 2>/dev/null`"
+elif [ -x "$(command -v verilator)" ]; then
+    echo -n " Verilator v`(verilator --version | cut -d ' ' -f 2) 2> /dev/null`"
+else
+    if ( [ -f *.v  ] || [ -f *.vh ] || [ -f *.xpr ] ) && ( [ -f *.sv ] || [ -f *.svh ] ); then
+        echo -n ' Verilog, SystemVerilog'
+    elif [ -f *.sv ] || [ -f *.svh ]; then
+        echo -n ' SystemVerilog'
+    elif [ -f *.v  ] || [ -f *.vh ] || [ -f *.xpr ]; then
+        echo -n ' Verilog'
+    fi
+fi
+'''
+shell = ['/usr/bin/bash']
+description = 'Custom widget for Verilog/SystemVerilog'
+detect_extensions = ['sv', 'svh', 'v', 'vh', 'xpr']
+format = '( $output )'
+
+[git_branch]
+format = '$symbol$branch'
+symbol = ' '
+
+[git_status]
+format = '( $all_status$ahead_behind)'
+
+[battery]
+format = ' $symbol $percentage'
+
+[[battery.display]]
+threshold = 10
+charging_symbol = '󰢜'
+discharging_symbol = '󰁺'
+
+[[battery.display]]
+threshold = 20
+charging_symbol = '󰂆'
+discharging_symbol = '󰁻'
+
+[[battery.display]]
+threshold = 30
+charging_symbol = '󰂇'
+discharging_symbol = '󰁼'
+
+[[battery.display]]
+threshold = 40
+charging_symbol = '󰂈'
+discharging_symbol = '󰁼'
+
+[[battery.display]]
+threshold = 50
+charging_symbol = '󰢝'
+discharging_symbol = '󰁾'
+
+[[battery.display]]
+threshold = 60
+charging_symbol = '󰂉'
+discharging_symbol = '󰁿'
+
+[[battery.display]]
+threshold = 70
+charging_symbol = '󰢞'
+discharging_symbol = '󰂀'
+
+[[battery.display]]
+threshold = 80
+charging_symbol = '󰂊'
+discharging_symbol = '󰂁'
+
+[[battery.display]]
+threshold = 90
+charging_symbol = '󰂋'
+discharging_symbol = '󰂂'
+
+[[battery.display]]
+threshold = 100
+charging_symbol = '󰂅'
+discharging_symbol = '󰁹'
+
+[sudo]
+format = ' Sudo Active'
+disabled = false
+
+[time]
+format = '  $time '
+time_format = '%a %-m/%-d %-I:%M%P'
+disabled = false
+
+[cmd_duration]
+format = '\($duration\) '
+
+[line_break]
+disabled = false
+
+[character]
+success_symbol = '[ 󱞩](bold green)'
+error_symbol = '[ 󱞩](bold red)'
+disabled = false

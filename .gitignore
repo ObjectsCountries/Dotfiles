@@ -1,0 +1,10 @@
+/Config\ Files/emacs/*
+!/Config\ Files/emacs/init.el
+/Config\ Files/nvim/lazy-lock.json
+/KTaNE/*
+!/KTaNE/modSettings/
+!/KTaNE/modSettings.xml
+!/KTaNE/playerSettings.xml
+!/KTaNE/README.md
+/KTaNE/modSettings/Twitch\ Plays-settings.txt
+/Wallpaper/.env

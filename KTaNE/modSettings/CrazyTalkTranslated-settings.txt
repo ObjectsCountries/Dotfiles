@@ -1,0 +1,4 @@
+{
+  "language": "ja",
+  "langList": "de, en, es, ja, ru"
+}

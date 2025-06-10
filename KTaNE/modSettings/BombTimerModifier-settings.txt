@@ -1,0 +1,3 @@
+{
+    "testHarnessTimer": false
+}

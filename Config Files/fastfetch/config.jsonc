@@ -1,0 +1,185 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "display": {
+    "separator": " "
+  },
+  "modules": [
+    "break",
+    {
+      "type": "host",
+      "key": "╭─󰌢",
+      "keyColor": "light_black"
+    },
+    {
+      "type": "cpu",
+      "key": "├─󰻠",
+      "keyColor": "light_black"
+    },
+    {
+      "type": "gpu",
+      "key": "├─󰍛",
+      "keyColor": "light_black"
+    },
+    {
+      "type": "disk",
+      "key": "├─",
+      "keyColor": "light_black"
+    },
+    {
+      "type": "memory",
+      "key": "├─󰑭",
+      "keyColor": "light_black"
+    },
+    {
+      "type": "swap",
+      "key": "├─󰓡",
+      "keyColor": "light_black"
+    },
+    {
+      "type": "display",
+      "key": "├─󰍹",
+      "keyColor": "light_black"
+    },
+    {
+      "type": "brightness",
+      "key": "├─󰃞",
+      "keyColor": "light_black"
+    },
+    {
+      "type": "battery",
+      "key": "├─",
+      "keyColor": "light_black"
+    },
+    {
+      "type": "poweradapter",
+      "key": "├─",
+      "keyColor": "light_black"
+    },
+    {
+      "type": "gamepad",
+      "key": "├─",
+      "keyColor": "light_black"
+    },
+    {
+      "type": "bluetooth",
+      "key": "├─",
+      "keyColor": "light_black"
+    },
+    {
+      "type": "sound",
+      "key": "╰─",
+      "keyColor": "light_black"
+    },
+    "break",
+
+    {
+      "type": "shell",
+      "key": "╭─",
+      "keyColor": "white"
+    },
+    {
+      "type": "terminal",
+      "key": "├─",
+      "keyColor": "white"
+    },
+    {
+      "type": "terminalfont",
+      "key": "├─",
+      "keyColor": "white"
+    },
+    {
+      "type": "lm",
+      "key": "├─󰧨",
+      "keyColor": "white"
+    },
+    {
+      "type": "de",
+      "key": "├─",
+      "keyColor": "white"
+    },
+    {
+      "type": "wm",
+      "key": "├─",
+      "keyColor": "white"
+    },
+    {
+      "type": "theme",
+      "key": "├─󰉼",
+      "keyColor": "white"
+    },
+    {
+      "type": "icons",
+      "key": "├─󰀻",
+      "keyColor": "white"
+    },
+    {
+      "type": "cursor",
+      "key": "├─",
+      "keyColor": "white"
+    },
+    {
+      "type": "wallpaper",
+      "key": "╰─󰸉",
+      "keyColor": "white"
+    },
+    "break",
+
+    {
+      "type": "title",
+      "key": "╭─",
+      "format": "{user-name}@{host-name}",
+      "keyColor": "dim_magenta"
+    },
+    {
+      "type": "os",
+      "key": "├─{icon}",
+      "keyColor": "dim_magenta"
+    },
+    {
+      "type": "kernel",
+      "key": "├─",
+      "keyColor": "dim_magenta"
+    },
+    {
+      "type": "packages",
+      "key": "├─󰏖",
+      "keyColor": "dim_magenta"
+    },
+    {
+      "type": "command",
+      "shell": "/usr/bin/bash",
+      "text": "find /home/kasra/.local/share/Steam/steamapps/workshop/content/341800/ -maxdepth 1 -type d | tail -n +2 | wc -l",
+      "key": "├─󰚑",
+      "keyColor": "dim_magenta",
+      "format": "{result} (KTaNE)"
+    },
+    {
+      "type": "uptime",
+      "key": "├─󰅐",
+      "keyColor": "dim_magenta"
+    },
+    {
+      "type": "media",
+      "key": "├─󰝚",
+      "keyColor": "dim_magenta"
+    },
+    {
+      "type": "localip",
+      "key": "├─󰩟",
+      "compact": true,
+      "keyColor": "dim_magenta"
+    },
+    {
+      "type": "wifi",
+      "key": "├─",
+      "format": "{ssid}",
+      "keyColor": "dim_magenta"
+    },
+    {
+      "type": "locale",
+      "key": "╰─",
+      "keyColor": "dim_magenta"
+    },
+    "break"
+  ]
+}
