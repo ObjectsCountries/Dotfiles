@@ -1,5 +1,4 @@
-﻿<!-- Replace "/home/kasra/.local/share/Steam/steamapps/workshop/content/341800/" with "C:\Program Files (x86)\Steam\steamapps\workshop\content\341800\" on Windows -->
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <DisabledModPaths>
     <string>/home/kasra/.local/share/Steam/steamapps/workshop/content/341800/2282635865</string>
