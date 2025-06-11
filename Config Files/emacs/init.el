@@ -1,95 +1,109 @@
-;; Set up MELPA
-(require 'package)
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/"))
-(package-initialize)
-(package-refresh-contents)
+(setq package-enable-at-startup nil)
 
-;; For OmniSharp to work
+(defvar elpaca-installer-version 0.11)
+(defvar elpaca-directory (expand-file-name "elpaca/" user-emacs-directory))
+(defvar elpaca-builds-directory (expand-file-name "builds/" elpaca-directory))
+(defvar elpaca-repos-directory (expand-file-name "repos/" elpaca-directory))
+(defvar elpaca-order '(elpaca :repo "https://github.com/progfolio/elpaca.git"
+                              :ref nil :depth 1 :inherit ignore
+                              :files (:defaults "elpaca-test.el" (:exclude "extensions"))
+                              :build (:not elpaca--activate-package)))
+(let* ((repo  (expand-file-name "elpaca/" elpaca-repos-directory))
+       (build (expand-file-name "elpaca/" elpaca-builds-directory))
+       (order (cdr elpaca-order))
+       (default-directory repo))
+  (add-to-list 'load-path (if (file-exists-p build) build repo))
+  (unless (file-exists-p repo)
+    (make-directory repo t)
+    (when (<= emacs-major-version 28) (require 'subr-x))
+    (condition-case-unless-debug err
+        (if-let* ((buffer (pop-to-buffer-same-window "*elpaca-bootstrap*"))
+                  ((zerop (apply #'call-process `("git" nil ,buffer t "clone"
+                                                  ,@(when-let* ((depth (plist-get order :depth)))
+                                                      (list (format "--depth=%d" depth) "--no-single-branch"))
+                                                  ,(plist-get order :repo) ,repo))))
+                  ((zerop (call-process "git" nil buffer t "checkout"
+                                        (or (plist-get order :ref) "--"))))
+                  (emacs (concat invocation-directory invocation-name))
+                  ((zerop (call-process emacs nil buffer nil "-Q" "-L" "." "--batch"
+                                        "--eval" "(byte-recompile-directory \".\" 0 'force)")))
+                  ((require 'elpaca))
+                  ((elpaca-generate-autoloads "elpaca" repo)))
+            (progn (message "%s" (buffer-string)) (kill-buffer buffer))
+          (error "%s" (with-current-buffer buffer (buffer-string))))
+      ((error) (warn "%s" err) (delete-directory repo 'recursive))))
+  (unless (require 'elpaca-autoloads nil t)
+    (require 'elpaca)
+    (elpaca-generate-autoloads "elpaca" repo)
+    (let ((load-source-file-function nil)) (load "./elpaca-autoloads"))))
+(add-hook 'after-init-hook #'elpaca-process-queues)
+(elpaca `(,@elpaca-order))
+
 (setenv "FrameworkPathOverride" "/usr/lib/mono/4.8-api")
 
-(require 'cl-lib)
+(elpaca elpaca-use-package
+  (elpaca-use-package-mode))
 
-;; LSP packages to install:
-;; omnisharp-roslyn ruff typescript typescript-language-server vue-language-server
-(defvar my-packages
-  '(dashboard elcord evil magit markdown-mode monokai-theme npm treemacs treemacs-evil treemacs-icons-dired treemacs-magit treemacs-projectile typescript-mode web-mode)
-  "A list of packages to ensure are installed at launch.")
+(use-package evil :ensure t :demand t :config (evil-mode 1))
 
-(defun my-packages-installed-p ()
-  (cl-loop for p in my-packages
-           when (not (package-installed-p p)) do (cl-return nil)
-           finally (cl-return t)))
+(use-package lsp-mode
+  :ensure t
+  :init
+  (setq lsp-keymap-prefix "C-c l")
+  :hook (
+         (c++-mode . lsp)
+         (csharp-mode . lsp)
+         (python-mode . lsp)
+         (vue-mode . lsp)
+         (lsp-mode . lsp-enable-which-key-integration))
+  :commands lsp)
 
-(unless (my-packages-installed-p)
-  ;; check for new packages (package versions)
-  (package-refresh-contents)
-  ;; install the missing packages
-  (dolist (p my-packages)
-    (when (not (package-installed-p p))
-      (package-install p))))
+(use-package flycheck
+  :ensure t
+  :config
+  (add-hook 'after-init-hook #'global-flycheck-mode))
 
-;; web-mode setup
-(define-derived-mode vue-mode web-mode "Vue")
-(add-to-list 'auto-mode-alist '("\\.vue\\'" . vue-mode))
+(use-package company
+  :ensure t
+  :config
+  (add-hook 'after-init-hook 'global-company-mode))
 
-(defun vue-eglot-init-options ()
-             (let ((tsdk-path (expand-file-name
-                               "lib"
-                               (string-trim-right (shell-command-to-string "npm list --global --parseable typescript | head -n1")))))
-               `(:typescript (:tsdk ,tsdk-path
-                              :languageFeatures (:completion
-                                                 (:defaultTagNameCase "both"
-                                                  :defaultAttrNameCase "kebabCase"
-                                                  :getDocumentNameCasesRequest nil
-                                                  :getDocumentSelectionRequest nil)
-                                                 :diagnostics
-                                                 (:getDocumentVersionRequest nil))
-                              :documentFeatures (:documentFormatting
-                                                 (:defaultPrintWidth 100
-                                                  :getDocumentPrintWidthRequest nil)
-                                                 :documentSymbol t
-                                                 :documentColor t)))))
+(use-package lsp-ui :ensure t :commands lsp-ui-mode)
+(use-package helm-lsp :ensure t :commands helm-lsp-workspace-symbol)
+(use-package lsp-ivy :ensure t :commands lsp-ivy-workspace-symbol)
+(use-package lsp-treemacs :ensure t :commands lsp-treemacs-errors-list :config (lsp-treemacs-sync-mode 1))
+(use-package which-key
+    :config
+    (which-key-mode))
 
-;; Volar
-(with-eval-after-load 'eglot
-  (add-to-list 'eglot-server-programs
-                          `(vue-mode . ("vue-language-server" "--stdio" :initializationOptions ,(vue-eglot-init-options)))))
+(use-package exotica-theme :ensure t :config (load-theme 'exotica t))
 
-;; TypeScript
-(cl-defmethod project-root ((project (head eglot-project)))
-  (cdr project))
-(defun my-project-try-tsconfig-json (dir)
-  (when-let* ((found (locate-dominating-file dir "tsconfig.json")))
-    (cons 'eglot-project found)))
-(add-hook 'project-find-functions
-          'my-project-try-tsconfig-json nil nil)
-(with-eval-after-load 'eglot
-  (add-to-list 'eglot-server-programs
-               '((typescript-mode) "typescript-language-server" "--stdio")))
+(use-package transient :ensure t)
 
-;; Setup
-(evil-mode 1)
-(load-theme 'deeper-blue t)
-(which-key-mode)
-(add-to-list 'initial-frame-alist '(fullscreen . maximized))
-(setq vc-follow-symlinks t)
-(setq frame-title-format "%b - Emacs")
+(use-package magit :ensure t :after transient)
 
-;; Markdown
-(autoload 'markdown-mode "markdown-mode"
-   "Major mode for editing Markdown files" t)
-(add-to-list 'auto-mode-alist
-             '("\\.\\(?:md\\|markdown\\|mkd\\|mdown\\|mkdn\\|mdwn\\)\\'" . markdown-mode))
+(use-package treemacs :ensure t)
 
-(autoload 'gfm-mode "markdown-mode"
-   "Major mode for editing GitHub Flavored Markdown files" t)
-(add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
+(use-package treemacs-evil
+  :after (treemacs evil)
+  :ensure t)
 
-(with-eval-after-load 'markdown-mode
-  (define-key markdown-mode-map (kbd "C-c C-e") #'markdown-do))
+(use-package treemacs-projectile
+  :after (treemacs projectile)
+  :ensure t)
 
-;; Dashboard
+(use-package treemacs-icons-dired
+  :hook (dired-mode . treemacs-icons-dired-enable-once)
+  :ensure t)
+
+(use-package treemacs-magit
+  :after (treemacs magit)
+  :ensure t)
+
+(add-hook 'window-setup-hook 'toggle-frame-maximized t)
+
+(use-package nerd-icons :ensure t)
+
 (setq dashboard-display-icons-p t)
 (setq dashboard-icon-type 'nerd-icons)
 (setq dashboard-set-heading-icons t)
@@ -101,17 +115,27 @@
 (setq dashboard-items '((recents   . 5)
                         (projects  . 5)
                         (agenda    . 5)))
-(require 'dashboard)
-(dashboard-setup-startup-hook)
 
+(use-package dashboard :ensure t :config (dashboard-setup-startup-hook))
+(setq initial-buffer-choice (lambda () (get-buffer-create dashboard-buffer-name)))
+
+(setq vc-follow-symlinks t)
+(setq frame-title-format "%b - Emacs")
+
+(use-package elcord :ensure t)
+
+(use-package emacs :ensure nil :config (setq ring-bell-function #'ignore))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("6198e96f1fd7de3889a1b6ab8be1fc9b7c734cc9db0b0f16b635a2974601f977"
+     default))
  '(elcord-editor-icon "emacs_pen_icon")
- '(package-selected-packages nil))
+ '(package-selected-packages '(magit)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
