@@ -104,6 +104,10 @@
 
 (use-package nerd-icons :ensure t)
 
+(use-package clang-format :ensure t)
+
+(global-set-key [C-M-tab] 'clang-format-buffer)
+
 (setq dashboard-display-icons-p t)
 (setq dashboard-icon-type 'nerd-icons)
 (setq dashboard-set-heading-icons t)
