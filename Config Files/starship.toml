@@ -2,7 +2,7 @@
 
 format = """
 [](color_1)\
-[$os$username](white bg:color_1)\
+[$os$username$hostname](white bg:color_1)\
 [](color_1 bg:color_2)\
 [$directory($git_branch$git_status )](black bg:color_2)\
 [](color_2 bg:color_3)\
@@ -31,11 +31,15 @@ disabled = false
 
 [os.symbols]
 EndeavourOS = ' '
-Windows = ''
+Windows = ''
 
 [username]
-format = ' $user '
+format = ' $user'
 show_always = true
+
+[hostname]
+ssh_only = false
+format = '@$hostname '
 
 [directory]
 truncation_length = -1
