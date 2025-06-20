@@ -156,7 +156,7 @@
     {
       "type": "command",
       "shell": "powershell",
-      "text": "(Get-ChildItem 'C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\341800\\').Count",
+      "text": "$mods = 'C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\341800\\'; if ( (Test-Path -Path $mods) ) { $modCount = (Get-ChildItem $mods).Count; if ( (0 -ne $modCount) ) { echo $modCount } }",
       "key": "├─󰚑",
       "keyColor": "dim_magenta",
       "format": "{result} (KTaNE)"
