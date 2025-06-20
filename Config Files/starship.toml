@@ -2,15 +2,15 @@
 
 format = """
 [](color_1)\
-[$os$shell$username$hostname](white bg:color_1)\
+[$os$shell$username$hostname](#ffffff bg:color_1)\
 [](color_1 bg:color_2)\
-[$directory($git_branch$git_status )](black bg:color_2)\
+[$directory($git_branch$git_status )](#000000 bg:color_2)\
 [](color_2 bg:color_3)\
-[$cmake$cpp$dotnet${custom.jupyter}$nodejs$python$rust${custom.verilog}](white bg:color_3)\
+[$cmake$cpp$dotnet${custom.jupyter}$nodejs$python$rust${custom.verilog}](#ffffff bg:color_3)\
 [](color_3 bg:color_4)\
-[($battery$sudo )](white bg:color_4)\
+[($battery$sudo )](#ffffff bg:color_4)\
 [](color_4 bg:color_5)\
-[$time$cmd_duration](white bg:color_5)\
+[$time$cmd_duration](#ffffff bg:color_5)\
 [](color_5)\
 $line_break$character"""
 
