@@ -106,6 +106,12 @@
 
 (use-package clang-format :ensure t)
 
+(use-package org-roam :ensure t)
+(use-package pdf-tools :ensure t)
+(use-package nov :ensure t)
+(use-package djvu :ensure t)
+(use-package org-noter :ensure t)
+
 (global-set-key [C-M-tab] 'clang-format-buffer)
 
 (setq dashboard-display-icons-p t)
@@ -138,6 +144,7 @@
  '(custom-safe-themes
    '("6198e96f1fd7de3889a1b6ab8be1fc9b7c734cc9db0b0f16b635a2974601f977"
      default))
+ '(doc-view-continuous t)
  '(elcord-editor-icon "emacs_pen_icon")
  '(package-selected-packages '(magit)))
 (custom-set-faces
