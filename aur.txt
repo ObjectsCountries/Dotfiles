@@ -1,0 +1,7 @@
+obs-studio-browser
+octopi
+pinta
+sirikali
+ttf-ms-win11-auto
+vlc-luajit
+zoom
