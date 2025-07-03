@@ -1,3 +1,4 @@
+papirus-folders
 obs-studio-browser
 octopi
 pinta

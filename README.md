@@ -35,23 +35,21 @@ Cyberdream for other apps available under their [extras](https://github.com/scot
 |Cursors|Breeze Light|
 |System Sounds|Ocean|
 |Splash Screen|None|
-|Login Screen (SDDM)|Default|
-|Boot Splash Screen|BGRT|
+|Login Screen (SDDM)|[Ant-Dark SDDM Plasma 6](https://store.kde.org/p/2139782)|
+|Boot Splash Screen|BGRT, replaced Arch logo with EndeavourOS|
 
 ### Desktop
 
 * Dynamic Wallpaper: `plasma5-wallpapers-dynamic`
-  * Use [Lakeside](Wallpaper/wallpaper.avif)
+  * Use [Lakeside](wallpaper.avif)
 * Digital Clock w/ background in bottom right corner of left monitor
-* Wunderground widget in bottom left corner of right monitor
-* GPU Usage line graph and Disk Usage pie chart above Wunderground
+* GPU Usage line graph and Disk Usage pie chart in bottom left corner of right monitor
 
 ### Taskbar
 
 * Application Launcher w/ `endeavouros` icon
 * Icons-Only Task Manager
   * Floorp, Discord, Steam, Emacs client
-* Wunderground
 * System Tray
 * Clock
 
@@ -61,7 +59,7 @@ Cyberdream for other apps available under their [extras](https://github.com/scot
 
 * Breeze Dark theme for everything except icons
 * Dynamic Wallpaper: `plasma5-wallpapers-dynamic`
-  * Use [Lakeside](Wallpaper/wallpaper.avif)
+  * Use [Lakeside](wallpaper.avif)
 * Analog Clock in top left
 * Wunderground in bottom left
 * Digital Clock to the right of Analog Clock
@@ -106,46 +104,7 @@ Cyberdream for other apps available under their [extras](https://github.com/scot
 * [Fastfetch](Config%20Files/fastfetch/)
 * [Fish](Config%20Files/fish/)
 * [Hyfetch](Config%20Files/hyfetch.json)
-* [Hyprland](Config%20Files/hypr/)
-* [Hyprpanel](Config%20Files/hyprpanel/)
 * [Kitty](Config%20Files/kitty/)
 * [Neovim](Config%20Files/nvim/)
 * [Neovide](Config%20Files/neovide/)
 * [Starship](Config%20Files/starship.toml)
-
-## Other
-
-* [Login Screen](SDDM/)
-* [Background](Wallpaper/)
-
-## Hyprland
-
-Install the Python libraries `dotenv`, `psutil` and `pysolar` (`pysolar` through the AUR, the others through Pacman) in order to get the auto-updating background.
-
-### Hyprpanel
-
-#### Left
-
-* Menu
-* Workspaces
-* Media Title
-* Cava
-
-#### Center
-
-* Open Window
-
-#### Right
-
-* Notifications
-* Weather
-* System Tray
-* Upload/Download Speeds
-* Packages
-* Volume
-* Microphone Volume
-* CPU Usage (Click to open Mission Center)
-* RAM Usage (Click to open Mission Center)
-* Hyprsunset
-* Hypridle
-* Time

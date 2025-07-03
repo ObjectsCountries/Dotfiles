@@ -1,11 +1,14 @@
 audacity
+bat
 discord
 discover
 emacs-wayland
+eza
 fastfetch
 firefox
 fish
 fwupd
+git-delta
 github-cli
 gwenview
 hyfetch
@@ -16,6 +19,7 @@ libreoffice-fresh
 mission-center
 neovide
 okular
+papirus-icon-theme
 plasma
 prismlauncher
 qalculate-qt
