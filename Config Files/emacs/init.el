@@ -112,6 +112,19 @@
 (use-package djvu :ensure t)
 (use-package org-noter :ensure t)
 
+(setq centaur-tabs-style "wave")
+(setq centaur-tabs-height 32)
+(setq centaur-tabs-set-icons t)
+(setq centaur-tabs-icon-type 'nerd-icons)
+
+(use-package centaur-tabs
+  :ensure t
+  :config
+  (centaur-tabs-mode t)
+  :bind
+  ("C-<prior>" . centaur-tabs-backward)
+  ("C-<next>" . centaur-tabs-forward))
+
 (global-set-key [C-M-tab] 'clang-format-buffer)
 
 (setq dashboard-display-icons-p t)
