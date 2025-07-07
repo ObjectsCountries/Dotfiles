@@ -9,7 +9,7 @@
 |`ls` replacement|`eza`|`eza`|
 |`cat` replacement|`bat`|`bat`|
 |`git diff` replacement|Delta|`git-delta`|
-|Theme for just about everything|Cyberdream|Not on AUR, available as a Neovim package (scottmckendry/cyberdream.nvim)|
+|Fish, Bat and Neovim themes|Cyberdream|Not on AUR, available as a Neovim package (scottmckendry/cyberdream.nvim)|
 
 `eza` customization:
 ```bash
@@ -49,7 +49,7 @@ Cyberdream for other apps available under their [extras](https://github.com/scot
 
 * Application Launcher w/ `endeavouros` icon
 * Icons-Only Task Manager
-  * Floorp, Discord, Steam, Emacs client
+  * Firefox, Discord, Steam, Emacs client
 * System Tray
 * Clock
 
@@ -89,7 +89,7 @@ Cyberdream for other apps available under their [extras](https://github.com/scot
 * Global Menu
 * Panel Spacer
 * Icons-Only Task Manager
-  * Chrome, Discord, Steam
+  * Chrome, Discord, Emacs
 * Panel Spacer
 * Wunderground (extension)
 * System Tray
@@ -100,11 +100,10 @@ Cyberdream for other apps available under their [extras](https://github.com/scot
 
 ## Dotfiles
 
-* [Emacs](Config%20Files/emacs/)
+* [Emacs](Config%20Files/emacs/init.el)
 * [Fastfetch](Config%20Files/fastfetch/)
 * [Fish](Config%20Files/fish/)
 * [Hyfetch](Config%20Files/hyfetch.json)
-* [Kitty](Config%20Files/kitty/)
 * [Neovim](Config%20Files/nvim/)
 * [Neovide](Config%20Files/neovide/)
 * [Starship](Config%20Files/starship.toml)
