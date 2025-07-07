@@ -19,7 +19,6 @@ libreoffice-fresh
 mission-center
 neovide
 okular
-papirus-icon-theme
 plasma
 prismlauncher
 qalculate-qt
