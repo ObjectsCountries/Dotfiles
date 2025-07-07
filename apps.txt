@@ -2,7 +2,7 @@ audacity
 bat
 discord
 discover
-emacs-wayland
+emacs
 eza
 fastfetch
 firefox
