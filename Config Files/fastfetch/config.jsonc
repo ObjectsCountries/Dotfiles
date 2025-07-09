@@ -148,7 +148,7 @@
     {
       "type": "command",
       "shell": "/usr/bin/bash",
-      "text": "MOD_COUNT=`find $HOME/.local/share/Steam/steamapps/workshop/content/341800/ -maxdepth 1 -type d | tail -n +2 | wc -l`; [ MOD_COUNT -ne 0 ] && echo $MOD_COUNT",
+      "text": "MOD_COUNT=`find $HOME/.local/share/Steam/steamapps/workshop/content/341800/ -maxdepth 1 -type d | tail -n +2 | wc -l`; [[ MOD_COUNT -ne 0 ]] && echo $MOD_COUNT",
       "key": "├─󰚑",
       "keyColor": "dim_magenta",
       "format": "{result} (KTaNE)"
