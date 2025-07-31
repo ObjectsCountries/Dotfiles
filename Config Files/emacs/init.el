@@ -54,6 +54,7 @@
          (c++-mode . lsp)
          (csharp-mode . lsp)
          (python-mode . lsp)
+         (rust-mode . lsp)
          (vue-mode . lsp)
          (lsp-mode . lsp-enable-which-key-integration))
   :commands lsp)
@@ -77,6 +78,8 @@
     (which-key-mode))
 
 (use-package exotica-theme :ensure t :config (load-theme 'exotica t))
+
+(use-package vterm :ensure t)
 
 (use-package transient :ensure t)
 
@@ -116,6 +119,10 @@
 (setq centaur-tabs-height 32)
 (setq centaur-tabs-set-icons t)
 (setq centaur-tabs-icon-type 'nerd-icons)
+
+(setq make-backup-files nil)
+
+(add-hook 'prog-mode-hook 'display-line-numbers-mode)
 
 (use-package centaur-tabs
   :ensure t
@@ -159,7 +166,7 @@
      default))
  '(doc-view-continuous t)
  '(elcord-editor-icon "emacs_pen_icon")
- '(package-selected-packages '(magit)))
+ '(package-selected-packages '(magit rust-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
