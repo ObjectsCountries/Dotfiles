@@ -30,7 +30,7 @@ format = '$symbol'
 disabled = false
 
 [os.symbols]
-EndeavourOS = ' '
+EndeavourOS = ''
 Windows = ''
 
 [shell]
