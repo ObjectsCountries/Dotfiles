@@ -105,7 +105,7 @@
 
 (add-hook 'window-setup-hook 'toggle-frame-maximized t)
 
-(use-package nerd-icons :ensure t)
+(use-package all-the-icons :ensure t)
 
 (use-package clang-format :ensure t)
 
@@ -118,7 +118,7 @@
 (setq centaur-tabs-style "wave")
 (setq centaur-tabs-height 32)
 (setq centaur-tabs-set-icons t)
-(setq centaur-tabs-icon-type 'nerd-icons)
+(setq centaur-tabs-icon-type 'all-the-icons)
 
 (setq make-backup-files nil)
 
@@ -127,7 +127,7 @@
 (use-package centaur-tabs
   :ensure t
   :config
-  (centaur-tabs-mode t)
+  (centaur-tabs-change-fonts "FiraCode Nerd Font Mono" 100)
   :bind
   ("C-<prior>" . centaur-tabs-backward)
   ("C-<next>" . centaur-tabs-forward))
@@ -135,7 +135,7 @@
 (global-set-key [C-M-tab] 'clang-format-buffer)
 
 (setq dashboard-display-icons-p t)
-(setq dashboard-icon-type 'nerd-icons)
+(setq dashboard-icon-type 'all-the-icons)
 (setq dashboard-set-heading-icons t)
 (setq dashboard-set-file-icons t)
 (setq dashboard-banner-logo-title "Emacs")
