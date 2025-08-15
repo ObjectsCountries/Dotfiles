@@ -1,0 +1,101 @@
+theme:
+  background-color: 231 15 21
+  primary-color: 265 89 79
+  contrast-multiplier: 1.2
+  positive-color: 135 94 66
+  negative-color: 0 100 67
+pages:
+  - name: Home
+    head-widgets:
+      - type: search
+        search-engine: google
+    columns:
+      - size: small
+        widgets:
+          - type: calendar
+            first-day-of-week: sunday
+          - type: videos
+            channels:
+              - UCBODyKF0JMbUd6D9Bklyzbw # Alpharad
+              - UC5RpbFDGW-pgOaRMDUYpBFw # Alpharad LIVE
+              - UC2gB7YCgfHIskI3HsY1teDw # Alpharad Platinum
+              - UCECZ_6cWLN8C9AnReEZ0CDA # Big Yellow
+              - UCWFNUk2LHUQdRzQcJLYZmcg # Bringus Studios
+              - UCld68syR8Wi-GY_n4CaoJGA # Brodie Robertson
+              - UCtPouPVprzqlabJkV85L7Ow # Broski
+              - UCZXW8E1__d5tZb-wLFOt8TQ # Bog
+              - UCkoovQZX5QP5Z0eI7e9KAxw # Chazington
+              - UC-ZFVrf5NVlmgZ0hItLT0pg # Comme une Française
+              - UC2jBmMVEhxvDc8Sk9fxbqkw # FireThePyro
+              - UC8CsGpP6kVNrWeBVmlJ2UyA # Huggbees
+              - UCTjqo_3046IXFFGZ_M5jedA # jackisanerd
+              - UCPcFg7aBbaVzXoIKSNqwaww # jacksfilms
+              - UCMUyG01MXNeiTykIlvWwIRQ # JJJacksfilms
+              - UCSC6F-cM6_Xm3aJnHs6ZDVA # Joeseppi
+              - UC-kDX_ZvjzY_GECcKmJ9FPA # Jon Bringus
+              - UCYNyKRHBzd7UPRUtDhofUKg # Language Simp
+              - UCXuqSBlHAE6Xw-yeJA0Tunw # Linus Tech Tips
+              - UCsQ9n37qjeBZEWqN8bdKbMQ # Matt Rose
+              - UCb31gOY6OD8ES0zP8M0GhAw # Max Fosh
+              - UCj4UXVeHysxeTbZj7oEQd-Q # Microwave Society
+              - UCZBdaKw97n3P9qWeP6rs_7g # planet clue
+              - UCRC6cNamj9tYAO6h_RXd5xA # RTGame
+              - UC3yaWWA9FF9OBog5U9ml68A # SavvyNik
+              - UC5UYMeKfZbFYnLHzoTJB1xA # Schaffrillas Productions
+              - UC4rqhyiTs7XyuODcECvuiiQ # Scott the Woz
+              - UCmm3qhYkdW699stV_28TQpw # Scott's Stash
+              - UCKq6oQq_CnvzW4vhu-XpQ0g # Seong's Seongs
+              - UCeeFfhMcJa1kjtfZAGskOCA # TechLinked
+              - UCylGUf9BvQooEFjgdNudoQg # The Linux Cast
+              - UC5UAwBUum7CPN5buc-_N1Fw # The Linux Experiment
+              - UC8ENHE5xdFSwx71u3fDH5Xw # The Primeagen
+              - UCUyeluBRhGPCW4rPe_UvBZQ # ThePrimeTime
+              - UC2sZyDm1FqBWrWiCiAuI2Ug # Timotainment
+              - UCLaMpjgs3L1Uo_0Io_I1EGg # Tony Zaret
+              - UCm_dHxrHKK_fmoUgj9YnYqw # Truttle1
+              - UCMiyV_Ib77XLpzHPQH_q0qQ # Veronica Explains
+            style: vertical-list
+          - type: twitch-channels
+            channels:
+              - theprimeagen
+              - maximilian_dood
+              - timotainment
+      - size: full
+        widgets:
+          - type: group
+            widgets:
+              - type: reddit
+                subreddit: pcmasterrace
+                collapse-after: 10
+              - type: reddit
+                subreddit: french
+                collapse-after: 10
+          - type: markets
+            markets:
+              - symbol: AMD
+                name: AMD
+              - symbol: INTC
+                name: Intel
+              - symbol: NVDA
+                name: Nvidia
+      - size: small
+        widgets:
+          $include: /etc/weather.yml
+          - type: clock
+            hour-format: 12h
+          - type: to-do
+          - type: custom-api
+            title: "Recent Modules"
+            cache: 24h
+            url: https://ktane.timwi.de/json/raw
+            template: |
+                <ul class="list list-gap-10 collapsible-container" data-collapse-after="5">
+                  {{ range .JSON.Array "KtaneModules.@reverse" }}
+                    <li>
+                      <a href="{{ if eq (.String "Origin") "Vanilla" }}https://keeptalkinggame.com/{{ else }}https://steamcommunity.com/sharedfiles/filedetails/?id={{ .String "SteamID" }}{{ end }}"><img style="float: right;" src="https://ktane.timwi.de/Icons/{{ .String "Name" }}.png"></img></a>
+                      <a style="float:left;" href="https://ktane.timwi.de/HTML/{{ .String "Name" }}.html">{{ .String "Name" }}</a>
+                      <br>
+                      <p style="font-size:11px;">{{ if .Exists "Description" }} {{ .String "Description" }} {{ else if .Exists "Descriptions" }} {{ .String "Descriptions.#(Language=\"English\").Description" }} {{ end }}</p>
+                    </li>
+                  {{ end }}
+                </ul>
