@@ -60,16 +60,6 @@ pages:
               - theprimeagen
               - maximilian_dood
               - timotainment
-      - size: full
-        widgets:
-          - type: group
-            widgets:
-              - type: reddit
-                subreddit: pcmasterrace
-                collapse-after: 10
-              - type: reddit
-                subreddit: french
-                collapse-after: 10
           - type: markets
             markets:
               - symbol: AMD
@@ -78,6 +68,30 @@ pages:
                 name: Intel
               - symbol: NVDA
                 name: Nvidia
+      - size: full
+        widgets:
+          - type: group
+            widgets:
+              - type: rss
+                title: News
+                style: detailed-list
+                feeds:
+                  - url: https://9to5linux.com/feed/atom
+                    title: 9to5Linux
+                  - url: https://www.pcgamer.com/rss/
+                    title: PC Gamer
+                  - url: https://www.phoronix.com/rss.php
+                    title: Phoronix
+                  - url: https://www.tomshardware.com/feeds.xml
+                    title: Tom's Hardware
+              - type: reddit
+                subreddit: french
+                limit: 20
+                collapse-after: 20
+              - type: reddit
+                subreddit: pcmasterrace
+                limit: 20
+                collapse-after: 20
       - size: small
         widgets:
           $include: /etc/weather.yml
