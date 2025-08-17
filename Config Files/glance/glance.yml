@@ -108,10 +108,10 @@ pages:
                 <ul class="list list-gap-10 collapsible-container" data-collapse-after="5">
                   {{ range .JSON.Array "KtaneModules.@reverse" }}
                     <li>
-                      <a href="{{ if eq (.String "Origin") "Vanilla" }}https://keeptalkinggame.com/{{ else }}https://steamcommunity.com/sharedfiles/filedetails/?id={{ .String "SteamID" }}{{ end }}"><img style="float: right;" src="https://ktane.timwi.de/Icons/{{ .String "Name" }}.png"></img></a>
+                      <a href="{{ if eq (.String "Origin") "Vanilla" }}https://keeptalkinggame.com/{{ else }}https://steamcommunity.com/sharedfiles/filedetails/?id={{ .String "SteamID" }}{{ end }}"><img style="float: right;" src="https://ktane.timwi.de/Icons/{{ if and (eq (.Int "X") 0) (eq (.Int "Y") 0) }}blank{{ else }}{{ .String "Name" }}{{ end }}.png"></img></a>
                       <a style="float:left;" href="https://ktane.timwi.de/HTML/{{ .String "Name" }}.html">{{ .String "Name" }}</a>
                       <br>
-                      <p style="font-size:11px;">{{ if .Exists "Description" }} {{ .String "Description" }} {{ else if .Exists "Descriptions" }} {{ .String "Descriptions.#(Language=\"English\").Description" }} {{ end }}</p>
+                      <p style="font-size:11px;">{{ if .Exists "Description" }}{{ .String "Description" }}{{ else if .Exists "Descriptions" }}{{ .String "Descriptions.#(Language=\"English\").Description" }}{{ end }}</p>
                     </li>
                   {{ end }}
                 </ul>
