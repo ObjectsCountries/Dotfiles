@@ -110,7 +110,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "SouvenirModule": [
       "MemoryV2",
@@ -211,7 +213,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "theSwan": [
       "MemoryV2",
@@ -313,6 +317,8 @@
       "redLightGreenLight",
       "repeatAgain",
       "Crazy",
+      "FalseInfo",
+      "minskMetro",
       "TurnTheKeyAdvanced",
       "theSwan",
       "DividedSquaresModule",
@@ -481,7 +487,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "DividedSquaresModule": [
       "MemoryV2",
@@ -630,6 +638,8 @@
       "redLightGreenLight",
       "repeatAgain",
       "Crazy",
+      "FalseInfo",
+      "minskMetro",
       "TheHeart"
     ],
     "HogwartsModule": [
@@ -779,6 +789,8 @@
       "redLightGreenLight",
       "repeatAgain",
       "Crazy",
+      "FalseInfo",
+      "minskMetro",
       "TheHeart"
     ],
     "cookieJars": [
@@ -940,7 +952,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "simonsStages": [
       "MemoryV2",
@@ -1051,7 +1065,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "forgetThis": [
       "MemoryV2",
@@ -1162,7 +1178,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "PurgatoryModule": [
       "MemoryV2",
@@ -1273,7 +1291,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "Krit4CardMonte": [
       "cookieJars",
@@ -1403,7 +1423,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "forgetThemAll": [
       "MemoryV2",
@@ -1514,7 +1536,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "tallorderedKeys": [
       "MemoryV2",
@@ -1625,7 +1649,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "forgetEnigma": [
       "MemoryV2",
@@ -1736,7 +1762,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "forgetUsNot": [
       "TheHeart",
@@ -1848,7 +1876,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "qkForgetPerspective": [
       "MemoryV2",
@@ -1959,7 +1989,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "organizationModule": [
       "MemoryV2",
@@ -2071,6 +2103,8 @@
       "redLightGreenLight",
       "repeatAgain",
       "Crazy",
+      "FalseInfo",
+      "minskMetro",
       "TurnTheKeyAdvanced",
       "theSwan",
       "DividedSquaresModule",
@@ -2121,6 +2155,7 @@
       "redsquare",
       "100LevelsOfDefusal",
       "Amnesia",
+      "GSAutokey",
       "BackdoorHacking",
       "BTV",
       "bamboozlingTimeKeeper",
@@ -2392,7 +2427,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "forgetMeLater": [
       "MemoryV2",
@@ -2504,6 +2541,8 @@
       "redLightGreenLight",
       "repeatAgain",
       "Crazy",
+      "FalseInfo",
+      "minskMetro",
       "theSwan",
       "TheHeart",
       "multitask",
@@ -2624,7 +2663,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "encryptionBingo": [
       "MemoryV2",
@@ -2763,6 +2804,8 @@
       "redLightGreenLight",
       "repeatAgain",
       "Crazy",
+      "FalseInfo",
+      "minskMetro",
       "TheHeart"
     ],
     "qkUCN": [
@@ -2864,7 +2907,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "14": [
       "MemoryV2",
@@ -2976,6 +3021,8 @@
       "redLightGreenLight",
       "repeatAgain",
       "Crazy",
+      "FalseInfo",
+      "minskMetro",
       "TheHeart"
     ],
     "forgetItNot": [
@@ -3087,7 +3134,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "simonForgets": [
       "MemoryV2",
@@ -3199,6 +3248,8 @@
       "redLightGreenLight",
       "repeatAgain",
       "Crazy",
+      "FalseInfo",
+      "minskMetro",
       "theSwan",
       "TheHeart",
       "multitask",
@@ -3320,6 +3371,8 @@
       "redLightGreenLight",
       "repeatAgain",
       "Crazy",
+      "FalseInfo",
+      "minskMetro",
       "theSwan",
       "TheHeart",
       "multitask",
@@ -3440,7 +3493,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "forgetInfinity": [
       "MemoryV2",
@@ -3588,7 +3643,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "RPSJudging": [
       "MemoryV2",
@@ -3699,7 +3756,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "TheTwinModule": [
       "MemoryV2",
@@ -3810,7 +3869,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "RAM": [
       "MemoryV2",
@@ -3971,7 +4032,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "iconic": [
       "MemoryV2",
@@ -4072,7 +4135,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "encryptedHangman": [
       "TurnTheKeyAdvanced",
@@ -4109,6 +4174,8 @@
       "redLightGreenLight",
       "repeatAgain",
       "Crazy",
+      "FalseInfo",
+      "minskMetro",
       "cookieJars",
       "DividedSquaresModule",
       "taxReturns"
@@ -4250,6 +4317,8 @@
       "redLightGreenLight",
       "repeatAgain",
       "Crazy",
+      "FalseInfo",
+      "minskMetro",
       "TheHeart"
     ],
     "omegaForget": [
@@ -4361,7 +4430,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "kugelblitz": [
       "MemoryV2",
@@ -4472,7 +4543,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "ANDmodule": [
       "MemoryV2",
@@ -4583,7 +4656,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "dontTouchAnything": [
       "MemoryV2",
@@ -4684,7 +4759,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "busyBeaver": [
       "MemoryV2",
@@ -4795,7 +4872,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "FourtyTwo": [
       "MemoryV2",
@@ -4956,7 +5035,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "FiveZeroOne": [
       "MemoryV2",
@@ -5117,7 +5198,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "TechSupport": [
       "FourtyTwo",
@@ -5307,6 +5390,8 @@
       "redLightGreenLight",
       "repeatAgain",
       "Crazy",
+      "FalseInfo",
+      "minskMetro",
       "theSwan",
       "TheHeart",
       "multitask",
@@ -5452,6 +5537,8 @@
       "redLightGreenLight",
       "repeatAgain",
       "Crazy",
+      "FalseInfo",
+      "minskMetro",
       "theSwan",
       "multitask",
       "redLightGreenLight",
@@ -5571,7 +5658,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "SecurityCouncil": [
       "MemoryV2",
@@ -5683,6 +5772,8 @@
       "redLightGreenLight",
       "repeatAgain",
       "Crazy",
+      "FalseInfo",
+      "minskMetro",
       "theSwan",
       "TheHeart",
       "multitask",
@@ -5804,6 +5895,8 @@
       "redLightGreenLight",
       "repeatAgain",
       "Crazy",
+      "FalseInfo",
+      "minskMetro",
       "theSwan",
       "TheHeart",
       "multitask",
@@ -5924,7 +6017,21 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
+    ],
+    "ValidationNeedy": [
+      "TheTwinModule",
+      "xModule",
+      "yModule",
+      "CastorModule",
+      "PolluxModule",
+      "ApplePenModule",
+      "PineapplePenModule",
+      "ReportingAnomalies",
+      "solveShift",
+      "tylerVerifies"
     ],
     "blackArrowsModule": [
       "MemoryV2",
@@ -6035,7 +6142,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "forgetMazeNot": [
       "MemoryV2",
@@ -6147,6 +6256,8 @@
       "redLightGreenLight",
       "repeatAgain",
       "Crazy",
+      "FalseInfo",
+      "minskMetro",
       "theSwan",
       "multitask",
       "redLightGreenLight",
@@ -6303,7 +6414,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "GSAccessCodes": [
       "encryptedHangman",
@@ -6322,6 +6435,8 @@
       "redLightGreenLight",
       "repeatAgain",
       "Crazy",
+      "FalseInfo",
+      "minskMetro",
       "theSwan",
       "TheHeart",
       "multitask",
@@ -6442,7 +6557,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "doomsdayButton": [
       "MemoryV2",
@@ -6544,6 +6661,8 @@
       "redLightGreenLight",
       "repeatAgain",
       "Crazy",
+      "FalseInfo",
+      "minskMetro",
       "TurnTheKeyAdvanced",
       "theSwan",
       "DividedSquaresModule",
@@ -6712,7 +6831,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "qkCubeSynchronization": [
       "MemoryV2",
@@ -6823,7 +6944,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "OutOfTime": [
       "MemoryV2",
@@ -6924,7 +7047,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "RemoteTurnTheKeys": [
       "MemoryV2",
@@ -7086,11 +7211,16 @@
       "redLightGreenLight",
       "repeatAgain",
       "Crazy",
+      "FalseInfo",
+      "minskMetro",
       "100LevelsOfDefusal",
+      "ApplePenModule",
+      "GSAutokey",
       "CastorModule",
       "doomsdayButton",
       "lunchtime",
       "MentalMath",
+      "PineapplePenModule",
       "PolluxModule",
       "Rules",
       "smbh",
@@ -7208,6 +7338,8 @@
       "redLightGreenLight",
       "repeatAgain",
       "Crazy",
+      "FalseInfo",
+      "minskMetro",
       "theSwan",
       "TheHeart",
       "multitask",
@@ -7388,7 +7520,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "BoardWalk": [
       "MemoryV2",
@@ -7500,6 +7634,8 @@
       "redLightGreenLight",
       "repeatAgain",
       "Crazy",
+      "FalseInfo",
+      "minskMetro",
       "TheHeart"
     ],
     "gemory": [
@@ -7601,7 +7737,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "duckKonundrum": [
       "MemoryV2",
@@ -7712,7 +7850,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "ConcentrationModule": [
       "MemoryV2",
@@ -7823,7 +7963,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "TwisterModule": [
       "MemoryV2",
@@ -7934,7 +8076,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "forgetOurVoices": [
       "MemoryV2",
@@ -8045,7 +8189,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "soulsong": [
       "MemoryV2",
@@ -8156,7 +8302,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "idExchange": [
       "MemoryV2",
@@ -8267,7 +8415,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "smbh": [
       "MemoryV2",
@@ -8405,7 +8555,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "CornflowerButtonModule": [
       "antistress",
@@ -8532,6 +8684,8 @@
       "redLightGreenLight",
       "repeatAgain",
       "Crazy",
+      "FalseInfo",
+      "minskMetro",
       "redLightGreenLight"
     ],
     "GSEight": [
@@ -8643,7 +8797,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "SimpleBoss": [
       "MemoryV2",
@@ -8754,7 +8910,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "SimpleBossNot": [
       "MemoryV2",
@@ -8855,7 +9013,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "KritGrandPrix": [
       "MemoryV2",
@@ -8966,7 +9126,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "peeky": [
       "MemoryV2",
@@ -9114,7 +9276,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "ForgetMeMaybeModule": [
       "MemoryV2",
@@ -9225,7 +9389,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "channelSurfing": [
       "MemoryV2",
@@ -9427,7 +9593,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "binary_memory": [
       "MemoryV2",
@@ -9588,7 +9756,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "qkBitwiseOblivion": [
       "MemoryV2",
@@ -9699,7 +9869,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "damoclesLumber": [
       "MemoryV2",
@@ -9847,7 +10019,10 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro",
+      "GSAutokey"
     ],
     "top10nums": [
       "MemoryV2",
@@ -9958,7 +10133,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "moduleManeuvers": [
       "MemoryV2",
@@ -10129,7 +10306,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "queensWarModule": [
       "MemoryV2",
@@ -10240,7 +10419,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "forget_fractal": [
       "MemoryV2",
@@ -10351,7 +10532,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "pointerPointerModule": [
       "MemoryV2",
@@ -10462,7 +10645,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "slightGibberishTwistModule": [
       "MemoryV2",
@@ -10573,7 +10758,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "PianoParadoxModule": [
       "MemoryV2",
@@ -10684,7 +10871,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "Omission": [
       "MemoryV2",
@@ -10795,7 +10984,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "needyModuleAlarm": [
       "MemoryV2",
@@ -10907,6 +11098,8 @@
       "redLightGreenLight",
       "repeatAgain",
       "Crazy",
+      "FalseInfo",
+      "minskMetro",
       "TurnTheKeyAdvanced",
       "RemoteTurnTheKeys",
       "",
@@ -11048,7 +11241,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "inOrderModule": [
       "MemoryV2",
@@ -11159,7 +11354,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "nobodysCodeModule": [
       "MemoryV2",
@@ -11270,7 +11467,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "generator": [
       "TheTwinModule",
@@ -11481,7 +11680,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "ReportingAnomalies": [
       "MemoryV2",
@@ -11592,7 +11793,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "forgetle": [
       "MemoryV2",
@@ -11703,7 +11906,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "BTV": [
       "MemoryV2",
@@ -11842,6 +12047,8 @@
       "redLightGreenLight",
       "repeatAgain",
       "Crazy",
+      "FalseInfo",
+      "minskMetro",
       "BTV"
     ],
     "ActionsAndConsequences": [
@@ -11953,7 +12160,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "fizzBoss": [
       "theSwan",
@@ -12302,6 +12511,8 @@
       "redLightGreenLight",
       "repeatAgain",
       "Crazy",
+      "FalseInfo",
+      "minskMetro",
       "theSwan",
       "veryAnnoyingButton",
       "qkUCN",
@@ -12633,7 +12844,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "hickoryDickoryDockModule": [
       "MemoryV2",
@@ -12744,7 +12957,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "temporalSequence": [
       "MemoryV2",
@@ -12965,7 +13180,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "alarming": [
       "MemoryV2",
@@ -13104,6 +13321,8 @@
       "redLightGreenLight",
       "repeatAgain",
       "Crazy",
+      "FalseInfo",
+      "minskMetro",
       "theSwan",
       "veryAnnoyingButton",
       "qkUCN",
@@ -13235,7 +13454,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "limboKeysRB": [
       "MemoryV2",
@@ -13439,7 +13660,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "smashmarrykill": [
       "MemoryV2",
@@ -13551,6 +13774,8 @@
       "redLightGreenLight",
       "repeatAgain",
       "Crazy",
+      "FalseInfo",
+      "minskMetro",
       "TurnTheKeyAdvanced",
       "theSwan",
       "DividedSquaresModule",
@@ -13603,6 +13828,7 @@
       "redsquare",
       "100LevelsOfDefusal",
       "Amnesia",
+      "GSAutokey",
       "BackdoorHacking",
       "BTV",
       "bamboozlingTimeKeeper",
@@ -13654,6 +13880,8 @@
       "redLightGreenLight",
       "repeatAgain",
       "Crazy",
+      "FalseInfo",
+      "minskMetro",
       "MemoryV2",
       "SouvenirModule",
       "HexiEvilFMN",
@@ -13862,7 +14090,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "WAR": [
       "MemoryV2",
@@ -13973,7 +14203,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "redsquare": [
       "MemoryV2",
@@ -14134,7 +14366,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "dandysFloors": [
       "MemoryV2",
@@ -14282,7 +14516,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "Graduation": [
       "TurnTheKeyAdvanced",
@@ -14352,7 +14588,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "NumericalNightmare": [
       "MemoryV2",
@@ -14463,7 +14701,9 @@
       "doomsdayButton",
       "redLightGreenLight",
       "repeatAgain",
-      "Crazy"
+      "Crazy",
+      "FalseInfo",
+      "minskMetro"
     ],
     "ForgetMeNoModule": [
       "MemoryV2",

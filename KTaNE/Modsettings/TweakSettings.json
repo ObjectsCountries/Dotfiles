@@ -19,6 +19,7 @@
   "Mode": "Normal",
   "MissionSeed": -1,
   "CaseGenerator": true,
+  "CaseGeneratorMinModules": 1,
   "ModuleTweaks": true,
   "CaseColors": [],
   "Holdables": {
