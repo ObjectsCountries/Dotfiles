@@ -96,7 +96,11 @@ pages:
                 collapse-after: 20
       - size: small
         widgets:
-          $include: /etc/weather.yml
+          - type: weather
+            location: (insert city here)
+            units: imperial
+            hour-format: 12h
+            hide-location: true
           - type: clock
             hour-format: 12h
           - type: to-do
