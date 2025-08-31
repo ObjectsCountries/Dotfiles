@@ -137,7 +137,7 @@ discharging_symbol = '󰁼'
 [[battery.display]]
 threshold = 40
 charging_symbol = '󰂈'
-discharging_symbol = '󰁼'
+discharging_symbol = '󰁽'
 
 [[battery.display]]
 threshold = 50
