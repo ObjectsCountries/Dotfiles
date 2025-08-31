@@ -1,4 +1,4 @@
-(setq package-enable-at-startup nil)
+;(setq package-enable-at-startup nil)
 
 (defvar elpaca-installer-version 0.11)
 (defvar elpaca-directory (expand-file-name "elpaca/" user-emacs-directory))
