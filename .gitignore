@@ -1,5 +1,3 @@
-/Config\ Files/emacs/*
-!/Config\ Files/emacs/init.el
 /Config\ Files/glance/weather.yml
 /Config\ Files/nvim/lazy-lock.json
 /KTaNE/*
