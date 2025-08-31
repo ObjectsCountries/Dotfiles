@@ -12,8 +12,13 @@ pages:
     columns:
       - size: small
         widgets:
-          - type: calendar
-            first-day-of-week: sunday
+          - type: clock
+            hour-format: 12h
+          - type: weather
+            location: (insert city here)
+            units: imperial
+            hour-format: 12h
+            hide-location: true
           - type: videos
             channels:
               - UCBODyKF0JMbUd6D9Bklyzbw # Alpharad
@@ -60,14 +65,6 @@ pages:
               - theprimeagen
               - maximilian_dood
               - timotainment
-          - type: markets
-            markets:
-              - symbol: AMD
-                name: AMD
-              - symbol: INTC
-                name: Intel
-              - symbol: NVDA
-                name: Nvidia
       - size: full
         widgets:
           - type: group
@@ -96,14 +93,12 @@ pages:
                 collapse-after: 20
       - size: small
         widgets:
-          - type: weather
-            location: (insert city here)
-            units: imperial
-            hour-format: 12h
-            hide-location: true
-          - type: clock
-            hour-format: 12h
           - type: to-do
+          - type: repository
+            repository: ObjectsCountries/Dotfiles
+            pull-requests-limit: -1
+            issues-limit: -1
+            commits-limit: 3
           - type: custom-api
             title: "Recent Modules"
             cache: 24h
