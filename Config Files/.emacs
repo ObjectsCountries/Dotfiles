@@ -219,6 +219,28 @@
   :hook
   (markdown-mode . abbrev-mode))
 
+(use-package load-env-vars :ensure t
+  :config
+  (load-env-vars (expand-file-name "~/Dotfiles/.env"))
+  )
+
+    
+
+(use-package org-gcal :ensure t
+  :config
+  (setq org-gcal-client-id (getenv "GCAL_CLIENT_ID"))
+  (setq	org-gcal-client-secret (getenv "GCAL_CLIENT_SECRET"))
+  (org-gcal-reload-client-id-secret)
+  (setq	org-gcal-fetch-file-alist (list (cons (getenv "GCAL_CALENDARS_MAIN") "~/Calendars/main.org")
+					(cons (getenv "GCAL_CALENDARS_SCHEDULE") "~/Calendars/schedule.org")
+					(cons (getenv "GCAL_CALENDARS_IEEE") "~/Calendars/ieee.org")
+					(cons (getenv "GCAL_CALENDARS_WORK") "~/Calendars/work.org")))
+  (add-to-list 'plstore-encrypt-to (getenv "GPG_KEY"))
+  (setq epg-pinentry-mode 'loopback)
+)
+
+(setq org-agenda-files '("~/Calendars"))
+
 (use-package emacs :ensure nil :config (setq ring-bell-function #'ignore))
 
 (custom-set-variables
