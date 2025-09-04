@@ -165,12 +165,11 @@
    ("C-c n d" . denote-dired)
    ("C-c n g" . denote-grep))
   :config
-  (setq denote-directory (expand-file-name "~/Notes/")
+  (setq denote-directory (expand-file-name "~/UCI/"))
   (setq denote-known-keywords '("french-102a" "ics-46" "compsci-122a" "eecs-112" "stats-67"))
   (setq denote-file-type "markdown-yaml")
   (setq denote-prompts '(title keywords subdirectory))
   (setq denote-infer-keywords nil)
-  )
 )
 
 ; https://www.reddit.com/r/emacs/comments/10h9jf0/comment/j5atwdh/
