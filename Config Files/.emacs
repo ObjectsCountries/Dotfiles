@@ -230,16 +230,20 @@
   :config
   (setq org-gcal-client-id (getenv "GCAL_CLIENT_ID"))
   (setq	org-gcal-client-secret (getenv "GCAL_CLIENT_SECRET"))
-  (org-gcal-reload-client-id-secret)
   (setq	org-gcal-fetch-file-alist (list (cons (getenv "GCAL_CALENDARS_MAIN") "~/Calendars/main.org")
 					(cons (getenv "GCAL_CALENDARS_SCHEDULE") "~/Calendars/schedule.org")
 					(cons (getenv "GCAL_CALENDARS_IEEE") "~/Calendars/ieee.org")
 					(cons (getenv "GCAL_CALENDARS_WORK") "~/Calendars/work.org")))
+  (org-gcal-reload-client-id-secret)
   (add-to-list 'plstore-encrypt-to (getenv "GPG_KEY"))
   (setq epg-pinentry-mode 'loopback)
 )
 
+(setq create-lockfiles nil)
+
 (setq org-agenda-files '("~/Calendars"))
+
+(setq warning-minimum-level :error)
 
 (use-package emacs :ensure nil :config (setq ring-bell-function #'ignore))
 
