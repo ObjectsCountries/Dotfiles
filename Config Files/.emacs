@@ -245,6 +245,14 @@
 
 (setq warning-minimum-level :error)
 
+(setq markdown-enable-math t)
+
+; sudo npm install -g git+https://gitlab.com/matsievskiysv/math-preview
+(use-package math-preview
+  :ensure t
+  :custom (math-preview-command "/usr/bin/math-preview")
+)
+
 (use-package emacs :ensure nil :config (setq ring-bell-function #'ignore))
 
 (custom-set-variables
@@ -257,7 +265,7 @@
      default))
  '(doc-view-continuous t)
  '(elcord-editor-icon "emacs_pen_icon")
- '(package-selected-packages '(magit rust-mode)))
+ '(package-selected-packages '(auctex magit rust-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
