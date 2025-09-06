@@ -83,9 +83,13 @@
 
 (use-package transient :ensure t)
 
-(use-package magit :ensure t :after transient)
+(use-package magit :ensure t :after transient
+  :config
+  (setq magit-diff-refine-hunk 'all)
+  )
 
 (use-package treemacs :ensure t)
+
 
 (use-package treemacs-evil
   :after (treemacs evil)
@@ -106,6 +110,12 @@
 (add-hook 'window-setup-hook 'toggle-frame-maximized t)
 
 (use-package all-the-icons :ensure t)
+
+(use-package treemacs-all-the-icons
+  :after (treemacs all-the-icons)
+  :ensure t
+  :config
+  (treemacs-load-theme "all-the-icons"))
 
 (use-package clang-format :ensure t)
 
