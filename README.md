@@ -2,14 +2,14 @@
 
 ## Info
 
-|Component|Using|Package|
-|-|-|-|
-|Icons (Laptop) |Papirus|`papirus-icon-theme`|
-|Color of Folders (Laptop)|Papirus Folders script|`papirus-folders` (AUR)|
-|`ls` replacement|`eza`|`eza`|
-|`cat` replacement|`bat`|`bat`|
-|`git diff` replacement|Delta|`git-delta`|
-|Fish, Bat and Neovim themes|Cyberdream|Not on AUR, available as a Neovim package (scottmckendry/cyberdream.nvim)|
+| Component                   | Using                  | Package                                                                   |
+|-----------------------------|------------------------|---------------------------------------------------------------------------|
+| Icons (Laptop)              | Papirus                | `papirus-icon-theme`                                                      |
+| Color of Folders (Laptop)   | Papirus Folders script | `papirus-folders` (AUR)                                                   |
+| `ls` replacement            | `eza`                  | `eza`                                                                     |
+| `cat` replacement           | `bat`                  | `bat`                                                                     |
+| `git diff` replacement      | Delta                  | `git-delta`                                                               |
+| Fish, Bat and Neovim themes | Cyberdream             | Not on AUR, available as a Neovim package (scottmckendry/cyberdream.nvim) |
 
 `eza` customization:
 ```bash
@@ -24,19 +24,19 @@ Cyberdream for other apps available under their [extras](https://github.com/scot
 
 * Fira Sans font, FiraCode Nerd Font for monospace
 
-|Component|Theme|
-|-|-|
-|Colors|[MyBreeze-Dark-Color](https://store.kde.org/p/2217383)|
-|Application Style|Breeze|
-|Plasma Style|[MyBreeze-Dark-Plasma](https://store.kde.org/p/2217414)|
-|GTK Theme|[MyBreeze-Dark-GTK](https://store.kde.org/p/2217416)|
-|Window Decorations|[Cool-Color-Dark-Aurorae-6](https://store.kde.org/p/2227008)|
-|Icons|[Varied-gnome-dark](https://store.kde.org/p/2221913)|
-|Cursors|Breeze Light|
-|System Sounds|Ocean|
-|Splash Screen|None|
-|Login Screen (SDDM)|[Ant-Dark SDDM Plasma 6](https://store.kde.org/p/2139782)|
-|Boot Splash Screen|BGRT, replaced Arch logo with EndeavourOS|
+| Component           | Theme                                                                                                  |
+|---------------------|--------------------------------------------------------------------------------------------------------|
+| Colors              | BreezeDark                                                                                             |
+| Application Style   | Breeze                                                                                                 |
+| Plasma Style        | Orchis-Dark (`plasma6-themes-orchis-kde-git` on AUR)                                                   |
+| GTK Theme           | Orchis-Dark                                                                                            |
+| Window Decorations  | Orchis-Dark                                                                                            |
+| Icons               | Papirus-Dark (`papirus-icon-theme` on Extra, with `papirus-folders` AUR script to make folders violet) |
+| Cursors             | Breeze Light                                                                                           |
+| System Sounds       | Ocean                                                                                                  |
+| Splash Screen       | None                                                                                                   |
+| Login Screen (SDDM) | eos-Breeze, [custom background](swag.jpg)                                                              |
+| Boot Splash Screen  | BGRT, replaced Arch logo with EndeavourOS                                                              |
 
 ### Desktop
 
@@ -48,8 +48,9 @@ Cyberdream for other apps available under their [extras](https://github.com/scot
 ### Taskbar
 
 * Application Launcher w/ `endeavouros` icon
+* Global Menu
 * Icons-Only Task Manager
-  * Firefox, Discord, Steam, Emacs client
+  * Firefox, Discord, Steam, Emacs
 * System Tray
 * Clock
 
@@ -61,7 +62,7 @@ Cyberdream for other apps available under their [extras](https://github.com/scot
 * Dynamic Wallpaper: `plasma5-wallpapers-dynamic`
   * Use [Lakeside](wallpaper.avif)
 * Analog Clock in top left
-* Wunderground in bottom left
+* Weather in bottom left
 * Digital Clock to the right of Analog Clock
   * 12-Hour for time, M/d/yyyy for date
 * Media player in bottom right
@@ -89,9 +90,8 @@ Cyberdream for other apps available under their [extras](https://github.com/scot
 * Global Menu
 * Panel Spacer
 * Icons-Only Task Manager
-  * Chrome, Discord, Emacs
+  * Firefox, Discord, Emacs
 * Panel Spacer
-* Wunderground (extension)
 * System Tray
 * Total CPU Use
 * Memory Usage
@@ -100,9 +100,10 @@ Cyberdream for other apps available under their [extras](https://github.com/scot
 
 ## Dotfiles
 
-* [Emacs](Config%20Files/emacs/init.el)
+* [Emacs](Config%20Files/.emacs)
 * [Fastfetch](Config%20Files/fastfetch/)
 * [Fish](Config%20Files/fish/)
+* [Glance](Config%20Files/glance.yml)
 * [Hyfetch](Config%20Files/hyfetch.json)
 * [Neovim](Config%20Files/nvim/)
 * [Neovide](Config%20Files/neovide/)
