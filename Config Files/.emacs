@@ -138,6 +138,9 @@
   :ensure t
   :config
   (centaur-tabs-change-fonts "FiraCode Nerd Font Mono" 100)
+  (setq centaur-tabs-background-color "#202020")
+  :hook
+  (dired-mode . centaur-tabs-local-mode)
   :bind
   ("C-<prior>" . centaur-tabs-backward)
   ("C-<next>" . centaur-tabs-forward))
@@ -253,7 +256,7 @@
 
 (setq org-agenda-files '("~/Calendars"))
 
-(setq warning-minimum-level :error)
+;(setq warning-minimum-level :error)
 
 (setq markdown-enable-math t)
 
@@ -261,9 +264,17 @@
 (use-package math-preview
   :ensure t
   :custom (math-preview-command "/usr/bin/math-preview")
+  )
+
+(use-package rainbow-mode
+  :ensure t
+  :hook
+  ((markdown-mode . rainbow-mode))
 )
 
 (use-package emacs :ensure nil :config (setq ring-bell-function #'ignore))
+
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

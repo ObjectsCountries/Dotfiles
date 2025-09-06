@@ -4,8 +4,6 @@
 
 | Component                   | Using                  | Package                                                                   |
 |-----------------------------|------------------------|---------------------------------------------------------------------------|
-| Icons (Laptop)              | Papirus                | `papirus-icon-theme`                                                      |
-| Color of Folders (Laptop)   | Papirus Folders script | `papirus-folders` (AUR)                                                   |
 | `ls` replacement            | `eza`                  | `eza`                                                                     |
 | `cat` replacement           | `bat`                  | `bat`                                                                     |
 | `git diff` replacement      | Delta                  | `git-delta`                                                               |
@@ -59,12 +57,13 @@ Cyberdream for other apps available under their [extras](https://github.com/scot
 ### Desktop
 
 * Breeze Dark theme for everything except icons
+* Papirus for icons, same as above
 * Dynamic Wallpaper: `plasma5-wallpapers-dynamic`
   * Use [Lakeside](wallpaper.avif)
 * Analog Clock in top left
 * Weather in bottom left
 * Digital Clock to the right of Analog Clock
-  * 12-Hour for time, M/d/yyyy for date
+  * 12-Hour for time, M/d/yyyy for date, transparent background
 * Media player in bottom right
 * Battery above media player (align to right)
 
@@ -90,13 +89,13 @@ Cyberdream for other apps available under their [extras](https://github.com/scot
 * Global Menu
 * Panel Spacer
 * Icons-Only Task Manager
-  * Firefox, Discord, Emacs
+  * Firefox, Discord, Emacs (Client)
 * Panel Spacer
 * System Tray
 * Total CPU Use
 * Memory Usage
 * Digital Clock
-  * M/d beside region defaults time
+  * Short date beside region defaults time
 
 ## Dotfiles
 
