@@ -16,14 +16,12 @@ eza -l --color=always --icons=always --hyperlink -a --group-directories-first --
 
 Cyberdream for other apps available under their [extras](https://github.com/scottmckendry/cyberdream.nvim/tree/main/extras)
 
-## Desktop KDE Plasma
-
-### Theming
-
-* Fira Sans font, FiraCode Nerd Font for monospace
+## Theming
 
 | Component           | Theme                                                                                                  |
 |---------------------|--------------------------------------------------------------------------------------------------------|
+| Font                | Bahnschrift SemiLight (`ttf-ms-win11-auto` on the AUR)                                                 |
+| Monospace Font      | ComicShannsMono Nerd Font Mono (`otf-comicshanns-nerd` from Extra)                                     |
 | Colors              | BreezeDark                                                                                             |
 | Application Style   | Breeze                                                                                                 |
 | Plasma Style        | Orchis-Dark (`plasma6-themes-orchis-kde-git` on AUR)                                                   |
@@ -35,6 +33,8 @@ Cyberdream for other apps available under their [extras](https://github.com/scot
 | Splash Screen       | None                                                                                                   |
 | Login Screen (SDDM) | eos-Breeze, [custom background](swag.jpg)                                                              |
 | Boot Splash Screen  | BGRT, replaced Arch logo with EndeavourOS                                                              |
+
+## PC
 
 ### Desktop
 
@@ -52,12 +52,10 @@ Cyberdream for other apps available under their [extras](https://github.com/scot
 * System Tray
 * Clock
 
-## Laptop KDE Plasma
+## Laptop
 
 ### Desktop
 
-* Breeze Dark theme for everything except icons
-* Papirus for icons, same as above
 * Dynamic Wallpaper: `plasma5-wallpapers-dynamic`
   * Use [Lakeside](wallpaper.avif)
 * Analog Clock in top left
