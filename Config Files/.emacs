@@ -41,10 +41,14 @@
 
 (setenv "FrameworkPathOverride" "/usr/lib/mono/4.8-api")
 
+(cua-mode t)
+
+(setq-default cursor-type 'bar)
+
 (elpaca elpaca-use-package
   (elpaca-use-package-mode))
 
-(use-package evil :ensure t :demand t :config (evil-mode 1))
+;(use-package evil :ensure t :demand t :config (evil-mode 0))
 
 (use-package lsp-mode
   :ensure t
@@ -91,9 +95,9 @@
 (use-package treemacs :ensure t)
 
 
-(use-package treemacs-evil
-  :after (treemacs evil)
-  :ensure t)
+;(use-package treemacs-evil
+;  :after (treemacs evil)
+;  :ensure nil)
 
 (use-package treemacs-projectile
   :after (treemacs projectile)
