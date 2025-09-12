@@ -278,6 +278,12 @@
   ((markdown-mode . rainbow-mode))
   )
 
+(add-hook 'find-file-hook 'toggle-menu-bar-mode-from-frame)
+
+(global-set-key [f2] 'toggle-menu-bar-mode-from-frame)
+
+(undo-only t)
+
 (use-package emacs :ensure nil :config (setq ring-bell-function #'ignore))
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
