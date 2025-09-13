@@ -102,6 +102,4 @@ Cyberdream for other apps available under their [extras](https://github.com/scot
 * [Fish](Config%20Files/fish/)
 * [Glance](Config%20Files/glance.yml)
 * [Hyfetch](Config%20Files/hyfetch.json)
-* [Neovim](Config%20Files/nvim/)
-* [Neovide](Config%20Files/neovide/)
 * [Starship](Config%20Files/starship.toml)

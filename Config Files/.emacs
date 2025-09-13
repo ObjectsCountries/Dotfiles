@@ -166,6 +166,7 @@
 
 (use-package dashboard :ensure t :config (dashboard-setup-startup-hook))
 (setq initial-buffer-choice (lambda () (get-buffer-create dashboard-buffer-name)))
+(add-hook 'server-after-make-frame-hook 'revert-buffer)
 
 (setq vc-follow-symlinks t)
 (setq frame-title-format "%b - Emacs")
