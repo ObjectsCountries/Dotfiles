@@ -288,11 +288,6 @@
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((python . t)
-   (R . t)))
-
 (use-package cmake-mode
   :ensure t)
 
@@ -309,6 +304,7 @@
      default))
  '(doc-view-continuous t)
  '(elcord-editor-icon "emacs_pen_icon")
+ '(org-babel-load-languages '((python . t) (C . t) (R . t) (emacs-lisp . t)))
  '(package-selected-packages '(auctex magit rust-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
