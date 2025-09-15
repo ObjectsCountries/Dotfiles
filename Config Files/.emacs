@@ -186,7 +186,7 @@
   :config
   (setq denote-directory (expand-file-name "~/UCI/"))
   (setq denote-known-keywords '("french-102a" "ics-46" "compsci-122a" "eecs-112" "stats-67"))
-  (setq denote-file-type "markdown-yaml")
+  ;(setq denote-file-type "markdown-yaml")
   (setq denote-prompts '(title keywords subdirectory))
   (setq denote-infer-keywords nil)
 )
@@ -283,11 +283,21 @@
 
 (global-set-key [f2] 'toggle-menu-bar-mode-from-frame)
 
-(undo-only t)
-
 (use-package emacs :ensure nil :config (setq ring-bell-function #'ignore))
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
+
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((python . t)
+   (R . t)))
+
+(use-package cmake-mode
+  :ensure t)
+
+(use-package cmake-project
+  :ensure t)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
