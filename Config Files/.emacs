@@ -123,7 +123,6 @@
 
 (use-package clang-format :ensure t)
 
-(use-package org-roam :ensure t)
 (use-package pdf-tools :ensure t)
 (use-package nov :ensure t)
 (use-package djvu :ensure t)
@@ -195,8 +194,34 @@
   :ensure t
   :custom
   (org-roam-directory "~/UCI")
+  :bind (
+	 ("C-c n l" . org-roam-buffer-toggle)
+	 ("C-c n f" . org-roam-node-find)
+	 ("C-c n i" . org-roam-node-insert)
+	 )
   :config
   (org-roam-setup))
+
+
+(setq org-roam-capture-templates
+      '(
+        ("A" "FRENCH 102A" plain "%?"
+         :target (file+head "FRENCH 102A/Notes/%<%Y%m%d%H%M%S>-${slug}.org"
+                            "#+title: ${title}\n") :unnarrowed t)
+        ("B" "ICS 46" plain "%?"
+         :target (file+head "ICS 46/Notes/%<%Y%m%d%H%M%S>-${slug}.org"
+                            "#+title: ${title}\n") :unnarrowed t)
+        ("C" "COMPSCI 122A" plain "%?"
+         :target (file+head "COMPSCI 122A/Notes/%<%Y%m%d%H%M%S>-${slug}.org"
+                            "#+title: ${title}\n") :unnarrowed t)
+        ("D" "EECS 112" plain "%?"
+         :target (file+head "EECS 112/Notes/%<%Y%m%d%H%M%S>-${slug}.org"
+                            "#+title: ${title}\n") :unnarrowed t)
+        ("E" "STATS 67" plain "%?"
+         :target (file+head "STATS 67/Notes/%<%Y%m%d%H%M%S>-${slug}.org"
+                            "#+title: ${title}\n") :unnarrowed t)
+        )
+      )
 
 ; https://www.reddit.com/r/emacs/comments/10h9jf0/comment/j5atwdh/
 
@@ -275,10 +300,10 @@
 (setq markdown-enable-math t)
 
 ; sudo npm install -g git+https://gitlab.com/matsievskiysv/math-preview
-(use-package math-preview
-  :ensure t
-  :custom (math-preview-command "/usr/bin/math-preview")
-  )
+;(use-package math-preview
+;  :ensure t
+;  :custom (math-preview-command "/usr/bin/math-preview")
+;  )
 
 (use-package rainbow-mode
   :ensure t
@@ -287,6 +312,8 @@
   )
 
 (add-hook 'find-file-hook 'toggle-menu-bar-mode-from-frame)
+
+;(add-hook 'org-mode-hook 'global-display-line-numbers-mode-hook)
 
 (global-set-key [f2] 'toggle-menu-bar-mode-from-frame)
 
