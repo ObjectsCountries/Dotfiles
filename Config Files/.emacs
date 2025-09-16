@@ -206,20 +206,20 @@
 (setq org-roam-capture-templates
       '(
         ("a" "FRENCH 102A" plain "%?"
-         :target (file+head "FRENCH 102A/Notes/%<%Y%m%d%H%M%S>-${slug}.org"
-                            "#+title: ${title}\n") :unnarrowed t)
+         :target (file+head "FRENCH 102A/Notes/%<%-m-%-d>_${slug}.org"
+                            "#+TITLE: ${title}\n#+DATE: %<%-m/%-d/%Y>\n#+AUTHOR: Kasra Moayedi\n#+DESCRIPTION: \n") :unnarrowed t)
         ("b" "ICS 46" plain "%?"
-         :target (file+head "ICS 46/Notes/%<%Y%m%d%H%M%S>-${slug}.org"
-                            "#+title: ${title}\n") :unnarrowed t)
+         :target (file+head "ICS 46/Notes/%<%-m-%-d>_${slug}.org"
+                            "#+TITLE: ${title}\n#+DATE: %<%-m/%-d/%Y>\n#+AUTHOR: Kasra Moayedi\n#+DESCRIPTION: \n") :unnarrowed t)
         ("c" "COMPSCI 122A" plain "%?"
-         :target (file+head "COMPSCI 122A/Notes/%<%Y%m%d%H%M%S>-${slug}.org"
-                            "#+title: ${title}\n") :unnarrowed t)
+         :target (file+head "COMPSCI 122A/Notes/%<%-m-%-d>_${slug}.org"
+                            "#+TITLE: ${title}\n#+DATE: %<%-m/%-d/%Y>\n#+AUTHOR: Kasra Moayedi\n#+DESCRIPTION: \n") :unnarrowed t)
         ("d" "EECS 112" plain "%?"
-         :target (file+head "EECS 112/Notes/%<%Y%m%d%H%M%S>-${slug}.org"
-                            "#+title: ${title}\n") :unnarrowed t)
+         :target (file+head "EECS 112/Notes/%<%-m-%-d>_${slug}.org"
+                            "#+TITLE: ${title}\n#+DATE: %<%-m/%-d/%Y>\n#+AUTHOR: Kasra Moayedi\n#+DESCRIPTION: \n") :unnarrowed t)
         ("e" "STATS 67" plain "%?"
-         :target (file+head "STATS 67/Notes/%<%Y%m%d%H%M%S>-${slug}.org"
-                            "#+title: ${title}\n") :unnarrowed t)
+         :target (file+head "STATS 67/Notes/%<%-m-%-d>_${slug}.org"
+                            "#+TITLE: ${title}\n#+DATE: %<%-m/%-d/%Y>\n#+AUTHOR: Kasra Moayedi\n#+DESCRIPTION: \n") :unnarrowed t)
         )
       )
 
