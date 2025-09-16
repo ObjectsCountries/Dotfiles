@@ -173,23 +173,30 @@
 
 (use-package elcord :ensure t)
 
-(use-package denote
+;(use-package denote
+;  :ensure t
+;  :hook (dired-mode . denote-dired-mode)
+;  :bind
+;  (("C-c n n" . denote)
+;   ("C-c n r" . denote-rename-file)
+;   ("C-c n l" . denote-link)
+;   ("C-c n b" . denote-backlinks)
+;   ("C-c n d" . denote-dired)
+;   ("C-c n g" . denote-grep))
+;  :config
+;  (setq denote-directory (expand-file-name "~/UCI/"))
+;  (setq denote-known-keywords '("french-102a" "ics-46" "compsci-122a" "eecs-112" "stats-67"))
+;  ;(setq denote-file-type "markdown-yaml")
+;  (setq denote-prompts '(title keywords subdirectory))
+;  (setq denote-infer-keywords nil)
+					;)
+
+(use-package org-roam
   :ensure t
-  :hook (dired-mode . denote-dired-mode)
-  :bind
-  (("C-c n n" . denote)
-   ("C-c n r" . denote-rename-file)
-   ("C-c n l" . denote-link)
-   ("C-c n b" . denote-backlinks)
-   ("C-c n d" . denote-dired)
-   ("C-c n g" . denote-grep))
+  :custom
+  (org-roam-directory "~/UCI")
   :config
-  (setq denote-directory (expand-file-name "~/UCI/"))
-  (setq denote-known-keywords '("french-102a" "ics-46" "compsci-122a" "eecs-112" "stats-67"))
-  ;(setq denote-file-type "markdown-yaml")
-  (setq denote-prompts '(title keywords subdirectory))
-  (setq denote-infer-keywords nil)
-)
+  (org-roam-setup))
 
 ; https://www.reddit.com/r/emacs/comments/10h9jf0/comment/j5atwdh/
 
