@@ -205,19 +205,19 @@
 
 (setq org-roam-capture-templates
       '(
-        ("A" "FRENCH 102A" plain "%?"
+        ("a" "FRENCH 102A" plain "%?"
          :target (file+head "FRENCH 102A/Notes/%<%Y%m%d%H%M%S>-${slug}.org"
                             "#+title: ${title}\n") :unnarrowed t)
-        ("B" "ICS 46" plain "%?"
+        ("b" "ICS 46" plain "%?"
          :target (file+head "ICS 46/Notes/%<%Y%m%d%H%M%S>-${slug}.org"
                             "#+title: ${title}\n") :unnarrowed t)
-        ("C" "COMPSCI 122A" plain "%?"
+        ("c" "COMPSCI 122A" plain "%?"
          :target (file+head "COMPSCI 122A/Notes/%<%Y%m%d%H%M%S>-${slug}.org"
                             "#+title: ${title}\n") :unnarrowed t)
-        ("D" "EECS 112" plain "%?"
+        ("d" "EECS 112" plain "%?"
          :target (file+head "EECS 112/Notes/%<%Y%m%d%H%M%S>-${slug}.org"
                             "#+title: ${title}\n") :unnarrowed t)
-        ("E" "STATS 67" plain "%?"
+        ("e" "STATS 67" plain "%?"
          :target (file+head "STATS 67/Notes/%<%Y%m%d%H%M%S>-${slug}.org"
                             "#+title: ${title}\n") :unnarrowed t)
         )
