@@ -321,6 +321,8 @@
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
+(use-package rust-mode
+  :ensure t)
 
 (use-package cmake-mode
   :ensure t)
@@ -338,6 +340,7 @@
      default))
  '(doc-view-continuous t)
  '(elcord-editor-icon "emacs_pen_icon")
+ '(lsp-rust-analyzer-rustfmt-override-command ["~/.cargo/bin/leptosfmt" "~/Coding Projects/Other/Timcord Survey/"])
  '(org-babel-load-languages '((python . t) (C . t) (R . t) (emacs-lisp . t)))
  '(package-selected-packages '(auctex magit rust-mode)))
 (custom-set-faces
