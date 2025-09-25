@@ -1,5 +1,3 @@
-;(setq package-enable-at-startup nil)
-
 (defvar elpaca-installer-version 0.11)
 (defvar elpaca-directory (expand-file-name "elpaca/" user-emacs-directory))
 (defvar elpaca-builds-directory (expand-file-name "builds/" elpaca-directory))
@@ -39,16 +37,69 @@
 (add-hook 'after-init-hook #'elpaca-process-queues)
 (elpaca `(,@elpaca-order))
 
-(setenv "FrameworkPathOverride" "/usr/lib/mono/4.8-api")
-
-(cua-mode t)
-
-(setq-default cursor-type 'bar)
-
 (elpaca elpaca-use-package
   (elpaca-use-package-mode))
 
-;(use-package evil :ensure t :demand t :config (evil-mode 0))
+;; PACKAGES
+
+(use-package all-the-icons
+  :ensure t)
+
+(use-package centaur-tabs
+  :ensure t
+  :config
+  (centaur-tabs-change-fonts "FiraCode Nerd Font Mono" 100)
+  (setq centaur-tabs-background-color "#202020")
+  :hook
+  (dired-mode . centaur-tabs-local-mode)
+  :bind
+  ("C-<prior>" . centaur-tabs-backward)
+  ("C-<next>" . centaur-tabs-forward))
+
+(use-package clang-format
+  :ensure t)
+
+(use-package cmake-mode
+  :ensure t)
+
+(use-package cmake-project
+  :ensure t)
+
+(use-package company
+  :ensure t
+  :config
+  (add-hook 'after-init-hook 'global-company-mode))
+
+(use-package dashboard
+  :ensure t
+  :config (dashboard-setup-startup-hook))
+
+(use-package djvu
+  :ensure t)
+
+(use-package elcord
+  :ensure t)
+
+(use-package ess
+  :ensure t)
+
+(use-package exotica-theme
+  :ensure t
+  :config (load-theme 'exotica t))
+
+(use-package flycheck
+  :ensure t
+  :config
+  (add-hook 'after-init-hook #'global-flycheck-mode))
+
+(use-package helm-lsp :ensure t
+  :commands helm-lsp-workspace-symbol)
+
+(use-package load-env-vars :ensure t
+  :config (load-env-vars (expand-file-name "~/Dotfiles/.env")))
+
+(use-package lsp-ivy :ensure t
+  :commands lsp-ivy-workspace-symbol)
 
 (use-package lsp-mode
   :ensure t
@@ -63,168 +114,17 @@
          (lsp-mode . lsp-enable-which-key-integration))
   :commands lsp)
 
-(use-package flycheck
-  :ensure t
-  :config
-  (add-hook 'after-init-hook #'global-flycheck-mode))
+(use-package lsp-treemacs :ensure t
+  :commands lsp-treemacs-errors-list
+  :config (lsp-treemacs-sync-mode 1))
 
-(use-package company
-  :ensure t
-  :config
-  (add-hook 'after-init-hook 'global-company-mode))
-
-(use-package lsp-ui :ensure t :commands lsp-ui-mode)
-(use-package helm-lsp :ensure t :commands helm-lsp-workspace-symbol)
-(use-package lsp-ivy :ensure t :commands lsp-ivy-workspace-symbol)
-(use-package lsp-treemacs :ensure t :commands lsp-treemacs-errors-list :config (lsp-treemacs-sync-mode 1))
-(use-package which-key
-    :config
-    (which-key-mode))
-
-(use-package exotica-theme :ensure t :config (load-theme 'exotica t))
-
-(use-package vterm :ensure t)
-
-(use-package transient :ensure t)
+(use-package lsp-ui :ensure t
+  :commands lsp-ui-mode)
 
 (use-package magit :ensure t :after transient
-  :config
-  (setq magit-diff-refine-hunk 'all)
-  )
-
-(use-package treemacs :ensure t)
-
-
-;(use-package treemacs-evil
-;  :after (treemacs evil)
-;  :ensure nil)
-
-(use-package treemacs-projectile
-  :after (treemacs projectile)
-  :ensure t)
-
-(use-package treemacs-icons-dired
-  :hook (dired-mode . treemacs-icons-dired-enable-once)
-  :ensure t)
-
-(use-package treemacs-magit
-  :after (treemacs magit)
-  :ensure t)
-
-(add-hook 'window-setup-hook 'toggle-frame-maximized t)
-
-(use-package all-the-icons :ensure t)
-
-(use-package treemacs-all-the-icons
-  :after (treemacs all-the-icons)
-  :ensure t
-  :config
-  (treemacs-load-theme "all-the-icons"))
-
-(use-package clang-format :ensure t)
-
-(use-package pdf-tools :ensure t)
-(use-package nov :ensure t)
-(use-package djvu :ensure t)
-(use-package org-noter :ensure t)
-
-(setq centaur-tabs-style "wave")
-(setq centaur-tabs-height 32)
-(setq centaur-tabs-set-icons t)
-(setq centaur-tabs-icon-type 'all-the-icons)
-
-(setq make-backup-files nil)
-(auto-save-mode -1)
-
-(add-hook 'prog-mode-hook 'display-line-numbers-mode)
-
-(use-package centaur-tabs
-  :ensure t
-  :config
-  (centaur-tabs-change-fonts "FiraCode Nerd Font Mono" 100)
-  (setq centaur-tabs-background-color "#202020")
-  :hook
-  (dired-mode . centaur-tabs-local-mode)
-  :bind
-  ("C-<prior>" . centaur-tabs-backward)
-  ("C-<next>" . centaur-tabs-forward))
-
-(global-set-key [C-M-tab] 'clang-format-buffer)
-
-(setq dashboard-display-icons-p t)
-(setq dashboard-icon-type 'all-the-icons)
-(setq dashboard-set-heading-icons t)
-(setq dashboard-set-file-icons t)
-(setq dashboard-banner-logo-title "Emacs")
-(setq dashboard-startup-banner 'logo)
-(setq dashboard-center-content t)
-(setq dashboard-vertically-center-content t)
-(setq dashboard-items '((recents   . 5)
-                        (projects  . 5)
-                        (agenda    . 5)))
-
-(use-package dashboard :ensure t :config (dashboard-setup-startup-hook))
-(setq initial-buffer-choice (lambda () (get-buffer-create dashboard-buffer-name)))
-(add-hook 'server-after-make-frame-hook 'revert-buffer)
-
-(setq vc-follow-symlinks t)
-(setq frame-title-format "%b - Emacs")
-
-(use-package elcord :ensure t)
-
-;(use-package denote
-;  :ensure t
-;  :hook (dired-mode . denote-dired-mode)
-;  :bind
-;  (("C-c n n" . denote)
-;   ("C-c n r" . denote-rename-file)
-;   ("C-c n l" . denote-link)
-;   ("C-c n b" . denote-backlinks)
-;   ("C-c n d" . denote-dired)
-;   ("C-c n g" . denote-grep))
-;  :config
-;  (setq denote-directory (expand-file-name "~/UCI/"))
-;  (setq denote-known-keywords '("french-102a" "ics-46" "compsci-122a" "eecs-112" "stats-67"))
-;  ;(setq denote-file-type "markdown-yaml")
-;  (setq denote-prompts '(title keywords subdirectory))
-;  (setq denote-infer-keywords nil)
-					;)
-
-(use-package org-roam
-  :ensure t
-  :custom
-  (org-roam-directory "~/UCI")
-  :bind (
-	 ("C-c n l" . org-roam-buffer-toggle)
-	 ("C-c n f" . org-roam-node-find)
-	 ("C-c n i" . org-roam-node-insert)
-	 )
-  :config
-  (org-roam-setup))
-
-
-(setq org-roam-capture-templates
-      '(
-        ("a" "FRENCH 102A" plain "%?"
-         :target (file+head "FRENCH 102A/Notes/%<%-m-%-d>_${slug}.org"
-                            "#+TITLE: ${title}\n#+DATE: %<%-m/%-d/%Y>\n#+AUTHOR: Kasra Moayedi\n#+DESCRIPTION: \n") :unnarrowed t)
-        ("b" "ICS 46" plain "%?"
-         :target (file+head "ICS 46/Notes/%<%-m-%-d>_${slug}.org"
-                            "#+TITLE: ${title}\n#+DATE: %<%-m/%-d/%Y>\n#+AUTHOR: Kasra Moayedi\n#+DESCRIPTION: \n") :unnarrowed t)
-        ("c" "COMPSCI 122A" plain "%?"
-         :target (file+head "COMPSCI 122A/Notes/%<%-m-%-d>_${slug}.org"
-                            "#+TITLE: ${title}\n#+DATE: %<%-m/%-d/%Y>\n#+AUTHOR: Kasra Moayedi\n#+DESCRIPTION: \n") :unnarrowed t)
-        ("d" "EECS 112" plain "%?"
-         :target (file+head "EECS 112/Notes/%<%-m-%-d>_${slug}.org"
-                            "#+TITLE: ${title}\n#+DATE: %<%-m/%-d/%Y>\n#+AUTHOR: Kasra Moayedi\n#+DESCRIPTION: \n") :unnarrowed t)
-        ("e" "STATS 67" plain "%?"
-         :target (file+head "STATS 67/Notes/%<%-m-%-d>_${slug}.org"
-                            "#+TITLE: ${title}\n#+DATE: %<%-m/%-d/%Y>\n#+AUTHOR: Kasra Moayedi\n#+DESCRIPTION: \n") :unnarrowed t)
-        )
-      )
+  :config (setq magit-diff-refine-hunk 'all))
 
 ; https://www.reddit.com/r/emacs/comments/10h9jf0/comment/j5atwdh/
-
 (use-package markdown-mode
   :hook
   (markdown-mode . nb/markdown-unhighlight)
@@ -270,13 +170,8 @@
   :hook
   (markdown-mode . abbrev-mode))
 
-(use-package load-env-vars :ensure t
-  :config
-  (load-env-vars (expand-file-name "~/Dotfiles/.env"))
-  )
-
-(add-to-list 'default-frame-alist
-             '(font . "ComicShannsMono Nerd Font Mono-12"))
+(use-package nov
+  :ensure t)
 
 (use-package org-gcal :ensure t
   :config
@@ -288,47 +183,152 @@
 					(cons (getenv "GCAL_CALENDARS_WORK") "~/Calendars/work.org")))
   (org-gcal-reload-client-id-secret)
   (add-to-list 'plstore-encrypt-to (getenv "GPG_KEY"))
-  (setq epg-pinentry-mode 'loopback)
-)
+  (setq epg-pinentry-mode 'loopback))
 
-(setq create-lockfiles nil)
+(use-package org-noter
+  :ensure t)
 
-(setq org-agenda-files '("~/Calendars"))
+(use-package org-roam
+  :ensure t
+  :custom
+  (org-roam-directory "~/UCI")
+  :bind (
+	 ("C-c n l" . org-roam-buffer-toggle)
+	 ("C-c n f" . org-roam-node-find)
+	 ("C-c n i" . org-roam-node-insert)
+	 )
+  :config
+  (org-roam-setup))
 
-;(setq warning-minimum-level :error)
-
-(setq markdown-enable-math t)
-
-; sudo npm install -g git+https://gitlab.com/matsievskiysv/math-preview
-;(use-package math-preview
-;  :ensure t
-;  :custom (math-preview-command "/usr/bin/math-preview")
-;  )
+(use-package pdf-tools
+  :ensure t)
 
 (use-package rainbow-mode
   :ensure t
-  :hook
-  ((markdown-mode . rainbow-mode))
-  )
-
-(add-hook 'find-file-hook 'toggle-menu-bar-mode-from-frame)
-
-;(add-hook 'org-mode-hook 'global-display-line-numbers-mode-hook)
-
-(global-set-key [f2] 'toggle-menu-bar-mode-from-frame)
-
-(use-package emacs :ensure nil :config (setq ring-bell-function #'ignore))
-
-(add-to-list 'default-frame-alist '(fullscreen . maximized))
+  :hook ((markdown-mode . rainbow-mode)))
 
 (use-package rust-mode
   :ensure t)
 
-(use-package cmake-mode
+(use-package transient
   :ensure t)
 
-(use-package cmake-project
+(use-package treemacs
   :ensure t)
+
+(use-package treemacs-all-the-icons
+  :after (treemacs all-the-icons)
+  :ensure t
+  :config
+  (treemacs-load-theme "all-the-icons"))
+
+(use-package treemacs-icons-dired
+  :hook (dired-mode . treemacs-icons-dired-enable-once)
+  :ensure t)
+
+(use-package treemacs-magit
+  :after (treemacs magit)
+  :ensure t)
+
+(use-package treemacs-projectile
+  :after (treemacs projectile)
+  :ensure t)
+
+(use-package vterm
+  :ensure t)
+
+(use-package which-key
+  :config (which-key-mode))
+
+;; VARIABLES
+
+; thank you chatgpt
+(defun my/org-set-dictionary-from-language ()
+  "Set `ispell-change-dictionary` directly from #+LANGUAGE: in Org file."
+  (when (derived-mode-p 'org-mode)
+    (let* ((lang (cdr (assoc "LANGUAGE" (org-collect-keywords '("LANGUAGE")))))
+           (lang (car lang)))
+      (when lang
+        (ignore-errors
+          (ispell-change-dictionary lang))))))
+
+(add-hook 'prog-mode-hook 'display-line-numbers-mode)
+(add-hook 'org-mode-hook #'flyspell-mode)
+(add-hook 'org-mode-hook #'global-display-line-numbers-mode)
+(add-hook 'org-mode-hook #'my/org-set-dictionary-from-language)
+(add-hook 'server-after-make-frame-hook 'revert-buffer)
+(add-hook 'window-setup-hook 'toggle-frame-maximized t)
+
+(setq create-lockfiles nil)
+
+(setq centaur-tabs-height 32)
+(setq centaur-tabs-icon-type 'all-the-icons)
+(setq centaur-tabs-set-icons t)
+(setq centaur-tabs-style "wave")
+
+(setq dashboard-banner-logo-title "Emacs")
+(setq dashboard-center-content t)
+(setq dashboard-display-icons-p t)
+(setq dashboard-icon-type 'all-the-icons)
+(setq dashboard-items '((recents   . 5)
+                        (projects  . 5)
+                        (agenda    . 5)))
+(setq dashboard-set-file-icons t)
+(setq dashboard-set-heading-icons t)
+(setq dashboard-startup-banner 'logo)
+(setq dashboard-vertically-center-content t)
+
+(setq frame-title-format "%b - Emacs")
+
+(setq initial-buffer-choice (lambda () (get-buffer-create dashboard-buffer-name)))
+
+(setq make-backup-files nil)
+
+(setq org-agenda-files '("~/Calendars"))
+
+(setq org-roam-capture-templates
+      '(
+        ("a" "FRENCH 102A" plain "%?"
+         :target (file+head "FRENCH 102A/Notes/%<%-m-%-d>_${slug}.org"
+                            "#+TITLE: ${title}\n#+DATE: %<%-m/%-d/%Y>\n#+AUTHOR: Kasra Moayedi\n#+LANGUAGE: fr_FR\n#+DESCRIPTION:\n") :unnarrowed t)
+        ("b" "ICS 46" plain "%?"
+         :target (file+head "ICS 46/Notes/%<%-m-%-d>_${slug}.org"
+                            "#+TITLE: ${title}\n#+DATE: %<%-m/%-d/%Y>\n#+AUTHOR: Kasra Moayedi\n#+LANGUAGE: en_US\n#+DESCRIPTION:\n") :unnarrowed t)
+        ("c" "COMPSCI 122A" plain "%?"
+         :target (file+head "COMPSCI 122A/Notes/%<%-m-%-d>_${slug}.org"
+                            "#+TITLE: ${title}\n#+DATE: %<%-m/%-d/%Y>\n#+AUTHOR: Kasra Moayedi\n#+LANGUAGE: en_US\n#+DESCRIPTION:\n") :unnarrowed t)
+        ("d" "EECS 112" plain "%?"
+         :target (file+head "EECS 112/Notes/%<%-m-%-d>_${slug}.org"
+                            "#+TITLE: ${title}\n#+DATE: %<%-m/%-d/%Y>\n#+AUTHOR: Kasra Moayedi\n#+LANGUAGE: en_US\n#+DESCRIPTION:\n") :unnarrowed t)
+        ("e" "STATS 67" plain "%?"
+         :target (file+head "STATS 67/Notes/%<%-m-%-d>_${slug}.org"
+                            "#+TITLE: ${title}\n#+DATE: %<%-m/%-d/%Y>\n#+AUTHOR: Kasra Moayedi\n#+LANGUAGE: en_US\n#+DESCRIPTION:\n") :unnarrowed t)
+        )
+      )
+
+(setq vc-follow-symlinks t)
+
+;; MISC
+
+(add-to-list 'default-frame-alist
+             '(font . "ComicShannsMono Nerd Font Mono-12"))
+
+
+(global-set-key [C-M-tab] 'clang-format-buffer)
+(global-set-key [f2] 'toggle-menu-bar-mode-from-frame)
+
+(use-package emacs
+  :ensure nil
+  :config (setq ring-bell-function #'ignore))
+
+(auto-save-mode -1)
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
+(setenv "FrameworkPathOverride" "/usr/lib/mono/4.8-api")
+
+(cua-mode t)
+
+(setq-default cursor-type 'bar)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -340,9 +340,7 @@
      default))
  '(doc-view-continuous t)
  '(elcord-editor-icon "emacs_pen_icon")
- '(lsp-rust-analyzer-rustfmt-override-command ["~/.cargo/bin/leptosfmt" "~/Coding Projects/Other/Timcord Survey/"])
- '(org-babel-load-languages '((python . t) (C . t) (R . t) (emacs-lisp . t)))
- '(package-selected-packages '(auctex magit rust-mode)))
+ '(org-babel-load-languages '((python . t) (C . t) (R . t) (emacs-lisp . t))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
