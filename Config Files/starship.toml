@@ -6,24 +6,24 @@ format = """
 [](color_1 bg:color_2)\
 [$directory($git_branch$git_status )](#000000 bg:color_2)\
 [](color_2 bg:color_3)\
-[$cmake$cpp$dotnet${custom.jupyter}$nodejs$python$rust${custom.verilog}](#ffffff bg:color_3)\
+[($battery$sudo )](#000000 bg:color_3)\
 [](color_3 bg:color_4)\
-[($battery$sudo )](#ffffff bg:color_4)\
+[$cmake$cpp$dotnet${custom.jupyter}$nodejs$python$rust${custom.verilog}](#000000 bg:color_4)\
 [](color_4 bg:color_5)\
-[$time$cmd_duration](#ffffff bg:color_5)\
+[$time$cmd_duration](#000000 bg:color_5)\
 [](color_5)\
 $line_break$character"""
 
 add_newline = false
 
-palette = 'genderfluid'
+palette = 'rainbow'
 
-[palettes.genderfluid]
-color_1 = '#ff76a4'
-color_2 = '#ffffff'
-color_3 = '#c011d7'
-color_4 = '#404040'
-color_5 = '#2f3cbe'
+[palettes.rainbow]
+color_1 = '#ff6e5e'
+color_2 = '#ffbd5e'
+color_3 = '#5eff6c'
+color_4 = '#5ea1ff'
+color_5 = '#bd5eff'
 
 [os]
 format = '$symbol'

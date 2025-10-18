@@ -59,6 +59,17 @@
 (use-package clang-format
   :ensure t)
 
+(use-package cmake-integration
+  :ensure (cmake-integration :type git :host github 
+                             :repo "darcamo/cmake-integration")
+  :commands (cmake-integration-conan-manage-remotes
+             cmake-integration-conan-list-packages-in-local-cache
+             cmake-integration-search-in-conan-center
+             cmake-integration-transient)
+  :custom
+  (cmake-integration-generator "Ninja")
+  (cmake-integration-use-separated-compilation-buffer-for-each-target t))
+
 (use-package cmake-mode
   :ensure t)
 
@@ -202,6 +213,11 @@
 
 (use-package pdf-tools
   :ensure t)
+
+(use-package quarto-mode
+  :ensure t
+  :mode (("\\.qmd" . poly-quarto-mode))
+  )
 
 (use-package rainbow-mode
   :ensure t
