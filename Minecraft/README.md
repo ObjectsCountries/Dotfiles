@@ -28,14 +28,14 @@ Java [here](https://vanillatweaks.net), Bedrock [here](https://bedrocktweaks.net
   * Circular Log Tops
   * Brighter Nether
   * Clearer Water
-  * **Lower and Sides**
-    * Grass Sides
-    * Mycelium Sides
-    * Grass Path Sides
-    * Podzol Sides
-    * Snow Sides
-    * Crimson Nylium Sides
-    * Warped Nylium Sides
+  * **Lower and Full Sides**
+    * Full Grass Sides
+    * Full Snowy Grass Sides
+    * Full Mycelium Sides
+    * Full Dirt Path Sides
+    * Full Podzol Sides
+    * Full Crimson Nylium Sides
+    * Full Warped Nylium Sides
 * **Variation**
   * Variated Grass
   * Variated Cobblestone
@@ -86,11 +86,12 @@ Java [here](https://vanillatweaks.net), Bedrock [here](https://bedrocktweaks.net
   * 3D Mace
   * 3D Ladders (**Java Only**)
   * 3D Rails (**Java Only**)
+  * 3D Iron & Copper Bars (**Java Only**)
   * 3D Sugar Cane (**Java Only**)
-  * 3D Iron Bars (**Java Only**)
   * 3D Lily Pads (**Java Only**)
   * 3D Doors & Trapdoors (**Java Only**)
   * 3D Fungi (**Java Only**)
+  * 3D Bushes (**Java Only**)
   * 3D Vines (**Java Only**)
   * 3D Glow Lichen (**Java Only**)
   * 3D Sculk Veins (**Java Only**)
@@ -117,7 +118,6 @@ Java [here](https://vanillatweaks.net), Bedrock [here](https://bedrocktweaks.net
 * **Fun**
   * Sus Sand and Gravel
 * **World Of Color**
-  * Unique Dyes
   * **Slimes**
     * Cyan Slime
   * **Elytra**

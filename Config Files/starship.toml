@@ -31,7 +31,6 @@ disabled = false
 
 [os.symbols]
 CachyOS = ''
-EndeavourOS = ''
 Windows = ''
 
 [shell]

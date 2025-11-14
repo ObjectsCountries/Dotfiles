@@ -20,37 +20,17 @@ Cyberdream for other apps available under their [extras](https://github.com/scot
 
 | Component           | Theme                                                                                                  |
 |---------------------|--------------------------------------------------------------------------------------------------------|
-| Font                | Bahnschrift SemiLight (`ttf-ms-win11-auto` on the AUR)                                                 |
-| Monospace Font      | ComicShannsMono Nerd Font Mono (`otf-comicshanns-nerd` from Extra)                                     |
-| Colors              | BreezeDark                                                                                             |
+| Colors              | Breeze Dark, purple                                                                                    |
 | Application Style   | Breeze                                                                                                 |
-| Plasma Style        | Orchis-Dark (`plasma6-themes-orchis-kde-git` on AUR)                                                   |
-| GTK Theme           | Orchis-Dark                                                                                            |
-| Window Decorations  | Orchis-Dark                                                                                            |
+| Plasma Style        | Breeze                                                                                                 |
+| GTK Theme           | Breeze                                                                                                 |
+| Window Decorations  | Breeze                                                                                                 |
 | Icons               | Papirus-Dark (`papirus-icon-theme` on Extra, with `papirus-folders` AUR script to make folders violet) |
 | Cursors             | Breeze Light                                                                                           |
 | System Sounds       | Ocean                                                                                                  |
 | Splash Screen       | None                                                                                                   |
-| Login Screen (SDDM) | eos-Breeze, [custom background](swag.jpg)                                                              |
-| Boot Splash Screen  | BGRT, replaced Arch logo with EndeavourOS                                                              |
-
-## PC
-
-### Desktop
-
-* Dynamic Wallpaper: `plasma5-wallpapers-dynamic`
-  * Use [Lakeside](wallpaper.avif)
-* Digital Clock w/ background in bottom right corner of left monitor
-* GPU Usage line graph and Disk Usage pie chart in bottom left corner of right monitor
-
-### Taskbar
-
-* Application Launcher w/ `endeavouros` icon
-* Global Menu
-* Icons-Only Task Manager
-  * Firefox, Discord, Steam, Emacs
-* System Tray
-* Clock
+| Login Screen (SDDM) | Breeze, [custom background](swag.jpg)                                                                  |
+| Boot Splash Screen  | BGRT, replaced Arch logo with CachyOS                                                                  |
 
 ## Laptop
 
@@ -65,9 +45,9 @@ Cyberdream for other apps available under their [extras](https://github.com/scot
 * Media player in bottom right
 * Battery above media player (align to right)
 
-#### Panel
+### Panel
 
-* One panel at the top
+* One panel at the top, 28 px in height
 * `plasma6-applets-panel-colorizer`
   * Sky preset
   * Panel:
@@ -76,29 +56,29 @@ Cyberdream for other apps available under their [extras](https://github.com/scot
     * Background color: #8B5BC4, alpha 0.50
     * Foreground color: #FFFFFF
     * Radius of 16 and margin of 2 on all sides, spacing of 4
-  * Tray elements: no customization
-  * Overrides:
+  * Tray widgets: no customization
+  * Preset Overrides:
     * Plain: Background #000000 alpha 0.00, disable foreground
       * Apply to Application Menu, Global Menu, Panel Spacer, Icons-Only Task Manager, second Panel Spacer, Total CPU Use, Memory Usage
     * Padding: Margins 2 vertically, 6 horizontally
       * Apply to Digital Clock
 * Application Menu
-  * `endeavouros` icon
+  * `org.cachyos.hello` icon
 * Global Menu
 * Panel Spacer
 * Icons-Only Task Manager
-  * Firefox, Discord, Emacs (Client)
+  * Firefox, Discord, Emacs (client)
 * Panel Spacer
 * System Tray
 * Total CPU Use
 * Memory Usage
 * Digital Clock
-  * Short date beside region defaults time
+  * M/d/yyyy date beside 12-Hour time
 
 ## Dotfiles
 
 * [Emacs](Config%20Files/.emacs)
-* [Fastfetch](Config%20Files/fastfetch/)
+* [Fastfetch](Config%20Files/fastfetch.jsonc)
 * [Fish](Config%20Files/fish/)
 * [Glance](Config%20Files/glance.yml)
 * [Hyfetch](Config%20Files/hyfetch.json)
