@@ -4,9 +4,10 @@ My preferred launcher is [Prism Launcher](https://prismlauncher.org), and my pre
 
 ## Mods
 
-* [CraftPresence](https://www.curseforge.com/minecraft/mc-mods/craftpresence) (**Requires [UniLib](https://www.curseforge.com/minecraft/mc-mods/unilib)**)
+* [CraftPresence](https://www.curseforge.com/minecraft/mc-mods/craftpresence) (**Requires [UniLib](https://www.curseforge.com/minecraft/mc-mods/unilib)**) for Discord rich presence
+* [Cubes Without Borders](https://www.curseforge.com/minecraft/mc-mods/cubes-without-borders) for borderless windowed mode
 
-CraftPresence will work with any mod loader, letting me use it with modded SMPs that use Forge/NeoForge.
+These mods will work with Forge, NeoForge, Fabric and Quilt. CraftPresence is also compatible with Risugami's ModLoader.
 
 ## Vanilla Tweaks
 
