@@ -91,11 +91,29 @@ pages:
       - size: small
         widgets:
           - type: to-do
-          - type: repository
-            repository: ObjectsCountries/FOSS-Fight
-            pull-requests-limit: -1
-            issues-limit: -1
-            commits-limit: 3
+          - type: group
+            widgets:
+            - type: repository
+              title: Dotfiles
+              token: (insert token here)
+              repository: ObjectsCountries/Dotfiles
+              pull-requests-limit: 3
+              issues-limit: 3
+              commits-limit: 3
+            - type: repository
+              title: FOSS Fight
+              token: (insert token here)
+              repository: ObjectsCountries/FOSS-Fight
+              pull-requests-limit: 3
+              issues-limit: 3
+              commits-limit: 3
+            - type: repository
+              title: FFCC
+              token: (insert token here)
+              repository: ObjectsCountries/FFCC
+              pull-requests-limit: 3
+              issues-limit: 3
+              commits-limit: 3
           - type: custom-api
             title: "Recent Modules"
             cache: 24h
