@@ -102,12 +102,14 @@ pages:
             url: https://ktane.timwi.de/json/raw
             template: |
                 <ul class="list list-gap-10 collapsible-container" data-collapse-after="5">
-                  {{ range .JSON.Array "KtaneModules.@reverse" }}
+                  {{ range (sortByTime "Published" "DateOnly" "desc" (sortByString "Name" "desc" (.JSON.Array "KtaneModules"))) }}
+                    {{ if not (.Exists "TranslationOf") }}
                     <li>
-                      <a href="{{ if eq (.String "Origin") "Vanilla" }}https://keeptalkinggame.com/{{ else }}https://steamcommunity.com/sharedfiles/filedetails/?id={{ .String "SteamID" }}{{ end }}"><img style="float: right;" src="https://ktane.timwi.de/Icons/{{ if and (eq (.Int "X") 0) (eq (.Int "Y") 0) }}blank{{ else }}{{ .String "Name" }}{{ end }}.png"></img></a>
-                      <a style="float:left;" href="https://ktane.timwi.de/HTML/{{ .String "Name" }}.html">{{ .String "Name" }}</a>
+                      {{ if ne (.String "Type") "Appendix" }}<a href="{{ if eq (.String "Origin") "Vanilla" }}https://keeptalkinggame.com/{{ else }}https://steamcommunity.com/sharedfiles/filedetails/?id={{ .String "SteamID" }}{{ end }}">{{ end }}<img style="float: right;" src="https://ktane.timwi.de/Icons/{{ if and (eq (.Int "X") 0) (eq (.Int "Y") 0) }}blank{{ else if .Exists "FileName" }}{{ .String "FileName" }}{{ else }}{{ replaceAll "+" "%2B" (.String "Name") }}{{ end }}.png"></img>{{ if ne (.String "Type") "Appendix" }}</a>{{ end }}
+                      <a style="float:left;" href="https://ktane.timwi.de/HTML/{{ if .Exists "FileName" }}{{ .String "FileName" }}{{ else }}{{ replaceAll "+" "%2B" (.String "Name") }}{{ end }}.html">{{ .String "Name" }}</a>
                       <br>
                       <p style="font-size:11px;">{{ if .Exists "Description" }}{{ .String "Description" }}{{ else if .Exists "Descriptions" }}{{ .String "Descriptions.#(Language=\"English\").Description" }}{{ end }}</p>
                     </li>
+                    {{ end }}
                   {{ end }}
                 </ul>

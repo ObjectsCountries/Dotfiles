@@ -1,6 +1,8 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR EDITOR:nvim
+SETUVAR SUDO_EDITOR:nvim
+SETUVAR VISUAL:nvim
 SETUVAR BAT_THEME:cyberdream
 SETUVAR __fish_initialized:3800
 SETUVAR fish_color_autosuggestion:7b8496
