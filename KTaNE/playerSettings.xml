@@ -15,7 +15,7 @@
       <ComponentTypeEnum>Empty</ComponentTypeEnum>
       <ComponentTypeEnum>Empty</ComponentTypeEnum>
     </AccessibilityVeto>
-    <UnlockAllMissions>false</UnlockAllMissions>
+    <UnlockAllMissions>true</UnlockAllMissions>
   </AccessibilitySettings>
   <UseModsAlways>true</UseModsAlways>
   <SkipTitleScreen>true</SkipTitleScreen>
