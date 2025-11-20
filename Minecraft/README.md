@@ -1,6 +1,6 @@
 # Minecraft
 
-My preferred launcher is [Prism Launcher](https://prismlauncher.org), and my preferred mod loader is [Fabric](https://fabricmc.net). My skin is Classic as opposed to Slim.
+My preferred launcher is [Prism Launcher](https://prismlauncher.org), and my preferred mod loader is [Fabric](https://fabricmc.net). My skin is Classic as opposed to Slim, and uses the [Home Cape](https://minecraft.wiki/w/Home_Cape).
 
 ## Mods
 
