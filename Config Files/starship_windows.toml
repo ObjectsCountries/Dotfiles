@@ -30,11 +30,12 @@ format = '$symbol'
 disabled = false
 
 [os.symbols]
-CachyOS = ''
+Windows = ''
 
 [shell]
 bash_indicator = ''
-fish_indicator = '󰈺'
+powershell_indicator = '󰨊'
+cmd_indicator = ''
 format = ' $indicator'
 disabled = false
 
@@ -48,8 +49,8 @@ format = '@$hostname '
 
 [directory]
 truncation_length = -1
-format = ' ($read_only)$path/ '
-home_symbol = '/home/kasra'
+format = ' ($read_only)$path\\ '
+home_symbol = 'C:\Users\kasra'
 read_only = ' '
 
 [cmake]
@@ -169,6 +170,7 @@ discharging_symbol = '󰁹'
 
 [sudo]
 format = ' Sudo Active'
+allow_windows = true
 disabled = false
 
 [time]
