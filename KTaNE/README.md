@@ -5,3 +5,7 @@ These files are to be used for setting up [Keep Talking and Nobody Explodes](htt
 On Windows, these files should be dropped in `%APPDATA%\..\LocalLow\Steel Crate Games\Keep Talking and Nobody Explodes\`.
 
 On Linux, replace every instance of `C:\Program Files (x86)\Steam\steamapps\workshop\content\341800\` with `/home/(your username)/.local/share/Steam/steamapps/workshop/content/341800/` in [modSettings.xml](modSettings.xml). Then, either copy or symlink the files to `~/.config/unity3d/Steel Crate Games/Keep Talking and Nobody Explodes/`.
+
+## Setting Up Mods
+
+Subscribe to all of [these workshop items](https://steamcommunity.com/id/objectscountries/myworkshopfiles/?browsesort=myfavorites&browsefilter=myfavorites&p=1&numperpage=30&sortmethod=alpha) after unlocking mods. Assuming the mod settings have been placed properly, Tweaks should start downloading every modded module. In order to use the [Dynamic Mission Generator](https://steamcommunity.com/sharedfiles/filedetails/?id=1633427044), you must create an empty folder called `ModProfiles` (with that capitalization) in the same directory as everything else.

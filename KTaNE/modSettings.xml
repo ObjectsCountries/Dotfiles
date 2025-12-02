@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Remember to replace every instance of "C:\Program Files (x86)\Steam\steamapps\workshop\content\341800\" with "/home/(your username)/.local/share/Steam/steamapps/workshop/content/341800/" on Linux. -->
 <ModSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <DisabledModPaths>
     <string>C:\Program Files (x86)\Steam\steamapps\workshop\content\341800\2282635865</string>
@@ -1964,5 +1963,9 @@
     <string>C:\Program Files (x86)\Steam\steamapps\workshop\content\341800\3604699749</string>
     <string>C:\Program Files (x86)\Steam\steamapps\workshop\content\341800\3601638396</string>
     <string>C:\Program Files (x86)\Steam\steamapps\workshop\content\341800\3603904128</string>
+    <string>C:\Program Files (x86)\Steam\steamapps\workshop\content\341800\3610433250</string>
+    <string>C:\Program Files (x86)\Steam\steamapps\workshop\content\341800\3609557531</string>
+    <string>C:\Program Files (x86)\Steam\steamapps\workshop\content\341800\3611994848</string>
+    <string>C:\Program Files (x86)\Steam\steamapps\workshop\content\341800\3614171353</string>
   </DisabledModPaths>
 </ModSettings>

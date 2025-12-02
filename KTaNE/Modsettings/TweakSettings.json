@@ -1,6 +1,7 @@
 {
   "FadeTime": 1.0,
   "InstantSkip": true,
+  "FillExceptionLines": true,
   "ManageHarmonyMods": false,
   "SkipGameplayDelay": true,
   "BetterCasePicker": true,
