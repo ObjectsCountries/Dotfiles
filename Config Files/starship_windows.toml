@@ -49,7 +49,7 @@ format = '@$hostname '
 
 [directory]
 truncation_length = -1
-format = ' ($read_only)$path\\ '
+format = ' ($read_only)$path '
 home_symbol = 'C:\Users\kasra'
 read_only = ' '
 

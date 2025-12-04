@@ -339,7 +339,7 @@
   :config (setq ring-bell-function #'ignore))
 
 (auto-save-mode -1)
-(add-to-list 'default-frame-alist 'fullscreen . maximized))
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 (setenv "FrameworkPathOverride" "/usr/lib/mono/4.8-api")
 
