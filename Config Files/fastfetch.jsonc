@@ -1,193 +1,407 @@
 {
-  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
   "display": {
-    "separator": " "
+    "stat": false,
+    "pipe": false,
+    "showErrors": false,
+    "disableLinewrap": true,
+    "hideCursor": false,
+    "separator": ": ",
+    "brightColor": true,
+    "duration": {
+      "abbreviation": false,
+      "spaceBeforeUnit": "default"
+    },
+    "size": {
+      "maxPrefix": "YB",
+      "binaryPrefix": "iec",
+      "ndigits": 2,
+      "spaceBeforeUnit": "default"
+    },
+    "temp": {
+      "unit": "D",
+      "ndigits": 1,
+      "color": {
+        "green": "32",
+        "yellow": "93",
+        "red": "91"
+      },
+      "spaceBeforeUnit": "default"
+    },
+    "percent": {
+      "type": [
+        "num",
+        "num-color"
+      ],
+      "ndigits": 0,
+      "color": {
+        "green": "32",
+        "yellow": "93",
+        "red": "91"
+      },
+      "spaceBeforeUnit": "default",
+      "width": 0
+    },
+    "bar": {
+      "char": {
+        "elapsed": "■",
+        "total": "-"
+      },
+      "border": {
+        "left": "[ ",
+        "right": " ]",
+        "leftElapsed": "",
+        "rightElapsed": ""
+      },
+      "color": {
+        "elapsed": "auto",
+        "total": "97",
+        "border": "97"
+      },
+      "width": 10
+    },
+    "fraction": {
+      "ndigits": 2
+    },
+    "noBuffer": false,
+    "key": {
+      "width": 0,
+      "type": "both",
+      "paddingLeft": 0
+    },
+    "freq": {
+      "ndigits": 2,
+      "spaceBeforeUnit": "default"
+    },
+    "constants": []
+  },
+  "general": {
+    "thread": true,
+    "processingTimeout": 5000,
+    "detectVersion": true,
+    "playerName": "",
+    "dsForceDrm": false
   },
   "modules": [
-    "break",
-    {
-      "type": "host",
-      "key": "╭─󰌢",
-      "keyColor": "light_black"
-    },
-    {
-      "type": "cpu",
-      "key": "├─󰻠",
-      "keyColor": "light_black"
-    },
-    {
-      "type": "gpu",
-      "key": "├─󰍛",
-      "keyColor": "light_black"
-    },
-    {
-      "type": "disk",
-      "key": "├─",
-      "keyColor": "light_black"
-    },
-    {
-      "type": "memory",
-      "key": "├─󰑭",
-      "keyColor": "light_black"
-    },
-    {
-      "type": "swap",
-      "key": "├─󰓡",
-      "keyColor": "light_black"
-    },
-    {
-      "type": "display",
-      "key": "├─󰍹",
-      "keyColor": "light_black"
-    },
-    {
-      "type": "brightness",
-      "key": "├─󰃞",
-      "keyColor": "light_black"
-    },
-    {
-      "type": "battery",
-      "key": "├─",
-      "keyColor": "light_black"
-    },
-    {
-      "type": "poweradapter",
-      "key": "├─",
-      "keyColor": "light_black"
-    },
-    {
-      "type": "gamepad",
-      "key": "├─",
-      "keyColor": "light_black"
-    },
-    {
-      "type": "bluetooth",
-      "key": "├─",
-      "keyColor": "light_black"
-    },
-    {
-      "type": "sound",
-      "key": "╰─",
-      "keyColor": "light_black"
-    },
-    "break",
-
-    {
-      "type": "shell",
-      "key": "╭─",
-      "keyColor": "white"
-    },
-    {
-      "type": "terminal",
-      "key": "├─",
-      "keyColor": "white"
-    },
-    {
-      "type": "terminalfont",
-      "key": "├─",
-      "keyColor": "white"
-    },
-    {
-      "type": "lm",
-      "key": "├─󰧨",
-      "keyColor": "white"
-    },
-    {
-      "type": "de",
-      "key": "├─",
-      "keyColor": "white"
-    },
-    {
-      "type": "wm",
-      "key": "├─",
-      "keyColor": "white"
-    },
-    {
-      "type": "theme",
-      "key": "├─󰉼",
-      "keyColor": "white"
-    },
-    {
-      "type": "icons",
-      "key": "├─󰀻",
-      "keyColor": "white"
-    },
-    {
-      "type": "cursor",
-      "key": "├─",
-      "keyColor": "white"
-    },
-    {
-      "type": "wallpaper",
-      "key": "╰─󰸉",
-      "keyColor": "white"
-    },
-    "break",
-
     {
       "type": "title",
-      "key": "╭─",
-      "format": "{user-name}@{host-name}",
-      "keyColor": "dim_magenta"
+      "keyIcon": "",
+      "fqdn": true
+    },
+    {
+      "type": "break"
+    },
+    {
+      "type": "separator",
+      "string": "Software",
+      "outputColor": "bold_light_black",
+      "times": 1
+    },
+    {
+      "type": "separator",
+      "string": "-",
+      "outputColor": "bold_light_black",
+      "times": 0
     },
     {
       "type": "os",
-      "key": "├─{icon}",
-      "keyColor": "dim_magenta"
+      "keyIcon": "",
+      "format": "{name} {arch}",
+      "keyColor": "bold_light_black",
+      "outputColor": "light_black",
+      "condition": {
+        "system": "Linux"
+      }
+    },
+    {
+      "type": "os",
+      "keyIcon": "",
+      "format": "{name} {arch}",
+      "keyColor": "bold_light_black",
+      "outputColor": "light_black",
+      "condition": {
+        "system": "Android"
+      }
+    },
+    {
+      "type": "os",
+      "keyIcon": "",
+      "format": "{name}",
+      "keyColor": "bold_light_black",
+      "outputColor": "light_black",
+      "condition": {
+        "system": "Windows"
+      }
+    },
+    {
+      "type": "lm",
+      "keyIcon": "󰍂",
+      "keyColor": "bold_light_black",
+      "outputColor": "light_black"
+    },
+    {
+      "type": "uptime",
+      "keyIcon": "",
+      "keyColor": "bold_light_black",
+      "outputColor": "light_black"
     },
     {
       "type": "kernel",
-      "key": "├─",
-      "keyColor": "dim_magenta"
+      "keyIcon": "",
+      "keyColor": "bold_light_black",
+      "outputColor": "light_black",
+      "condition": {
+        "system": "Linux"
+      }
+    },
+    {
+      "type": "de",
+      "keyIcon": "",
+      "keyColor": "bold_light_black",
+      "outputColor": "light_black",
+      "slowVersionDetection": false
+    },
+    {
+      "type": "wm",
+      "keyIcon": "",
+      "keyColor": "bold_light_black",
+      "outputColor": "light_black",
+      "detectPlugin": true
     },
     {
       "type": "packages",
-      "key": "├─󰏖",
-      "keyColor": "dim_magenta"
+      "keyIcon": "󰏖",
+      "keyColor": "bold_light_black",
+      "outputColor": "light_black",
+      "disabled": null,
+      "combined": false
     },
     {
       "type": "command",
       "shell": "/usr/bin/bash",
       "text": "MOD_COUNT=`find $HOME/.local/share/Steam/steamapps/workshop/content/341800/ -maxdepth 1 -type d | tail -n +2 | wc -l`; [[ MOD_COUNT -ne 0 ]] && echo $MOD_COUNT",
-      "key": "├─󰚑",
+      "key": "󰚑 KTaNE Mods: ",
       "keyColor": "dim_magenta",
-      "format": "{result} (KTaNE)"
+      "format": "{result}"
     },
     {
       "type": "command",
       "shell": "powershell",
       "text": "$mods = 'C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\341800\\'; if ( (Test-Path -Path $mods) ) { $modCount = (Get-ChildItem $mods).Count; if ( (0 -ne $modCount) ) { echo $modCount } }",
-      "key": "├─󰚑",
+      "key": "󰚑 KTaNE Mods: ",
       "keyColor": "dim_magenta",
-      "format": "{result} (KTaNE)"
+      "format": "{result}"
     },
     {
-      "type": "uptime",
-      "key": "├─󰅐",
-      "keyColor": "dim_magenta"
+      "type": "shell",
+      "keyColor": "bold_light_black",
+      "outputColor": "light_black",
+      "keyIcon": ""
     },
     {
-      "type": "media",
-      "key": "├─󰝚",
-      "keyColor": "dim_magenta"
+      "type": "break"
     },
     {
-      "type": "localip",
-      "key": "├─󰩟",
-      "compact": true,
-      "keyColor": "dim_magenta"
+      "type": "separator",
+      "string": "Hardware",
+      "outputColor": "bold_white",
+      "times": 1
+    },
+    {
+      "type": "separator",
+      "string": "-",
+      "outputColor": "bold_white",
+      "times": 0
+    },
+    {
+      "type": "display",
+      "keyColor": "white",
+      "outputColor": "bold_white",
+      "keyIcon": "󰍹",
+      "compactType": "none",
+      "preciseRefreshRate": false,
+      "order": null
+    },
+    {
+      "type": "cpu",
+      "keyIcon": "",
+      "keyColor": "white",
+      "outputColor": "bold_white",
+      "temp": false,
+      "showPeCoreCount": false
+    },
+    {
+      "type": "cpuusage",
+      "keyIcon": "",
+      "keyColor": "white",
+      "outputColor": "bold_white",
+    },
+    {
+      "type": "gpu",
+      "keyIcon": "󰾲",
+      "keyColor": "white",
+      "outputColor": "bold_white",
+      "driverSpecific": false,
+      "detectionMethod": "auto",
+      "temp": false,
+      "hideType": "none",
+      "percent": {
+        "green": 50,
+        "yellow": 80,
+        "type": 0
+      },
+      "condition": {
+        "system": "Linux"
+      }
+    },
+    {
+      "type": "gpu",
+      "keyIcon": "󰾲",
+      "keyColor": "white",
+      "outputColor": "bold_white",
+      "driverSpecific": false,
+      "detectionMethod": "vulkan",
+      "temp": false,
+      "hideType": "none",
+      "percent": {
+        "green": 50,
+        "yellow": 80,
+        "type": 0
+      },
+      "condition": {
+        "system": "Android"
+      }
+    },
+    {
+      "type": "gpu",
+      "keyIcon": "󰾲",
+      "keyColor": "white",
+      "outputColor": "bold_white",
+      "driverSpecific": false,
+      "detectionMethod": "auto",
+      "temp": false,
+      "hideType": "none",
+      "percent": {
+        "green": 50,
+        "yellow": 80,
+        "type": 0
+      },
+      "condition": {
+        "system": "Windows"
+      }
+    },
+    {
+      "type": "memory",
+      "keyIcon": "",
+      "keyColor": "white",
+      "outputColor": "bold_white",
+      "percent": {
+        "green": 50,
+        "yellow": 80,
+        "type": 0
+      }
+    },
+    {
+      "type": "swap",
+      "keyColor": "white",
+      "outputColor": "bold_white",
+      "percent": {
+        "green": 50,
+        "yellow": 80,
+        "type": 0
+      },
+      "keyIcon": "󰓡",
+      "separate": false
+    },
+    {
+      "type": "disk",
+      "keyIcon": "",
+      "keyColor": "white",
+      "outputColor": "bold_white",
+      "showRegular": true,
+      "showExternal": true,
+      "showHidden": false,
+      "showSubvolumes": false,
+      "showReadOnly": true,
+      "showUnknown": false,
+      "folders": "",
+      "hideFolders": "/efi:/boot:/boot/*:/run/user/*",
+      "hideFS": "",
+      "useAvailable": false,
+      "percent": {
+        "green": 50,
+        "yellow": 80,
+        "type": 0
+      }
+    },
+    {
+      "type": "brightness",
+      "keyIcon": "",
+      "keyColor": "white",
+      "outputColor": "bold_white",
+    },
+    {
+      "type": "battery",
+      "keyIcon": "",
+      "keyColor": "white",
+      "outputColor": "bold_white",
+      "temp": false,
+      "percent": {
+        "green": 50,
+        "yellow": 20,
+        "type": 0
+      }
+    },
+    {
+      "type": "sound",
+      "keyIcon": "",
+      "keyColor": "white",
+      "outputColor": "bold_white",
+      "soundType": "main",
+      "percent": {
+        "green": 50,
+        "yellow": 20,
+        "type": 0
+      }
     },
     {
       "type": "wifi",
-      "key": "├─",
-      "format": "{ssid}",
-      "keyColor": "dim_magenta"
+      "keyIcon": "󰖩",
+      "keyColor": "white",
+      "outputColor": "bold_white"
     },
     {
-      "type": "locale",
-      "key": "╰─",
-      "keyColor": "dim_magenta"
+      "type": "bluetooth",
+      "keyIcon": "",
+      "keyColor": "white",
+      "outputColor": "bold_white",
+      "percent": {
+        "green": 50,
+        "yellow": 20,
+        "type": 0
+      }
     },
-    "break"
+    {
+      "type": "break"
+    },
+    {
+      "type": "separator",
+      "string": "Other",
+      "outputColor": "bold_dim_magenta",
+      "times": 1
+    },
+    {
+      "type": "separator",
+      "string": "-",
+      "outputColor": "bold_dim_magenta",
+      "times": 0
+    },
+    {
+      "type": "weather",
+      "keyColor": "dim_magenta",
+      "outputColor": "bold_dim_magenta",
+      "location": "INSERT+CITY+HERE",
+      "outputFormat": "%t+-+%C"
+    }
   ]
 }
