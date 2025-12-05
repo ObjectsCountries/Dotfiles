@@ -75,13 +75,6 @@
     },
     "constants": []
   },
-  "general": {
-    "thread": true,
-    "processingTimeout": 5000,
-    "detectVersion": true,
-    "playerName": "",
-    "dsForceDrm": false
-  },
   "modules": [
     {
       "type": "title",
@@ -126,7 +119,7 @@
     {
       "type": "os",
       "keyIcon": "",
-      "format": "{name}",
+      "format": "{pretty-name}",
       "keyColor": "bold_light_black",
       "outputColor": "light_black",
       "condition": {
@@ -137,7 +130,10 @@
       "type": "lm",
       "keyIcon": "󰍂",
       "keyColor": "bold_light_black",
-      "outputColor": "light_black"
+      "outputColor": "light_black",
+      "condition": {
+        "system": "Linux"
+      }
     },
     {
       "type": "uptime",
@@ -159,14 +155,20 @@
       "keyIcon": "",
       "keyColor": "bold_light_black",
       "outputColor": "light_black",
-      "slowVersionDetection": false
+      "slowVersionDetection": false,
+      "condition": {
+        "system": "Linux"
+      }
     },
     {
       "type": "wm",
       "keyIcon": "",
       "keyColor": "bold_light_black",
       "outputColor": "light_black",
-      "detectPlugin": true
+      "detectPlugin": true,
+      "condition": {
+        "system": "Linux"
+      }
     },
     {
       "type": "packages",
@@ -180,16 +182,20 @@
       "type": "command",
       "shell": "/usr/bin/bash",
       "text": "MOD_COUNT=`find $HOME/.local/share/Steam/steamapps/workshop/content/341800/ -maxdepth 1 -type d | tail -n +2 | wc -l`; [[ MOD_COUNT -ne 0 ]] && echo $MOD_COUNT",
-      "key": "󰚑 KTaNE Mods: ",
-      "keyColor": "dim_magenta",
+      "keyIcon": "󰚑",
+      "key": "KTaNE Mods",
+      "keyColor": "bold_light_black",
+      "outputColor": "light_black",
       "format": "{result}"
     },
     {
       "type": "command",
       "shell": "powershell",
       "text": "$mods = 'C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\341800\\'; if ( (Test-Path -Path $mods) ) { $modCount = (Get-ChildItem $mods).Count; if ( (0 -ne $modCount) ) { echo $modCount } }",
-      "key": "󰚑 KTaNE Mods: ",
-      "keyColor": "dim_magenta",
+      "keyIcon": "󰚑",
+      "key": "KTaNE Mods",
+      "keyColor": "bold_light_black",
+      "outputColor": "light_black",
       "format": "{result}"
     },
     {
@@ -388,20 +394,64 @@
       "type": "separator",
       "string": "Other",
       "outputColor": "bold_dim_magenta",
-      "times": 1
+      "times": 1,
+      "condition": {
+        "system": "Linux"
+      }
     },
     {
       "type": "separator",
       "string": "-",
       "outputColor": "bold_dim_magenta",
-      "times": 0
+      "times": 0,
+      "condition": {
+        "system": "Linux"
+      }
+    },    {
+      "type": "separator",
+      "string": "Other",
+      "outputColor": "bold_magenta",
+      "times": 1,
+      "condition": {
+        "system": "Windows"
+      }
+    },
+    {
+      "type": "separator",
+      "string": "-",
+      "outputColor": "bold_magenta",
+      "times": 0,
+      "condition": {
+        "system": "Windows"
+      }
     },
     {
       "type": "weather",
       "keyColor": "dim_magenta",
       "outputColor": "bold_dim_magenta",
       "location": "INSERT+CITY+HERE",
-      "outputFormat": "%t+-+%C"
-    }
+      "outputFormat": "%t+-+%C",
+      "condition": {
+        "system": "Linux"
+      }
+    },    {
+      "type": "weather",
+      "keyColor": "magenta",
+      "outputColor": "bold_magenta",
+      "location": "INSERT+CITY+HERE",
+      "outputFormat": "%t+-+%C",
+      "condition": {
+        "system": "Windows"
+      }
+    },
+    {
+      "type": "separator",
+      "string": " ",
+      "outputColor": "reset_black",
+      "times": 0,
+      "condition": {
+        "system": "Windows"
+      }
+    },
   ]
 }
