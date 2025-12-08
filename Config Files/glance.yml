@@ -90,7 +90,6 @@ pages:
                 collapse-after: 20
       - size: small
         widgets:
-          - type: to-do
           - type: group
             widgets:
             - type: repository
