@@ -287,11 +287,14 @@
 (setq centaur-tabs-set-icons t)
 (setq centaur-tabs-style "wave")
 
+(setq dashboard-agenda-prefix-format " %s %b ")
+(setq dashboard-agenda-sort-strategy '(time-up))
 (setq dashboard-banner-logo-title "Emacs")
 (setq dashboard-center-content t)
 (setq dashboard-display-icons-p t)
 (setq dashboard-icon-type 'all-the-icons)
-(setq dashboard-items '((recents   . 10)))
+(setq dashboard-items '((recents   . 5)
+			(agenda    . 5)))
 (setq dashboard-set-file-icons t)
 (setq dashboard-set-heading-icons t)
 (setq dashboard-startup-banner 'logo)
@@ -303,7 +306,7 @@
 
 (setq make-backup-files nil)
 
-;(setq org-agenda-files '("~/Calendars"))
+(setq org-agenda-files '("~/UCI/assignments.org"))
 
 (setq org-roam-capture-templates
       '(
