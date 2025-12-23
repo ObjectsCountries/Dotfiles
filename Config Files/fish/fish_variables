@@ -1,9 +1,9 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR BAT_THEME:cyberdream
 SETUVAR EDITOR:nvim
 SETUVAR SUDO_EDITOR:nvim
 SETUVAR VISUAL:nvim
-SETUVAR BAT_THEME:cyberdream
 SETUVAR __fish_initialized:3800
 SETUVAR fish_color_autosuggestion:7b8496
 SETUVAR fish_color_cancel:ff6e5e
@@ -92,6 +92,7 @@ SETUVAR pure_separate_prompt_on_error:false
 SETUVAR pure_shorten_prompt_current_directory_length:0
 SETUVAR pure_shorten_window_title_current_directory_length:0
 SETUVAR pure_show_jobs:false
+SETUVAR pure_show_numbered_git_indicator:false
 SETUVAR pure_show_prefix_root_prompt:false
 SETUVAR pure_show_subsecond_command_duration:false
 SETUVAR pure_show_system_time:false

@@ -185,17 +185,21 @@
 (use-package nov
   :ensure t)
 
-(use-package org-gcal :ensure t
-  :config
-  (setq org-gcal-client-id (getenv "GCAL_CLIENT_ID"))
-  (setq	org-gcal-client-secret (getenv "GCAL_CLIENT_SECRET"))
-  (setq	org-gcal-fetch-file-alist (list (cons (getenv "GCAL_CALENDARS_MAIN") "~/Calendars/main.org")
-					(cons (getenv "GCAL_CALENDARS_SCHEDULE") "~/Calendars/schedule.org")
-					(cons (getenv "GCAL_CALENDARS_IEEE") "~/Calendars/ieee.org")
-					(cons (getenv "GCAL_CALENDARS_WORK") "~/Calendars/work.org")))
-  (org-gcal-reload-client-id-secret)
-  (add-to-list 'plstore-encrypt-to (getenv "GPG_KEY"))
-  (setq epg-pinentry-mode 'loopback))
+(setq plstore-cache-passphrase-for-symmetric-encryption t)
+
+;(use-package org-gcal :ensure t
+;  :config
+;  (setq org-gcal-client-id (getenv "GCAL_CLIENT_ID"))
+;  (setq	org-gcal-client-secret (getenv "GCAL_CLIENT_SECRET"))
+;  (setq	org-gcal-fetch-file-alist (list (cons (getenv "GCAL_CALENDARS_MAIN") "~/Calendars/main.org")
+;					(cons (getenv "GCAL_CALENDARS_SCHEDULE") "~/Calendars/schedule.org")
+;					(cons (getenv "GCAL_CALENDARS_IEEE") "~/Calendars/ieee.org")
+;					(cons (getenv "GCAL_CALENDARS_ALUG") "~/Calendars/alug.org")))
+;  (org-gcal-reload-client-id-secret)
+;  (require 'plstore)
+;  (add-to-list 'plstore-encrypt-to (getenv "GPG_KEY"))
+;  ;(setq epg-pinentry-mode 'loopback)
+;)
 
 (use-package org-noter
   :ensure t)
@@ -287,9 +291,7 @@
 (setq dashboard-center-content t)
 (setq dashboard-display-icons-p t)
 (setq dashboard-icon-type 'all-the-icons)
-(setq dashboard-items '((recents   . 5)
-                        (projects  . 5)
-                        (agenda    . 5)))
+(setq dashboard-items '((recents   . 10)))
 (setq dashboard-set-file-icons t)
 (setq dashboard-set-heading-icons t)
 (setq dashboard-startup-banner 'logo)
@@ -301,24 +303,27 @@
 
 (setq make-backup-files nil)
 
-(setq org-agenda-files '("~/Calendars"))
+;(setq org-agenda-files '("~/Calendars"))
 
 (setq org-roam-capture-templates
       '(
-        ("a" "FRENCH 102A" plain "%?"
-         :target (file+head "FRENCH 102A/Notes/%<%-m-%-d>_${slug}.org"
-                            "#+TITLE: ${title}\n#+DATE: %<%-m/%-d/%Y>\n#+AUTHOR: Kasra Moayedi\n#+LANGUAGE: fr_FR\n#+DESCRIPTION:\n") :unnarrowed t)
-        ("b" "ICS 46" plain "%?"
-         :target (file+head "ICS 46/Notes/%<%-m-%-d>_${slug}.org"
+        ("a" "EECS 112L" plain "%?"
+         :target (file+head "EECS 112L/Notes/%<%-m-%-d>_${slug}.org"
                             "#+TITLE: ${title}\n#+DATE: %<%-m/%-d/%Y>\n#+AUTHOR: Kasra Moayedi\n#+LANGUAGE: en_US\n#+DESCRIPTION:\n") :unnarrowed t)
-        ("c" "COMPSCI 122A" plain "%?"
-         :target (file+head "COMPSCI 122A/Notes/%<%-m-%-d>_${slug}.org"
+        ("b" "FRENCH 116" plain "%?"
+         :target (file+head "FRENCH 116/Notes/%<%-m-%-d>_${slug}.org"
                             "#+TITLE: ${title}\n#+DATE: %<%-m/%-d/%Y>\n#+AUTHOR: Kasra Moayedi\n#+LANGUAGE: en_US\n#+DESCRIPTION:\n") :unnarrowed t)
-        ("d" "EECS 112" plain "%?"
-         :target (file+head "EECS 112/Notes/%<%-m-%-d>_${slug}.org"
+        ("c" "ICS 6B" plain "%?"
+         :target (file+head "ICS 6B/Notes/%<%-m-%-d>_${slug}.org"
                             "#+TITLE: ${title}\n#+DATE: %<%-m/%-d/%Y>\n#+AUTHOR: Kasra Moayedi\n#+LANGUAGE: en_US\n#+DESCRIPTION:\n") :unnarrowed t)
-        ("e" "STATS 67" plain "%?"
-         :target (file+head "STATS 67/Notes/%<%-m-%-d>_${slug}.org"
+        ("d" "MATH 3A" plain "%?"
+         :target (file+head "MATH 3A/Notes/%<%-m-%-d>_${slug}.org"
+                            "#+TITLE: ${title}\n#+DATE: %<%-m/%-d/%Y>\n#+AUTHOR: Kasra Moayedi\n#+LANGUAGE: en_US\n#+DESCRIPTION:\n") :unnarrowed t)
+        ("e" "PHYSICS 7D" plain "%?"
+         :target (file+head "PHYSICS 7D/Notes/%<%-m-%-d>_${slug}.org"
+                            "#+TITLE: ${title}\n#+DATE: %<%-m/%-d/%Y>\n#+AUTHOR: Kasra Moayedi\n#+LANGUAGE: en_US\n#+DESCRIPTION:\n") :unnarrowed t)
+        ("f" "PHYSICS 7LD" plain "%?"
+         :target (file+head "PHYSICS 7LD/Notes/%<%-m-%-d>_${slug}.org"
                             "#+TITLE: ${title}\n#+DATE: %<%-m/%-d/%Y>\n#+AUTHOR: Kasra Moayedi\n#+LANGUAGE: en_US\n#+DESCRIPTION:\n") :unnarrowed t)
         )
       )
