@@ -40,6 +40,12 @@
 (elpaca elpaca-use-package
   (elpaca-use-package-mode))
 
+;; THEME
+
+(use-package exotica-theme
+  :ensure t
+  :config (load-theme 'exotica t))
+
 ;; PACKAGES
 
 (use-package all-the-icons
@@ -93,10 +99,6 @@
 
 (use-package ess
   :ensure t)
-
-(use-package exotica-theme
-  :ensure t
-  :config (load-theme 'exotica t))
 
 (use-package flycheck
   :ensure t
@@ -312,22 +314,22 @@
       '(
         ("a" "EECS 112L" plain "%?"
          :target (file+head "EECS 112L/Notes/%<%-m-%-d>_${slug}.org"
-                            "#+TITLE: ${title}\n#+DATE: %<%-m/%-d/%Y>\n#+AUTHOR: Kasra Moayedi\n#+LANGUAGE: en_US\n#+DESCRIPTION:\n") :unnarrowed t)
+                            "#+TITLE: ${title}\n#+DATE: <%<%Y-%m-%d %a>>\n#+AUTHOR: Kasra Moayedi\n#+LANGUAGE: en_US\n#+DESCRIPTION:\n") :unnarrowed t)
         ("b" "FRENCH 116" plain "%?"
          :target (file+head "FRENCH 116/Notes/%<%-m-%-d>_${slug}.org"
-                            "#+TITLE: ${title}\n#+DATE: %<%-m/%-d/%Y>\n#+AUTHOR: Kasra Moayedi\n#+LANGUAGE: en_US\n#+DESCRIPTION:\n") :unnarrowed t)
+                            "#+TITLE: ${title}\n#+DATE: <%<%Y-%m-%d %a>>\n#+AUTHOR: Kasra Moayedi\n#+LANGUAGE: en_US\n#+DESCRIPTION:\n") :unnarrowed t)
         ("c" "ICS 6B" plain "%?"
          :target (file+head "ICS 6B/Notes/%<%-m-%-d>_${slug}.org"
-                            "#+TITLE: ${title}\n#+DATE: %<%-m/%-d/%Y>\n#+AUTHOR: Kasra Moayedi\n#+LANGUAGE: en_US\n#+DESCRIPTION:\n") :unnarrowed t)
+                            "#+TITLE: ${title}\n#+DATE: <%<%Y-%m-%d %a>>\n#+AUTHOR: Kasra Moayedi\n#+LANGUAGE: en_US\n#+DESCRIPTION:\n") :unnarrowed t)
         ("d" "MATH 3A" plain "%?"
          :target (file+head "MATH 3A/Notes/%<%-m-%-d>_${slug}.org"
-                            "#+TITLE: ${title}\n#+DATE: %<%-m/%-d/%Y>\n#+AUTHOR: Kasra Moayedi\n#+LANGUAGE: en_US\n#+DESCRIPTION:\n") :unnarrowed t)
+                            "#+TITLE: ${title}\n#+DATE: <%<%Y-%m-%d %a>>\n#+AUTHOR: Kasra Moayedi\n#+LANGUAGE: en_US\n#+DESCRIPTION:\n") :unnarrowed t)
         ("e" "PHYSICS 7D" plain "%?"
          :target (file+head "PHYSICS 7D/Notes/%<%-m-%-d>_${slug}.org"
-                            "#+TITLE: ${title}\n#+DATE: %<%-m/%-d/%Y>\n#+AUTHOR: Kasra Moayedi\n#+LANGUAGE: en_US\n#+DESCRIPTION:\n") :unnarrowed t)
+                            "#+TITLE: ${title}\n#+DATE: <%<%Y-%m-%d %a>>\n#+AUTHOR: Kasra Moayedi\n#+LANGUAGE: en_US\n#+DESCRIPTION:\n") :unnarrowed t)
         ("f" "PHYSICS 7LD" plain "%?"
          :target (file+head "PHYSICS 7LD/Notes/%<%-m-%-d>_${slug}.org"
-                            "#+TITLE: ${title}\n#+DATE: %<%-m/%-d/%Y>\n#+AUTHOR: Kasra Moayedi\n#+LANGUAGE: en_US\n#+DESCRIPTION:\n") :unnarrowed t)
+                            "#+TITLE: ${title}\n#+DATE: <%<%Y-%m-%d %a>>\n#+AUTHOR: Kasra Moayedi\n#+LANGUAGE: en_US\n#+DESCRIPTION:\n") :unnarrowed t)
         )
       )
 
@@ -336,7 +338,7 @@
 ;; MISC
 
 (add-to-list 'default-frame-alist
-             '(font . "ComicShannsMono Nerd Font Mono-12"))
+             '(font . "0xProto Nerd Font Mono-11"))
 
 
 (global-set-key [C-M-tab] 'clang-format-buffer)
