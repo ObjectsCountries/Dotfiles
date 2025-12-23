@@ -49,7 +49,6 @@ format = '@$hostname '
 [directory]
 truncation_length = -1
 format = ' ($read_only)$path '
-home_symbol = '/home/kasra'
 read_only = ' '
 
 [cmake]
