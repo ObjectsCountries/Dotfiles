@@ -184,6 +184,11 @@
   :hook
   (markdown-mode . abbrev-mode))
 
+(use-package mixed-pitch
+  :ensure t
+  :hook
+  (org-mode . mixed-pitch-mode))
+
 (use-package nov
   :ensure t)
 
@@ -219,7 +224,11 @@
   (org-roam-setup))
 
 (use-package pdf-tools
-  :ensure t)
+  :ensure t
+  :config
+    (pdf-tools-install)
+    (add-hook 'pdf-view-mode-hook (lambda () (display-line-numbers-mode -1)))
+)
 
 (use-package quarto-mode
   :ensure t
@@ -314,28 +323,60 @@
       '(
         ("a" "EECS 112L" plain "%?"
          :target (file+head "EECS 112L/Notes/%<%-m-%-d>_${slug}.org"
-                            "#+TITLE: ${title}\n#+DATE: <%<%Y-%m-%d %a>>\n#+AUTHOR: Kasra Moayedi\n#+LANGUAGE: en_US\n#+DESCRIPTION:\n") :unnarrowed t)
+                            "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
         ("b" "FRENCH 116" plain "%?"
          :target (file+head "FRENCH 116/Notes/%<%-m-%-d>_${slug}.org"
-                            "#+TITLE: ${title}\n#+DATE: <%<%Y-%m-%d %a>>\n#+AUTHOR: Kasra Moayedi\n#+LANGUAGE: en_US\n#+DESCRIPTION:\n") :unnarrowed t)
+                            "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
         ("c" "ICS 6B" plain "%?"
          :target (file+head "ICS 6B/Notes/%<%-m-%-d>_${slug}.org"
-                            "#+TITLE: ${title}\n#+DATE: <%<%Y-%m-%d %a>>\n#+AUTHOR: Kasra Moayedi\n#+LANGUAGE: en_US\n#+DESCRIPTION:\n") :unnarrowed t)
+                            "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
         ("d" "MATH 3A" plain "%?"
          :target (file+head "MATH 3A/Notes/%<%-m-%-d>_${slug}.org"
-                            "#+TITLE: ${title}\n#+DATE: <%<%Y-%m-%d %a>>\n#+AUTHOR: Kasra Moayedi\n#+LANGUAGE: en_US\n#+DESCRIPTION:\n") :unnarrowed t)
+                            "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
         ("e" "PHYSICS 7D" plain "%?"
          :target (file+head "PHYSICS 7D/Notes/%<%-m-%-d>_${slug}.org"
-                            "#+TITLE: ${title}\n#+DATE: <%<%Y-%m-%d %a>>\n#+AUTHOR: Kasra Moayedi\n#+LANGUAGE: en_US\n#+DESCRIPTION:\n") :unnarrowed t)
+                            "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
         ("f" "PHYSICS 7LD" plain "%?"
          :target (file+head "PHYSICS 7LD/Notes/%<%-m-%-d>_${slug}.org"
-                            "#+TITLE: ${title}\n#+DATE: <%<%Y-%m-%d %a>>\n#+AUTHOR: Kasra Moayedi\n#+LANGUAGE: en_US\n#+DESCRIPTION:\n") :unnarrowed t)
+                            "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
         )
       )
 
 (setq vc-follow-symlinks t)
 
 ;; MISC
+
+; thank you gemini
+;; 1. Define a function to fetch notes for a specific course
+(defun org-dblock-write:course-notes (params)
+  "Generates a list of links to Org files in a course's Notes directory."
+  (let* ((course (plist-get params :course))
+         ;; Construct the path: ~/UCI/COURSE_NAME/Notes
+         (dir (expand-file-name (format "Notes" ) (expand-file-name course "~/UCI")))
+         (files (if (file-directory-p dir)
+                    (directory-files dir t "\\.org$")
+                  nil)))
+    (if files
+        (dolist (file files)
+          (let ((title (with-temp-buffer
+                         (insert-file-contents file)
+                         ;; Extract the #+TITLE from the file
+                         (or (cadar (org-collect-keywords '("TITLE")))
+                             (file-name-base file))))) ;; Fallback to filename
+            (insert (format "- [[file:%s][%s]]\n" file title))))
+      (insert "- No notes found yet."))))
+
+;; 2. Optional: Auto-update the assignments file after every capture
+(defun my/update-assignments-dashboard ()
+  "Automatically refreshes the Dynamic Blocks in assignments.org."
+  (let ((dashboard-file "~/UCI/assignments.org"))
+    (when (file-exists-p dashboard-file)
+      (with-current-buffer (find-file-noselect dashboard-file)
+        (org-update-all-dblocks)
+        (save-buffer)))))
+
+;; Run this update every time you finish a capture
+(add-hook 'org-capture-after-finalize-hook 'my/update-assignments-dashboard)
 
 (add-to-list 'default-frame-alist
              '(font . "0xProto Nerd Font Mono-11"))
@@ -351,11 +392,14 @@
 (auto-save-mode -1)
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
-(setenv "FrameworkPathOverride" "/usr/lib/mono/4.8-api")
+(setenv "FrameworkPathOverride" "/usr/lib/mono/3.5-api")
 
 (cua-mode t)
 
 (setq-default cursor-type 'bar)
+
+(add-hook 'pdf-view-mode-hook #'pdf-view-midnight-minor-mode)
+(add-hook 'pdf-view-mode-hook #'auto-revert-mode)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -367,7 +411,9 @@
      default))
  '(doc-view-continuous t)
  '(elcord-editor-icon "emacs_pen_icon")
- '(org-babel-load-languages '((python . t) (C . t) (R . t) (emacs-lisp . t))))
+ '(org-babel-load-languages '((python . t) (C . t) (R . t) (emacs-lisp . t)))
+ '(pdf-view-continuous t)
+ '(pdf-view-selection-style 'glyph))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
