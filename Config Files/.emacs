@@ -322,22 +322,28 @@
 (setq org-roam-capture-templates
       '(
         ("a" "EECS 112L" plain "%?"
-         :target (file+head "EECS 112L/Notes/%<%-m-%-d>_${slug}.org"
+         :target (file+head "EECS112L/Notes/${slug}.org"
                             "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
         ("b" "FRENCH 116" plain "%?"
-         :target (file+head "FRENCH 116/Notes/%<%-m-%-d>_${slug}.org"
+         :target (file+head "FRENCH 116/Notes/${slug}.org"
                             "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
         ("c" "ICS 6B" plain "%?"
-         :target (file+head "ICS 6B/Notes/%<%-m-%-d>_${slug}.org"
+         :target (file+head "ICS 6B/Notes/${slug}.org"
                             "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
         ("d" "MATH 3A" plain "%?"
-         :target (file+head "MATH 3A/Notes/%<%-m-%-d>_${slug}.org"
+         :target (file+head "MATH 3A/Notes/${slug}.org"
                             "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
         ("e" "PHYSICS 7D" plain "%?"
-         :target (file+head "PHYSICS 7D/Notes/%<%-m-%-d>_${slug}.org"
+         :target (file+head "PHYSICS 7D/Notes/${slug}.org"
                             "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
         ("f" "PHYSICS 7LD" plain "%?"
-         :target (file+head "PHYSICS 7LD/Notes/%<%-m-%-d>_${slug}.org"
+         :target (file+head "PHYSICS 7LD/Notes/${slug}.org"
+                            "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
+        ("y" "ICS 46" plain "%?"
+         :target (file+head "ICS 46/Notes/${slug}.org"
+                            "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
+        ("z" "STATS 67" plain "%?"
+         :target (file+head "STATS 67/Notes/${slug}.org"
                             "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
         )
       )
@@ -345,38 +351,6 @@
 (setq vc-follow-symlinks t)
 
 ;; MISC
-
-; thank you gemini
-;; 1. Define a function to fetch notes for a specific course
-(defun org-dblock-write:course-notes (params)
-  "Generates a list of links to Org files in a course's Notes directory."
-  (let* ((course (plist-get params :course))
-         ;; Construct the path: ~/UCI/COURSE_NAME/Notes
-         (dir (expand-file-name (format "Notes" ) (expand-file-name course "~/UCI")))
-         (files (if (file-directory-p dir)
-                    (directory-files dir t "\\.org$")
-                  nil)))
-    (if files
-        (dolist (file files)
-          (let ((title (with-temp-buffer
-                         (insert-file-contents file)
-                         ;; Extract the #+TITLE from the file
-                         (or (cadar (org-collect-keywords '("TITLE")))
-                             (file-name-base file))))) ;; Fallback to filename
-            (insert (format "- [[file:%s][%s]]\n" file title))))
-      (insert "- No notes found yet."))))
-
-;; 2. Optional: Auto-update the assignments file after every capture
-(defun my/update-assignments-dashboard ()
-  "Automatically refreshes the Dynamic Blocks in assignments.org."
-  (let ((dashboard-file "~/UCI/assignments.org"))
-    (when (file-exists-p dashboard-file)
-      (with-current-buffer (find-file-noselect dashboard-file)
-        (org-update-all-dblocks)
-        (save-buffer)))))
-
-;; Run this update every time you finish a capture
-(add-hook 'org-capture-after-finalize-hook 'my/update-assignments-dashboard)
 
 (add-to-list 'default-frame-alist
              '(font . "0xProto Nerd Font Mono-11"))
@@ -398,6 +372,12 @@
 
 (setq-default cursor-type 'bar)
 
+(c-set-offset 'case-label '+)
+
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+(setq indent-line-function 'insert-tab)
+
 (add-hook 'pdf-view-mode-hook #'pdf-view-midnight-minor-mode)
 (add-hook 'pdf-view-mode-hook #'auto-revert-mode)
 
@@ -412,6 +392,7 @@
  '(doc-view-continuous t)
  '(elcord-editor-icon "emacs_pen_icon")
  '(org-babel-load-languages '((python . t) (C . t) (R . t) (emacs-lisp . t)))
+ '(org-preview-latex-default-process 'dvisvgm)
  '(pdf-view-continuous t)
  '(pdf-view-selection-style 'glyph))
 (custom-set-faces
