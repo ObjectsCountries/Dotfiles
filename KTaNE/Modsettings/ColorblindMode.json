@@ -52,6 +52,13 @@
     "GridlockModule": null,
     "neutralization": null,
     "ColorMorseModule": null,
-    "screw": null
+    "screw": null,
+    "curlyWires": null,
+    "rgbMaze": null,
+    "GSJumbledButtons": null,
+    "MandNs": null,
+    "breakfastEgg": null,
+    "TheExplodingPen": null,
+    "ForgetTheColors": null
   }
 }

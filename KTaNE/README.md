@@ -2,9 +2,9 @@
 
 These files are to be used for setting up [Keep Talking and Nobody Explodes](https://keeptalkinggame.com) on a new computer. Before copying these files, launch the game and choose to disable mods, then complete mission 1.3 to unlock mods.
 
-On Windows, these files should be dropped in `%APPDATA%\..\LocalLow\Steel Crate Games\Keep Talking and Nobody Explodes\`.
+On Linux, either copy or symlink these files to `~/.config/unity3d/Steel Crate Games/Keep Talking and Nobody Explodes/`.
 
-On Linux, replace every instance of `C:\Program Files (x86)\Steam\steamapps\workshop\content\341800\` with `/home/(your username)/.local/share/Steam/steamapps/workshop/content/341800/` (do not use `~`) in [modSettings.xml](modSettings.xml). Then, either copy or symlink the files to `~/.config/unity3d/Steel Crate Games/Keep Talking and Nobody Explodes/`.
+On Windows, replace every instance of `/home/kasra/.local/share/Steam/steamapps/workshop/content/341800/` with `C:\Program Files (x86)\Steam\steamapps\workshop\content\341800\`. in [modSettings.xml](modSettings.xml). Then, either copy or move these files to `%APPDATA%\..\LocalLow\Steel Crate Games\Keep Talking and Nobody Explodes\`.
 
 ## Setting Up Mods
 
