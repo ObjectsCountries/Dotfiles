@@ -117,16 +117,6 @@
       }
     },
     {
-      "type": "os",
-      "keyIcon": "",
-      "format": "{pretty-name}",
-      "keyColor": "bold_light_black",
-      "outputColor": "light_black",
-      "condition": {
-        "system": "Windows"
-      }
-    },
-    {
       "type": "lm",
       "keyIcon": "󰍂",
       "keyColor": "bold_light_black",
@@ -177,26 +167,6 @@
       "outputColor": "light_black",
       "disabled": null,
       "combined": false
-    },
-    {
-      "type": "command",
-      "shell": "/usr/bin/bash",
-      "text": "MOD_COUNT=`find $HOME/.local/share/Steam/steamapps/workshop/content/341800/ -maxdepth 1 -type d | tail -n +2 | wc -l`; [[ MOD_COUNT -ne 0 ]] && echo $MOD_COUNT",
-      "keyIcon": "󰚑",
-      "key": "KTaNE Mods",
-      "keyColor": "bold_light_black",
-      "outputColor": "light_black",
-      "format": "{result}"
-    },
-    {
-      "type": "command",
-      "shell": "powershell",
-      "text": "$mods = 'C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\341800\\'; if ( (Test-Path -Path $mods) ) { $modCount = (Get-ChildItem $mods).Count; if ( (0 -ne $modCount) ) { echo $modCount } }",
-      "keyIcon": "󰚑",
-      "key": "KTaNE Mods",
-      "keyColor": "bold_light_black",
-      "outputColor": "light_black",
-      "format": "{result}"
     },
     {
       "type": "shell",
@@ -276,24 +246,6 @@
       },
       "condition": {
         "system": "Android"
-      }
-    },
-    {
-      "type": "gpu",
-      "keyIcon": "󰾲",
-      "keyColor": "white",
-      "outputColor": "bold_white",
-      "driverSpecific": false,
-      "detectionMethod": "auto",
-      "temp": false,
-      "hideType": "none",
-      "percent": {
-        "green": 50,
-        "yellow": 80,
-        "type": 0
-      },
-      "condition": {
-        "system": "Windows"
       }
     },
     {
@@ -407,23 +359,6 @@
       "condition": {
         "system": "Linux"
       }
-    },    {
-      "type": "separator",
-      "string": "Other",
-      "outputColor": "bold_magenta",
-      "times": 1,
-      "condition": {
-        "system": "Windows"
-      }
-    },
-    {
-      "type": "separator",
-      "string": "-",
-      "outputColor": "bold_magenta",
-      "times": 0,
-      "condition": {
-        "system": "Windows"
-      }
     },
     {
       "type": "weather",
@@ -434,24 +369,16 @@
       "condition": {
         "system": "Linux"
       }
-    },    {
-      "type": "weather",
-      "keyColor": "magenta",
-      "outputColor": "bold_magenta",
-      "location": "INSERT+CITY+HERE",
-      "outputFormat": "%t+-+%C",
-      "condition": {
-        "system": "Windows"
-      }
     },
     {
-      "type": "separator",
-      "string": " ",
-      "outputColor": "reset_black",
-      "times": 0,
-      "condition": {
-        "system": "Windows"
-      }
-    },
+      "type": "command",
+      "shell": "/usr/bin/bash",
+      "text": "MOD_COUNT=`find $HOME/.local/share/Steam/steamapps/workshop/content/341800/ -maxdepth 1 -type d | tail -n +2 | wc -l`; [[ MOD_COUNT -ne 0 ]] && echo $MOD_COUNT",
+      "keyIcon": "󰚑",
+      "key": "KTaNE Mods",
+      "keyColor": "dim_magenta",
+      "outputColor": "bold_dim_magenta",
+      "format": "{result}"
+    }
   ]
 }

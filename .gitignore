@@ -1,7 +1,4 @@
-/.directory
-/.env
 /.idea/
-/Config\ Files/nvim/lazy-lock.json
 /KTaNE/*
 !/KTaNE/Modsettings/
 !/KTaNE/modSettings.xml

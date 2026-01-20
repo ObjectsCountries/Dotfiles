@@ -1,1 +1,0 @@
-{"RetryOnDetonation":false,"DetonateOnSolve":false}
