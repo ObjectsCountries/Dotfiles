@@ -1,7 +1,0 @@
-{
-  "ExcludeVanillaModules": false,
-  "ExcludeIgnoredModules": false,
-  "ExcludeMysteryModule": false,
-  "ExcludeSouvenir": false,
-  "Language": null
-}

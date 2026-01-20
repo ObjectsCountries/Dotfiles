@@ -1,3 +1,0 @@
-{
-	"note": "No Settings To Change"
-}

@@ -1,4 +1,0 @@
-{
-  "openingTimeEnabled": true,
-  "hoursCommandEnabled": true
-}

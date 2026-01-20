@@ -9,9 +9,9 @@
   "DemandBasedModLoading": true,
   "DemandBasedModsExcludeList": [],
   "DemandModLimit": 0,
-  "ExcludeModuleMissions": false,
-  "ReplaceObsoleteMods": false,
-  "SubscribeToNewMods": false,
+  "ExcludeModuleMissions": true,
+  "ReplaceObsoleteMods": true,
+  "SubscribeToNewMods": true,
   "BombHUD": "On",
   "ShowEdgework": true,
   "DisableAdvantageous": "Missions",
@@ -28,10 +28,8 @@
     "BombBinder": true,
     "ModManager": true,
     "DossierMenu": true,
-    "ModSelectorTablet": true,
-    "BombCreator": true,
-    "IRCManager": true,
-    "ColorBlindHelper": true
+    "ColorBlindHelper": true,
+    "ModSelectorTablet": true
   },
   "LocalMods": [
   ],
