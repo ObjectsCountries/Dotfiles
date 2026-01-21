@@ -100,16 +100,9 @@ pages:
               issues-limit: 3
               commits-limit: 3
             - type: repository
-              title: FOSS Fight
+              title: KTaNE Unit Testing
               token: (insert token here)
-              repository: ObjectsCountries/FOSS-Fight
-              pull-requests-limit: 3
-              issues-limit: 3
-              commits-limit: 3
-            - type: repository
-              title: FFCC
-              token: (insert token here)
-              repository: ObjectsCountries/FFCC
+              repository: ObjectsCountries/Unit-Testing
               pull-requests-limit: 3
               issues-limit: 3
               commits-limit: 3
