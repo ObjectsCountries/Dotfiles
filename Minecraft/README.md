@@ -1,17 +1,17 @@
 # Minecraft
 
-My preferred launcher is [Prism Launcher](https://prismlauncher.org), and my preferred mod loader is [Fabric](https://fabricmc.net). My skin is Classic as opposed to Slim, and uses the [Home Cape](https://minecraft.wiki/w/Home_Cape). My Minecraft username is `ObjectsCountries` on Java Edition (NameMC page [here](https://namemc.com/profile/ObjectsCountries.1)), and `ObjectsCountris` (without the last e) on Bedrock Edition.
+My preferred launcher is [Prism Launcher](https://prismlauncher.org), and my preferred mod loader is [Fabric](https://fabricmc.net). My skin is Classic as opposed to Slim, and uses the [Home Cape](https://minecraft.wiki/w/Home_Cape). My Minecraft username is `ObjectsCountries` on Java Edition (NameMC page [here](https://namemc.com/profile/ObjectsCountries.1)).
 
 ## Mods
 
-* [CraftPresence](https://www.curseforge.com/minecraft/mc-mods/craftpresence) (**Requires [UniLib](https://www.curseforge.com/minecraft/mc-mods/unilib)**) for Discord rich presence (config [here](craftpresence.json))
+* [CraftPresence](https://www.curseforge.com/minecraft/mc-mods/craftpresence) (**Requires [UniLib](https://www.curseforge.com/minecraft/mc-mods/unilib)**) for Discord rich presence
 * [Cubes Without Borders](https://www.curseforge.com/minecraft/mc-mods/cubes-without-borders) for borderless windowed mode
 
 These mods will work with Forge, NeoForge, Fabric and Quilt. CraftPresence is also compatible with Risugami's ModLoader.
 
 ## Vanilla Tweaks
 
-Java [here](https://vanillatweaks.net), Bedrock [here](https://bedrocktweaks.net).
+Available [here](https://vanillatweaks.net).
 
 * **Aesthetic**
   * Softer Wool
@@ -20,12 +20,12 @@ Java [here](https://vanillatweaks.net), Bedrock [here](https://bedrocktweaks.net
   * Ashless Campfires
   * Flint Tipped Arrows
   * Splash Bottle o' Enchanting
-  * Fencier Fences (**Java Only**)
+  * Fencier Fences
   * Smoother Warped Planks
   * Classic Style Netherite Armor
 * **Terrain**
   * Golden Savanna
-  * Twinkling Stars (**Java Only**)
+  * Twinkling Stars
   * Circular Log Tops
   * Brighter Nether
   * Clearer Water
@@ -44,15 +44,16 @@ Java [here](https://vanillatweaks.net), Bedrock [here](https://bedrocktweaks.net
   * Variated End Stone
   * Variated Planks
   * Variated Stone
+  * Variated & Offset Firefly Bushes
   * Variated Villagers
 * **Connected Textures**
-  * Connected Polished Stones (**Java Only**)
-  * Connected Iron Blocks (**Java Only**)
-  * Connected Lapis Blocks (**Java Only**)
+  * Connected Polished Stones
+  * Connected Iron Blocks
+  * Connected Lapis Blocks
 * **Utility**
-  * Diminishing Tools (**Java Only**)
-  * Unique Painting Items (**1.21.5+**, **Java Only**)
-  * Unique Axolotl Buckets (**1.21.5+**, **Java Only**)
+  * Diminishing Tools
+  * Unique Painting Items
+  * Unique Axolotl Buckets
   * Fully Aged Crop Marker
   * Fully Aged Amethyst Cluster Marker
   * Different Stems
@@ -60,50 +61,50 @@ Java [here](https://vanillatweaks.net), Bedrock [here](https://bedrocktweaks.net
   * Hunger Preview
   * Sticky Piston Sides
   * Directional Hoppers
-  * Directional Dispensers & Droppers (**Java Only**)
+  * Directional Dispensers & Droppers
   * Directional Observers
   * Clean Redstone Dust
-  * Redstone Power Levels (**Java Only**)
-  * Groovy Levers (**Java Only**)
+  * Redstone Power Levels
+  * Groovy Levers
   * Brewing Guide
-  * Visual Honey Stages (**Java Only**)
-  * Visual Cauldron Stages (**Java Only**)
-  * Visual Composter Stages (**Java Only**)
-  * Visual Sapling Growth (**Java Only**)
-  * Visual Note Block Pitch (**Java Only**)
+  * Visual Honey Stages
+  * Visual Cauldron Stages
+  * Visual Composter Stages
+  * Visual Sapling Growth
+  * Visual Note Block Pitch
 * **Unobtrusive**
   * Borderless Glass
   * Borderless Stained Glass
   * Borderless Tinted Glass
   * Lower Fire
 * **3D**
-  * 3D Bookshelves (**Java Only**)
-  * 3D Chiseled Bookshelves (**Java Only**)
-  * 3D Chains (**Java Only**)
-  * 3D Pointed Dripstone (**Java Only**)
-  * 3D Amethyst Crystals (**Java Only**)
-  * 3D Redstone Wire (**Java Only**)
-  * 3D Items (**Java Only**)
+  * 3D Bookshelves
+  * 3D Chiseled Bookshelves
+  * 3D Chains
+  * 3D Pointed Dripstone
+  * 3D Amethyst Crystals
+  * 3D Redstone Wire
+  * 3D Items
   * 3D Mace
-  * 3D Ladders (**Java Only**)
-  * 3D Rails (**Java Only**)
-  * 3D Iron & Copper Bars (**Java Only**)
-  * 3D Sugar Cane (**Java Only**)
-  * 3D Lily Pads (**Java Only**)
-  * 3D Doors & Trapdoors (**Java Only**)
-  * 3D Fungi (**Java Only**)
-  * 3D Bushes (**Java Only**)
-  * 3D Vines (**Java Only**)
-  * 3D Glow Lichen (**Java Only**)
-  * 3D Sculk Veins (**Java Only**)
-  * 3D Stonecutters (**Java Only**)
+  * 3D Ladders
+  * 3D Rails
+  * 3D Iron & Copper Bars
+  * 3D Sugar Cane
+  * 3D Lily Pads
+  * 3D Doors & Trapdoors
+  * 3D Fungi
+  * 3D Bushes
+  * 3D Vines
+  * 3D Glow Lichen
+  * 3D Sculk Veins
+  * 3D Stonecutters
   * 3D Sun & Moon
 * **Gui**
   * Dark UI
   * Numbered Hotbar
-  * No Java Edition Subtitle (**Java Only**)
+  * No Java Edition Subtitle
   * Clearer Wither Hearts
-  * Colored Ping Indicator (**Java Only**)
+  * Colored Ping Indicator
   * Rainbow Experience Bar
   * **Crosshairs**
     * Smaller Crosshair
@@ -113,9 +114,9 @@ Java [here](https://vanillatweaks.net), Bedrock [here](https://bedrocktweaks.net
   * **Hotbar Selector**
     * Gray Hotbar Selector
   * **Widgets**
-    * Black Widgets (**Java Only**)
+    * Black Widgets
   * **Options Backgrounds**
-    * Purple Concrete Options Background (**Java Only**)
+    * Purple Concrete Options Background
 * **Fun**
   * Sus Sand and Gravel
 * **World Of Color**
@@ -125,8 +126,10 @@ Java [here](https://vanillatweaks.net), Bedrock [here](https://bedrocktweaks.net
     * Purple Elytra
   * **Enchantment Glints**
     * Blue Enchantment Glint
+  * **Block Outlines**
+    * Rainbow Block Outline
 * **Fixes And Consistency**
-  * Updated Spectator Icon Textures (**Java Only**)
+  * Updated Spectator Icon Textures
   * Consistent Buckets
-  * Proper Break Particles (**Java Only**)
-  * Don't Eat the Bowl! (**Java Only**)
+  * Proper Break Particles
+  * Don't Eat the Bowl!
