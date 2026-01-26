@@ -108,9 +108,6 @@
 (use-package helm-lsp :ensure t
   :commands helm-lsp-workspace-symbol)
 
-(use-package load-env-vars :ensure t
-  :config (load-env-vars (expand-file-name "~/Dotfiles/.env")))
-
 (use-package lsp-ivy :ensure t
   :commands lsp-ivy-workspace-symbol)
 
