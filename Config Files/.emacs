@@ -118,10 +118,8 @@
   :hook (
          (c++-mode . lsp)
          (csharp-mode . lsp)
-	 (php-mode . lsp)
          (python-mode . lsp)
          (rust-mode . lsp)
-         (vue-mode . lsp)
          (lsp-mode . lsp-enable-which-key-integration))
   :commands lsp)
 
