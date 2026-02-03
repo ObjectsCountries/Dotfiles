@@ -269,20 +269,9 @@
 
 ;; VARIABLES
 
-; thank you chatgpt
-(defun my/org-set-dictionary-from-language ()
-  "Set `ispell-change-dictionary` directly from #+LANGUAGE: in Org file."
-  (when (derived-mode-p 'org-mode)
-    (let* ((lang (cdr (assoc "LANGUAGE" (org-collect-keywords '("LANGUAGE")))))
-           (lang (car lang)))
-      (when lang
-        (ignore-errors
-          (ispell-change-dictionary lang))))))
-
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 (add-hook 'org-mode-hook #'flyspell-mode)
 (add-hook 'org-mode-hook #'global-display-line-numbers-mode)
-(add-hook 'org-mode-hook #'my/org-set-dictionary-from-language)
 (add-hook 'server-after-make-frame-hook 'revert-buffer)
 (add-hook 'window-setup-hook 'toggle-frame-maximized t)
 
@@ -319,19 +308,16 @@
         ("a" "EECS 112L" plain "%?"
          :target (file+head "EECS112L/Notes/${slug}.org"
                             "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
-        ("b" "FRENCH 116" plain "%?"
-         :target (file+head "FRENCH 116/Notes/${slug}.org"
-                            "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
-        ("c" "ICS 6B" plain "%?"
+        ("b" "ICS 6B" plain "%?"
          :target (file+head "ICS 6B/Notes/${slug}.org"
                             "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
-        ("d" "MATH 3A" plain "%?"
+        ("c" "MATH 3A" plain "%?"
          :target (file+head "MATH 3A/Notes/${slug}.org"
                             "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
-        ("e" "PHYSICS 7D" plain "%?"
+        ("d" "PHYSICS 7D" plain "%?"
          :target (file+head "PHYSICS 7D/Notes/${slug}.org"
                             "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
-        ("f" "PHYSICS 7LD" plain "%?"
+        ("e" "PHYSICS 7LD" plain "%?"
          :target (file+head "PHYSICS 7LD/Notes/${slug}.org"
                             "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
         ("y" "ICS 46" plain "%?"
