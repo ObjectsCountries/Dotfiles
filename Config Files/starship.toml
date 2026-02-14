@@ -182,5 +182,5 @@ format = '\($duration\) '
 disabled = false
 
 [character]
-success_symbol = '[ 󱞩](bold #00ff00)'
+success_symbol = '[ 󱞩](bold #ffffff)'
 error_symbol = '[ 󱞩](bold #ff0000)'
