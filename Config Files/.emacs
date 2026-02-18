@@ -305,26 +305,17 @@
 
 (setq org-roam-capture-templates
       '(
-        ("a" "EECS 112L" plain "%?"
-         :target (file+head "EECS112L/Notes/${slug}.org"
-                            "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
-        ("b" "ICS 6B" plain "%?"
+        ("a" "ICS 6B" plain "%?"
          :target (file+head "ICS 6B/Notes/${slug}.org"
                             "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
-        ("c" "MATH 3A" plain "%?"
+        ("b" "MATH 3A" plain "%?"
          :target (file+head "MATH 3A/Notes/${slug}.org"
                             "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
-        ("d" "PHYSICS 7D" plain "%?"
+        ("c" "PHYSICS 7D" plain "%?"
          :target (file+head "PHYSICS 7D/Notes/${slug}.org"
                             "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
-        ("e" "PHYSICS 7LD" plain "%?"
+        ("d" "PHYSICS 7LD" plain "%?"
          :target (file+head "PHYSICS 7LD/Notes/${slug}.org"
-                            "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
-        ("y" "ICS 46" plain "%?"
-         :target (file+head "ICS 46/Notes/${slug}.org"
-                            "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
-        ("z" "STATS 67" plain "%?"
-         :target (file+head "STATS 67/Notes/${slug}.org"
                             "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
         )
       )
