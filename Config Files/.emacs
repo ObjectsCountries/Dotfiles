@@ -352,6 +352,9 @@
 (setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
 
+(add-hook! 'after-setting-font-hook
+  (set-fontset-font t 'arabic (font-spec :family "Noto Sans Arabic UI")))
+
 (add-hook 'pdf-view-mode-hook #'pdf-view-midnight-minor-mode)
 (add-hook 'pdf-view-mode-hook #'auto-revert-mode)
 
