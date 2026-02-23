@@ -295,7 +295,6 @@
 (setq dashboard-startup-banner 'logo)
 (setq dashboard-vertically-center-content t)
 
-(setq diary-date-forms 'diary-american-date-forms)
 (setq diary-file "~/UCI/diary")
 
 (setq frame-title-format "%b - Emacs")
