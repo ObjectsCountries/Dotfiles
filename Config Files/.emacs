@@ -40,6 +40,8 @@
 (elpaca elpaca-use-package
   (elpaca-use-package-mode))
 
+(set-fontset-font t 'arabic "Noto Sans Arabic UI")
+
 ;; THEME
 
 (use-package exotica-theme
@@ -301,6 +303,15 @@
 
 (setq initial-buffer-choice (lambda () (get-buffer-create dashboard-buffer-name)))
 
+(setq ispell-program-name "hunspell")
+;; you could set `ispell-dictionary` instead but `ispell-local-dictionary' has higher priority
+(setq ispell-local-dictionary "en_US")
+(setq ispell-local-dictionary-alist '(("en_US" "[[:alpha:]]" "[^[:alpha:]]" "[']" nil ("-d" "en_US,fr_FR,fa_IR") nil utf-8)))
+;; new variable `ispell-hunspell-dictionary-alist' is defined in Emacs
+;; If it's nil, Emacs tries to automatically set up the dictionaries.
+(when (boundp 'ispell-hunspell-dictionary-alist)
+  (setq ispell-hunspell-dictionary-alist ispell-local-dictionary-alist))
+
 (setq make-backup-files nil)
 
 (setq org-agenda-files '("~/UCI/assignments.org"))
@@ -351,9 +362,6 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
-
-(add-hook! 'after-setting-font-hook
-  (set-fontset-font t 'arabic (font-spec :family "Noto Sans Arabic UI")))
 
 (add-hook 'pdf-view-mode-hook #'pdf-view-midnight-minor-mode)
 (add-hook 'pdf-view-mode-hook #'auto-revert-mode)
