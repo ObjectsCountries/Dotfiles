@@ -29,7 +29,8 @@
     "ModManager": true,
     "DossierMenu": true,
     "ColorBlindHelper": true,
-    "ModSelectorTablet": true
+    "ModSelectorTablet": true,
+    "IRCManager": true
   },
   "LocalMods": [
   ],
