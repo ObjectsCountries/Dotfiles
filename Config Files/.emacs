@@ -330,7 +330,7 @@
 
 (setq make-backup-files nil)
 
-(setq org-agenda-files '("~/UCI/assignments.org"))
+(setq org-agenda-files '("~/UCI/resources.org"))
 
 (setq org-roam-capture-templates
       '(
