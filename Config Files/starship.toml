@@ -30,11 +30,10 @@ format = '$symbol'
 disabled = false
 
 [os.symbols]
-CachyOS = ''
+Artix = ''
 
 [shell]
 bash_indicator = ''
-fish_indicator = '󰈺'
 format = ' $indicator'
 disabled = false
 
