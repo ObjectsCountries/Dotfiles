@@ -7,14 +7,11 @@
 | `ls` replacement            | `eza`                  | `eza`                                                                     |
 | `cat` replacement           | `bat`                  | `bat`                                                                     |
 | `git diff` replacement      | Delta                  | `git-delta`                                                               |
-| Fish, Bat and Neovim themes | Cyberdream             | Not on AUR, available as a Neovim package (scottmckendry/cyberdream.nvim) |
 
 `eza` customization:
 ```bash
 eza -l --color=always --icons=always --hyperlink -a --group-directories-first --git --total-size --no-user --no-time
 ```
-
-Cyberdream for other apps available under their [extras](https://github.com/scottmckendry/cyberdream.nvim/tree/main/extras)
 
 ## Theming
 
@@ -30,7 +27,7 @@ Cyberdream for other apps available under their [extras](https://github.com/scot
 | System Sounds       | Ocean                                                                                                  |
 | Splash Screen       | None                                                                                                   |
 | Login Screen (SDDM) | Breeze, [custom background](swag.jpg)                                                                  |
-| Boot Splash Screen  | BGRT, replaced Arch logo with CachyOS                                                                  |
+| Boot Splash Screen  | BGRT, replaced Arch logo with Artix                                                                    |
 
 ## Laptop
 
@@ -63,7 +60,7 @@ Cyberdream for other apps available under their [extras](https://github.com/scot
     * Padding: Margins 2 vertically, 6 horizontally
       * Apply to Digital Clock
 * Application Menu
-  * `org.cachyos.hello` icon
+  * `artixlinux-logo` icon
 * Global Menu
 * Panel Spacer
 * Icons-Only Task Manager
@@ -79,7 +76,5 @@ Cyberdream for other apps available under their [extras](https://github.com/scot
 
 * [Emacs](Config%20Files/.emacs)
 * [Fastfetch](Config%20Files/fastfetch.jsonc)
-* [Fish](Config%20Files/fish/)
-* [Glance](Config%20Files/glance.yml)
 * [Hyfetch](Config%20Files/hyfetch.json)
 * [Starship](Config%20Files/starship.toml)
