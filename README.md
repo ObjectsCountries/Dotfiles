@@ -30,7 +30,7 @@ eza -l --color=always --icons=always --hyperlink -a --group-directories-first --
 | Cursors             | Breeze Light                                                                                           |
 | System Sounds       | Ocean                                                                                                  |
 | Splash Screen       | None                                                                                                   |
-| Login Screen (SDDM) | Breeze, [custom background](swag.jpg)                                                                  |
+| Login Screen (SDDM) | Breeze, [custom background](Images/bg.jpg)                                                             |
 | Boot Splash Screen  | BGRT, replaced Arch logo with Artix                                                                    |
 
 ### Desktop
