@@ -1,14 +1,14 @@
 '$schema' = 'https://starship.rs/config-schema.json'
 
 format = """
-[](color_1)\
-[$os$shell$username$hostname](#ffffff bg:color_1)\
-[](color_1 bg:color_2)\
-[$directory($git_branch$git_status )](#000000 bg:color_2)\
-[](color_2 bg:color_3)\
-[$c$cmake$cpp$dotnet${custom.jupyter}$nodejs$python$rust${custom.verilog}](#000000 bg:color_3)\
-[](color_3 bg:color_4)\
-[($battery$sudo)$time$cmd_duration](#ffffff bg:color_4)\
+[](fg:color_1)\
+[$os$shell$username$hostname](fg:text_1 bg:color_1)\
+[](fg:color_1 bg:color_2)\
+[$directory($git_branch$git_status )](fg:text_2 bg:color_2)\
+[](fg:color_2 bg:color_3)\
+[$c$cmake$cpp$dotnet${custom.jupyter}$nodejs$python$rust${custom.verilog}](fg:text_3 bg:color_3)\
+[](fg:color_3 bg:color_4)\
+[($battery$sudo)$memory_usage$time$cmd_duration](fg:text_4 bg:color_4)\
 [](color_4)\
 $line_break$character"""
 
@@ -21,6 +21,12 @@ color_1 = '#404040'
 color_2 = '#a3a3a3'
 color_3 = '#ffffff'
 color_4 = '#800080'
+failure_color = '#ff0000'
+success_color = '#ffffff'
+text_1 = '#ffffff'
+text_2 = '#000000'
+text_3 = '#000000'
+text_4 = '#ffffff'
 
 [os]
 format = '$symbol'
@@ -170,6 +176,12 @@ discharging_symbol = '󰁹'
 format = ' Sudo Active'
 disabled = false
 
+[memory_usage]
+threshold = 0
+format = ' $symbol ${ram_pct} RAM'
+symbol = ''
+disabled = false
+
 [time]
 format = '  $time '
 time_format = '%a %-m/%-d %-I:%M%P'
@@ -182,5 +194,5 @@ format = '\($duration\) '
 disabled = false
 
 [character]
-success_symbol = '[ 󱞩](bold #ffffff)'
-error_symbol = '[ 󱞩](bold #ff0000)'
+success_symbol = '[ 󱞩](fg:success_color)'
+error_symbol = '[ 󱞩](fg:failure_color)'
