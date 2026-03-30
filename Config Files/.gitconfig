@@ -1,0 +1,14 @@
+[core]
+	pager = delta
+[delta]
+	hyperlinks = true
+	line-numbers = true
+	navigate = true
+	side-by-side = true
+[interactive]
+	diffFilter = delta --color-only
+[merge]
+	conflictStyle = zdiff3
+[user]
+	email = kasramoayedi@protonmail.com
+	name = ObjectsCountries

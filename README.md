@@ -1,5 +1,9 @@
 # Dotfiles
 
+* [Config Files](Config%20Files/)
+* [Images](Images/)
+* [Minecraft](Minecraft/)
+
 ## Info
 
 | Component                   | Using                  | Package                                                                   |
@@ -13,11 +17,11 @@
 eza -l --color=always --icons=always --hyperlink -a --group-directories-first --git --total-size --no-user --no-time
 ```
 
-## Theming
+## Rice
 
 | Component           | Theme                                                                                                  |
 |---------------------|--------------------------------------------------------------------------------------------------------|
-| Colors              | Breeze Dark, purple                                                                                    |
+| Colors              | Breeze Dark, purple color                                                                              |
 | Application Style   | Breeze                                                                                                 |
 | Plasma Style        | Breeze                                                                                                 |
 | GTK Theme           | Breeze                                                                                                 |
@@ -29,12 +33,10 @@ eza -l --color=always --icons=always --hyperlink -a --group-directories-first --
 | Login Screen (SDDM) | Breeze, [custom background](swag.jpg)                                                                  |
 | Boot Splash Screen  | BGRT, replaced Arch logo with Artix                                                                    |
 
-## Laptop
-
 ### Desktop
 
 * Dynamic Wallpaper: `plasma5-wallpapers-dynamic`
-  * Use [Lakeside](wallpaper.avif)
+  * Use [Lakeside](Images/wallpaper.avif)
 * Analog Clock in top left
 * Weather in bottom left
 * Digital Clock to the right of Analog Clock
@@ -71,10 +73,3 @@ eza -l --color=always --icons=always --hyperlink -a --group-directories-first --
 * Memory Usage
 * Digital Clock
   * M/d/yyyy date beside 12-Hour time
-
-## Dotfiles
-
-* [Emacs](Config%20Files/.emacs)
-* [Fastfetch](Config%20Files/fastfetch.jsonc)
-* [Hyfetch](Config%20Files/hyfetch.json)
-* [Starship](Config%20Files/starship.toml)

@@ -6,24 +6,21 @@ format = """
 [](color_1 bg:color_2)\
 [$directory($git_branch$git_status )](#000000 bg:color_2)\
 [](color_2 bg:color_3)\
-[($battery$sudo )](#000000 bg:color_3)\
+[$c$cmake$cpp$dotnet${custom.jupyter}$nodejs$python$rust${custom.verilog}](#000000 bg:color_3)\
 [](color_3 bg:color_4)\
-[$cmake$cpp$dotnet${custom.jupyter}$nodejs$python$rust${custom.verilog}](#000000 bg:color_4)\
-[](color_4 bg:color_5)\
-[$time$cmd_duration](#000000 bg:color_5)\
-[](color_5)\
+[($battery$sudo)$time$cmd_duration](#ffffff bg:color_4)\
+[](color_4)\
 $line_break$character"""
 
 add_newline = false
 
-palette = 'rainbow'
+palette = 'asexual'
 
-[palettes.rainbow]
-color_1 = '#ff6e5e'
-color_2 = '#ffbd5e'
-color_3 = '#5eff6c'
-color_4 = '#5ea1ff'
-color_5 = '#bd5eff'
+[palettes.asexual]
+color_1 = '#404040'
+color_2 = '#a3a3a3'
+color_3 = '#ffffff'
+color_4 = '#800080'
 
 [os]
 format = '$symbol'
@@ -49,6 +46,17 @@ format = '@$hostname '
 truncation_length = -1
 format = ' ($read_only)$path '
 read_only = ' '
+
+[git_branch]
+format = '$symbol$branch'
+symbol = ' '
+
+[git_status]
+format = '( $all_status$ahead_behind)'
+
+[c]
+format = '( $symbol$version-$name )'
+symbol = '󰙱 '
 
 [cmake]
 format = '( $symbol$version )'
@@ -104,13 +112,6 @@ shell = ['/usr/bin/bash']
 description = 'Custom widget for Verilog/SystemVerilog'
 detect_extensions = ['sv', 'svh', 'v', 'vh', 'xpr']
 format = '( $output )'
-
-[git_branch]
-format = '$symbol$branch'
-symbol = ' '
-
-[git_status]
-format = '( $all_status$ahead_behind)'
 
 [battery]
 format = ' $symbol $percentage'
