@@ -318,19 +318,19 @@
       '(
         ("a" "ICS 6B" plain "%?"
          :target (file+head "ICS 6B/Notes/ICS_6B_${slug}.org"
-                            "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
+                            "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n#+STARTUP: latexpreview\n") :unnarrowed t)
         ("b" "ICS 46" plain "%?"
          :target (file+head "ICS 46/Notes/ICS_46_${slug}.org"
-                            "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
+                            "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n#+STARTUP: latexpreview\n") :unnarrowed t)
         ("c" "MATH 3A" plain "%?"
          :target (file+head "MATH 3A/Notes/MATH_3A_${slug}.org"
-                            "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
+                            "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n#+STARTUP: latexpreview\n") :unnarrowed t)
         ("d" "PHYSICS 7D" plain "%?"
          :target (file+head "PHYSICS 7D/Notes/PHYSICS_7D_${slug}.org"
-                            "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
+                            "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n#+STARTUP: latexpreview\n") :unnarrowed t)
         ("e" "PHYSICS 7LD" plain "%?"
          :target (file+head "PHYSICS 7LD/Notes/PHYSICS_7LD_${slug}.org"
-                            "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n") :unnarrowed t)
+                            "#+TITLE: ${title}\n#+AUTHOR: Kasra Moayedi\n#+DATE: <%<%Y-%m-%d %a>>\n#+STARTUP: latexpreview\n") :unnarrowed t)
         )
       )
 
