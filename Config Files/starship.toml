@@ -33,7 +33,7 @@ format = '$symbol'
 disabled = false
 
 [os.symbols]
-Artix = ''
+CachyOS = ''
 
 [shell]
 bash_indicator = ''

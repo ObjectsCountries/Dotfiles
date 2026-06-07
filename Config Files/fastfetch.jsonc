@@ -101,29 +101,13 @@
       "keyIcon": "",
       "format": "{name} {arch}",
       "keyColor": "bold_light_black",
-      "outputColor": "light_black",
-      "condition": {
-        "system": "Linux"
-      }
-    },
-    {
-      "type": "os",
-      "keyIcon": "",
-      "format": "{name} {arch}",
-      "keyColor": "bold_light_black",
-      "outputColor": "light_black",
-      "condition": {
-        "system": "Android"
-      }
+      "outputColor": "light_black"
     },
     {
       "type": "lm",
       "keyIcon": "󰍂",
       "keyColor": "bold_light_black",
-      "outputColor": "light_black",
-      "condition": {
-        "system": "Linux"
-      }
+      "outputColor": "light_black"
     },
     {
       "type": "uptime",
@@ -135,30 +119,21 @@
       "type": "kernel",
       "keyIcon": "",
       "keyColor": "bold_light_black",
-      "outputColor": "light_black",
-      "condition": {
-        "system": "Linux"
-      }
+      "outputColor": "light_black"
     },
     {
       "type": "de",
       "keyIcon": "",
       "keyColor": "bold_light_black",
       "outputColor": "light_black",
-      "slowVersionDetection": false,
-      "condition": {
-        "system": "Linux"
-      }
+      "slowVersionDetection": false
     },
     {
       "type": "wm",
       "keyIcon": "",
       "keyColor": "bold_light_black",
       "outputColor": "light_black",
-      "detectPlugin": true,
-      "condition": {
-        "system": "Linux"
-      }
+      "detectPlugin": true
     },
     {
       "type": "packages",
@@ -225,27 +200,6 @@
         "green": 50,
         "yellow": 80,
         "type": 0
-      },
-      "condition": {
-        "system": "Linux"
-      }
-    },
-    {
-      "type": "gpu",
-      "keyIcon": "󰾲",
-      "keyColor": "white",
-      "outputColor": "bold_white",
-      "driverSpecific": false,
-      "detectionMethod": "vulkan",
-      "temp": false,
-      "hideType": "none",
-      "percent": {
-        "green": 50,
-        "yellow": 80,
-        "type": 0
-      },
-      "condition": {
-        "system": "Android"
       }
     },
     {
@@ -346,39 +300,20 @@
       "type": "separator",
       "string": "Other",
       "outputColor": "bold_dim_magenta",
-      "times": 1,
-      "condition": {
-        "system": "Linux"
-      }
+      "times": 1
     },
     {
       "type": "separator",
       "string": "-",
       "outputColor": "bold_dim_magenta",
-      "times": 0,
-      "condition": {
-        "system": "Linux"
-      }
+      "times": 0
     },
     {
       "type": "weather",
       "keyColor": "dim_magenta",
       "outputColor": "bold_dim_magenta",
       "location": "INSERT+CITY+HERE",
-      "outputFormat": "%t+-+%C",
-      "condition": {
-        "system": "Linux"
-      }
-    },
-    {
-      "type": "command",
-      "shell": "/usr/bin/bash",
-      "text": "MOD_COUNT=`find $HOME/.local/share/Steam/steamapps/workshop/content/341800/ -maxdepth 1 -type d | tail -n +2 | wc -l`; [[ MOD_COUNT -ne 0 ]] && echo $MOD_COUNT",
-      "keyIcon": "󰚑",
-      "key": "KTaNE Mods",
-      "keyColor": "dim_magenta",
-      "outputColor": "bold_dim_magenta",
-      "format": "{result}"
+      "outputFormat": "%t+-+%C"
     }
   ]
 }
