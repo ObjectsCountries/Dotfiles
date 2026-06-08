@@ -31,7 +31,7 @@ eza -l --color=always --icons=always --hyperlink -a --group-directories-first --
 | System Sounds       | Ocean                                                                                                  |
 | Splash Screen       | None                                                                                                   |
 | Login Screen (SDDM) | Breeze, [custom background](Images/bg.jpg)                                                             |
-| Boot Splash Screen  | BGRT, replaced Arch logo with Artix                                                                    |
+| Boot Splash Screen  | BGRT, replaced Arch logo with CachyOS                                                                  |
 
 ### Desktop
 
@@ -62,7 +62,7 @@ eza -l --color=always --icons=always --hyperlink -a --group-directories-first --
     * Padding: Margins 2 vertically, 6 horizontally
       * Apply to Digital Clock
 * Application Menu
-  * `artixlinux-logo` icon
+  * CachyOS icon
 * Global Menu
 * Panel Spacer
 * Icons-Only Task Manager
