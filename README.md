@@ -27,7 +27,7 @@
 ### Desktop
 
 * Dynamic Wallpaper: `plasma5-wallpapers-dynamic`
-  * Use [Lakeside](Images/wallpaper.avif)
+  * Use [Lakeside](wallpaper.avif)
 * Analog Clock in top left
 * Weather in bottom left
 * Digital Clock to the right of Analog Clock
