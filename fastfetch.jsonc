@@ -1,0 +1,319 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "display": {
+    "stat": false,
+    "pipe": false,
+    "showErrors": false,
+    "disableLinewrap": true,
+    "hideCursor": false,
+    "separator": ": ",
+    "brightColor": true,
+    "duration": {
+      "abbreviation": false,
+      "spaceBeforeUnit": "default"
+    },
+    "size": {
+      "maxPrefix": "YB",
+      "binaryPrefix": "iec",
+      "ndigits": 2,
+      "spaceBeforeUnit": "default"
+    },
+    "temp": {
+      "unit": "D",
+      "ndigits": 1,
+      "color": {
+        "green": "32",
+        "yellow": "93",
+        "red": "91"
+      },
+      "spaceBeforeUnit": "default"
+    },
+    "percent": {
+      "type": [
+        "num",
+        "num-color"
+      ],
+      "ndigits": 0,
+      "color": {
+        "green": "32",
+        "yellow": "93",
+        "red": "91"
+      },
+      "spaceBeforeUnit": "default",
+      "width": 0
+    },
+    "bar": {
+      "char": {
+        "elapsed": "■",
+        "total": "-"
+      },
+      "border": {
+        "left": "[ ",
+        "right": " ]",
+        "leftElapsed": "",
+        "rightElapsed": ""
+      },
+      "color": {
+        "elapsed": "auto",
+        "total": "97",
+        "border": "97"
+      },
+      "width": 10
+    },
+    "fraction": {
+      "ndigits": 2
+    },
+    "noBuffer": false,
+    "key": {
+      "width": 0,
+      "type": "both",
+      "paddingLeft": 0
+    },
+    "freq": {
+      "ndigits": 2,
+      "spaceBeforeUnit": "default"
+    },
+    "constants": []
+  },
+  "modules": [
+    {
+      "type": "title",
+      "keyIcon": "",
+      "fqdn": true
+    },
+    {
+      "type": "break"
+    },
+    {
+      "type": "separator",
+      "string": "Software",
+      "outputColor": "bold_light_black",
+      "times": 1
+    },
+    {
+      "type": "separator",
+      "string": "-",
+      "outputColor": "bold_light_black",
+      "times": 0
+    },
+    {
+      "type": "os",
+      "keyIcon": "",
+      "format": "{name} {arch}",
+      "keyColor": "bold_light_black",
+      "outputColor": "light_black"
+    },
+    {
+      "type": "lm",
+      "keyIcon": "󰍂",
+      "keyColor": "bold_light_black",
+      "outputColor": "light_black"
+    },
+    {
+      "type": "uptime",
+      "keyIcon": "",
+      "keyColor": "bold_light_black",
+      "outputColor": "light_black"
+    },
+    {
+      "type": "kernel",
+      "keyIcon": "",
+      "keyColor": "bold_light_black",
+      "outputColor": "light_black"
+    },
+    {
+      "type": "de",
+      "keyIcon": "",
+      "keyColor": "bold_light_black",
+      "outputColor": "light_black",
+      "slowVersionDetection": false
+    },
+    {
+      "type": "wm",
+      "keyIcon": "",
+      "keyColor": "bold_light_black",
+      "outputColor": "light_black",
+      "detectPlugin": true
+    },
+    {
+      "type": "packages",
+      "keyIcon": "󰏖",
+      "keyColor": "bold_light_black",
+      "outputColor": "light_black",
+      "disabled": null,
+      "combined": false
+    },
+    {
+      "type": "shell",
+      "keyColor": "bold_light_black",
+      "outputColor": "light_black",
+      "keyIcon": ""
+    },
+    {
+      "type": "break"
+    },
+    {
+      "type": "separator",
+      "string": "Hardware",
+      "outputColor": "bold_white",
+      "times": 1
+    },
+    {
+      "type": "separator",
+      "string": "-",
+      "outputColor": "bold_white",
+      "times": 0
+    },
+    {
+      "type": "display",
+      "keyColor": "white",
+      "outputColor": "bold_white",
+      "keyIcon": "󰍹",
+      "compactType": "none",
+      "preciseRefreshRate": false,
+      "order": null
+    },
+    {
+      "type": "cpu",
+      "keyIcon": "",
+      "keyColor": "white",
+      "outputColor": "bold_white",
+      "temp": false,
+      "showPeCoreCount": false
+    },
+    {
+      "type": "cpuusage",
+      "keyIcon": "",
+      "keyColor": "white",
+      "outputColor": "bold_white",
+    },
+    {
+      "type": "gpu",
+      "keyIcon": "󰾲",
+      "keyColor": "white",
+      "outputColor": "bold_white",
+      "driverSpecific": false,
+      "detectionMethod": "auto",
+      "temp": false,
+      "hideType": "none",
+      "percent": {
+        "green": 50,
+        "yellow": 80,
+        "type": 0
+      }
+    },
+    {
+      "type": "memory",
+      "keyIcon": "",
+      "keyColor": "white",
+      "outputColor": "bold_white",
+      "percent": {
+        "green": 50,
+        "yellow": 80,
+        "type": 0
+      }
+    },
+    {
+      "type": "swap",
+      "keyColor": "white",
+      "outputColor": "bold_white",
+      "percent": {
+        "green": 50,
+        "yellow": 80,
+        "type": 0
+      },
+      "keyIcon": "󰓡",
+      "separate": false
+    },
+    {
+      "type": "disk",
+      "keyIcon": "",
+      "keyColor": "white",
+      "outputColor": "bold_white",
+      "showRegular": true,
+      "showExternal": true,
+      "showHidden": false,
+      "showSubvolumes": false,
+      "showReadOnly": true,
+      "showUnknown": false,
+      "folders": "",
+      "hideFolders": "/efi:/boot:/boot/*:/run/user/*",
+      "hideFS": "",
+      "useAvailable": false,
+      "percent": {
+        "green": 50,
+        "yellow": 80,
+        "type": 0
+      }
+    },
+    {
+      "type": "brightness",
+      "keyIcon": "",
+      "keyColor": "white",
+      "outputColor": "bold_white",
+    },
+    {
+      "type": "battery",
+      "keyIcon": "",
+      "keyColor": "white",
+      "outputColor": "bold_white",
+      "temp": false,
+      "percent": {
+        "green": 50,
+        "yellow": 20,
+        "type": 0
+      }
+    },
+    {
+      "type": "sound",
+      "keyIcon": "",
+      "keyColor": "white",
+      "outputColor": "bold_white",
+      "soundType": "main",
+      "percent": {
+        "green": 50,
+        "yellow": 20,
+        "type": 0
+      }
+    },
+    {
+      "type": "wifi",
+      "keyIcon": "󰖩",
+      "keyColor": "white",
+      "outputColor": "bold_white"
+    },
+    {
+      "type": "bluetooth",
+      "keyIcon": "",
+      "keyColor": "white",
+      "outputColor": "bold_white",
+      "percent": {
+        "green": 50,
+        "yellow": 20,
+        "type": 0
+      }
+    },
+    {
+      "type": "break"
+    },
+    {
+      "type": "separator",
+      "string": "Other",
+      "outputColor": "bold_dim_magenta",
+      "times": 1
+    },
+    {
+      "type": "separator",
+      "string": "-",
+      "outputColor": "bold_dim_magenta",
+      "times": 0
+    },
+    {
+      "type": "weather",
+      "keyColor": "dim_magenta",
+      "outputColor": "bold_dim_magenta",
+      "location": "INSERT+CITY+HERE",
+      "outputFormat": "%t+-+%C"
+    }
+  ]
+}

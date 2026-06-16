@@ -1,0 +1,198 @@
+'$schema' = 'https://starship.rs/config-schema.json'
+
+format = """
+[](fg:color_1)\
+[$os$shell$username$hostname](fg:text_1 bg:color_1)\
+[](fg:color_1 bg:color_2)\
+[$directory($git_branch$git_status )](fg:text_2 bg:color_2)\
+[](fg:color_2 bg:color_3)\
+[$c$cmake$cpp$dotnet${custom.jupyter}$nodejs$python$rust${custom.verilog}](fg:text_3 bg:color_3)\
+[](fg:color_3 bg:color_4)\
+[($battery$sudo)$memory_usage$time$cmd_duration](fg:text_4 bg:color_4)\
+[](color_4)\
+$line_break$character"""
+
+add_newline = false
+
+palette = 'asexual'
+
+[palettes.asexual]
+color_1 = '#404040'
+color_2 = '#a3a3a3'
+color_3 = '#ffffff'
+color_4 = '#800080'
+failure_color = '#ff0000'
+success_color = '#ffffff'
+text_1 = '#ffffff'
+text_2 = '#000000'
+text_3 = '#000000'
+text_4 = '#ffffff'
+
+[os]
+format = '$symbol'
+disabled = false
+
+[os.symbols]
+CachyOS = ''
+
+[shell]
+bash_indicator = ''
+format = ' $indicator'
+disabled = false
+
+[username]
+format = ' $user'
+show_always = true
+
+[hostname]
+ssh_only = false
+format = '@$hostname '
+
+[directory]
+truncation_length = -1
+format = ' ($read_only)$path '
+read_only = ' '
+
+[git_branch]
+format = '$symbol$branch'
+symbol = ' '
+
+[git_status]
+format = '( $all_status$ahead_behind)'
+
+[c]
+format = '( $symbol$version-$name )'
+symbol = '󰙱 '
+
+[cmake]
+format = '( $symbol$version )'
+symbol = ' '
+
+[cpp]
+format = '( $symbol$version-$name )'
+symbol = ' '
+disabled = false
+
+[dotnet]
+format = '( $symbol$version( $tfm) )'
+symbol = ' '
+
+[custom.jupyter]
+command = '[ -f "/tmp/jupyter_lab_version.txt" ] || jupyter lab --version > /tmp/jupyter_lab_version.txt; cat /tmp/jupyter_lab_version.txt'
+shell = ['/usr/bin/bash']
+description = 'Custom widget for Jupyter Lab notebooks'
+detect_extensions = ['ipynb']
+symbol = ' '
+format = '( $symbol$output )'
+ignore_timeout = true
+
+[nodejs]
+format = '( $symbol$version )'
+symbol = ' '
+
+[python]
+format = '( $symbol$pyenv_prefix($version)( \($virtualenv\)) )'
+symbol = ' '
+
+[rust]
+format = '( $symbol$version )'
+symbol = ' '
+
+[custom.verilog]
+command = '''
+if [ -x "$(command -v iverilog)" ]; then
+    echo -n " IVerilog v`(iverilog -V | head -n 1 | cut -d ' ' -f 4) 2>/dev/null`"
+elif [ -x "$(command -v verilator)" ]; then
+    echo -n " Verilator v`(verilator --version | cut -d ' ' -f 2) 2> /dev/null`"
+else
+    if ( [ -f *.v  ] || [ -f *.vh ] || [ -f *.xpr ] ) && ( [ -f *.sv ] || [ -f *.svh ] ); then
+        echo -n ' Verilog, SystemVerilog'
+    elif [ -f *.sv ] || [ -f *.svh ]; then
+        echo -n ' SystemVerilog'
+    elif [ -f *.v  ] || [ -f *.vh ] || [ -f *.xpr ]; then
+        echo -n ' Verilog'
+    fi
+fi
+'''
+shell = ['/usr/bin/bash']
+description = 'Custom widget for Verilog/SystemVerilog'
+detect_extensions = ['sv', 'svh', 'v', 'vh', 'xpr']
+format = '( $output )'
+
+[battery]
+format = ' $symbol $percentage'
+
+[[battery.display]]
+threshold = 10
+charging_symbol = '󰢜'
+discharging_symbol = '󰁺'
+
+[[battery.display]]
+threshold = 20
+charging_symbol = '󰂆'
+discharging_symbol = '󰁻'
+
+[[battery.display]]
+threshold = 30
+charging_symbol = '󰂇'
+discharging_symbol = '󰁼'
+
+[[battery.display]]
+threshold = 40
+charging_symbol = '󰂈'
+discharging_symbol = '󰁽'
+
+[[battery.display]]
+threshold = 50
+charging_symbol = '󰢝'
+discharging_symbol = '󰁾'
+
+[[battery.display]]
+threshold = 60
+charging_symbol = '󰂉'
+discharging_symbol = '󰁿'
+
+[[battery.display]]
+threshold = 70
+charging_symbol = '󰢞'
+discharging_symbol = '󰂀'
+
+[[battery.display]]
+threshold = 80
+charging_symbol = '󰂊'
+discharging_symbol = '󰂁'
+
+[[battery.display]]
+threshold = 90
+charging_symbol = '󰂋'
+discharging_symbol = '󰂂'
+
+[[battery.display]]
+threshold = 100
+charging_symbol = '󰂅'
+discharging_symbol = '󰁹'
+
+[sudo]
+format = ' Sudo Active'
+disabled = false
+
+[memory_usage]
+threshold = 0
+format = ' $symbol ${ram_pct} RAM'
+symbol = ''
+disabled = false
+
+[time]
+format = '  $time '
+time_format = '%a %-m/%-d %-I:%M%P'
+disabled = false
+
+[cmd_duration]
+format = '\($duration\) '
+
+[line_break]
+disabled = false
+
+[character]
+success_symbol = '[ 󱞩](fg:success_color)'
+error_symbol = '[ 󱞩](fg:failure_color)'
