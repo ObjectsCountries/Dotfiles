@@ -2,31 +2,30 @@
 
 ## Info
 
-| Component              | Using | Package     |
-|------------------------|-------|-------------|
-| `ls` replacement       | `eza` | `eza`       |
-| `cat` replacement      | `bat` | `bat`       |
-| `git diff` replacement | Delta | `git-delta` |
+| Component              | Using       |
+|------------------------|-------------|
+| `ls` replacement       | `eza`       |
+| `cat` replacement      | `bat`       |
+| `git diff` replacement | `git-delta` |
 
 ## Rice
 
-| Component           | Theme                                                                                                  |
-|---------------------|--------------------------------------------------------------------------------------------------------|
-| Colors              | Breeze Dark, purple color                                                                              |
-| Application Style   | Breeze                                                                                                 |
-| Plasma Style        | Breeze                                                                                                 |
-| GTK Theme           | Breeze                                                                                                 |
-| Window Decorations  | Breeze                                                                                                 |
-| Icons               | Papirus-Dark (`papirus-icon-theme` on Extra, with `papirus-folders` AUR script to make folders violet) |
-| Cursors             | Breeze Light                                                                                           |
-| System Sounds       | Ocean                                                                                                  |
-| Splash Screen       | None                                                                                                   |
-| Login Screen (SDDM) | Breeze, [custom background](Images/bg.jpg)                                                             |
-| Boot Splash Screen  | BGRT, replaced Arch logo with CachyOS                                                                  |
+| Component           | Theme                                                               |
+|---------------------|---------------------------------------------------------------------|
+| Colors              | Breeze Dark, purple color                                           |
+| Application Style   | Breeze                                                              |
+| Plasma Style        | Breeze                                                              |
+| GTK Theme           | Breeze                                                              |
+| Window Decorations  | Breeze                                                              |
+| Icons               | Papirus-Dark (with `papirus-folders` script to make folders violet) |
+| Cursors             | Breeze Light                                                        |
+| System Sounds       | Ocean                                                               |
+| Splash Screen       | None                                                                |
+| Boot Splash Screen  | BGRT                                                                |
 
 ### Desktop
 
-* Dynamic Wallpaper: `plasma5-wallpapers-dynamic`
+* [Dynamic Wallpaper](https://github.com/zzag/plasma5-wallpapers-dynamic)
   * Use [Lakeside](wallpaper.avif)
 * Analog Clock in top left
 * Weather in bottom left
@@ -40,7 +39,7 @@
 Copy the [Rice](Rice/) folder to `~/.config/panel-colorizer/presets/`.
 
 * One panel at the top, 28 px in height
-* `plasma6-applets-panel-colorizer`
+* [Plasma Panel Colorizer](https://github.com/luisbocanegra/plasma-panel-colorizer)
   * Sky preset
   * Panel:
     * Background color: #1B1030
@@ -55,11 +54,11 @@ Copy the [Rice](Rice/) folder to `~/.config/panel-colorizer/presets/`.
     * Padding: Margins 2 vertically, 6 horizontally
       * Apply to Digital Clock
 * Application Menu
-  * CachyOS icon
+  * Fedora icon
 * Global Menu
 * Panel Spacer
 * Icons-Only Task Manager
-  * Firefox, Discord, Emacs (client)
+  * Firefox, Discord, Steam
 * Panel Spacer
 * System Tray
 * Total CPU Use
@@ -80,7 +79,7 @@ eval "$(starship init bash)"
 
 ### Fastfetch
 
-On [line 315](fastfetch.jsonc#L315), replace `"INSERT+CITY+HERE"` with the name of your city (plus state/province and country if necessary), replacing spaces with plus symbols. Rename the file to `config.jsonc`.
+On [line 315](fastfetch.jsonc#L315), replace `"INSERT+CITY+HERE"` with the name of your city (plus state/province and country if necessary), replacing spaces with plus symbols. Copy the file to `~/.config/fastfetch/config.jsonc`.
 
 ### Hyfetch
 
