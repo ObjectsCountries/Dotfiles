@@ -314,6 +314,16 @@
       "outputColor": "bold_dim_magenta",
       "location": "INSERT+CITY+HERE",
       "outputFormat": "%t+-+%C"
+    },
+    {
+      "type": "command",
+      "shell": "/usr/bin/bash",
+      "text": "MOD_COUNT=`find $HOME/.local/share/Steam/steamapps/workshop/content/341800/ -maxdepth 1 -type d | tail -n +2 | wc -l`; [[ MOD_COUNT -ne 0 ]] && echo $MOD_COUNT",
+      "keyIcon": "󰚑",
+      "key": "KTaNE Mods",
+      "keyColor": "dim_magenta",
+      "outputColor": "bold_dim_magenta",
+      "format": "{result}"
     }
   ]
 }
